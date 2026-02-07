@@ -1,0 +1,41 @@
+{
+	"storyName": "That blue lizard dragon thing idk (DO NOT PRESS IT)",
+	"difficulties": "Normal, Hard, Hell",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"week1plz",
+		""
+	],
+	"songs": [
+		[
+			"Frestal",
+			"kyanite",
+			[
+				0,
+				28,
+				132
+			]
+		],
+		[
+			"Beautie",
+			"kate",
+			[
+				193,
+				92,
+				174
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Al2SiO5",
+	"hiddenUntilUnlocked": false
+}

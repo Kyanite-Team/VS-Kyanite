@@ -1,0 +1,36 @@
+{
+	"song": {
+		"events": [
+			[
+				18600,
+				[
+					[
+						"Hey!",
+						"Something else",
+						""
+					]
+				]
+			],
+			[
+				27600,
+				[
+					[
+						"Hey!",
+						"Something else",
+						"1.2"
+					]
+				]
+			],
+			[
+				52800,
+				[
+					[
+						"Hey!",
+						"Something else",
+						"1.2"
+					]
+				]
+			]
+		]
+	}
+}

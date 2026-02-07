@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Dead_ass.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="death0000" x="276" y="0" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0001" x="0" y="0" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0002" x="828" y="1068" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0003" x="1380" y="0" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0004" x="1104" y="0" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0005" x="1104" y="534" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0006" x="1380" y="1068" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0007" x="552" y="1068" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0008" x="1104" y="1068" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0009" x="552" y="534" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0010" x="0" y="534" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0011" x="828" y="534" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0012" x="0" y="1068" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0013" x="276" y="534" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0014" x="552" y="0" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0015" x="828" y="0" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0016" x="1380" y="534" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+	<SubTexture name="death0017" x="276" y="1068" width="276" height="534" frameX="2" frameY="2" frameWidth="272" frameHeight="530"/>
+</TextureAtlas>

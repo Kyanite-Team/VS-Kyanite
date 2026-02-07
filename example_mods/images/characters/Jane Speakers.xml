@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Jane Speakers.png">
+	<!-- Created with Adobe Animate version 24.0.7.61 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Jane speaker cheer0000" x="20" y="20" width="1381" height="730" pivotX="0" pivotY="0"/>
+	<SubTexture name="Jane speaker cheer0001" x="20" y="20" width="1381" height="730"/>
+	<SubTexture name="Jane speaker cheer0002" x="1421" y="20" width="1347" height="718" frameX="-12" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0003" x="1421" y="20" width="1347" height="718" frameX="-12" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0004" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0005" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0006" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0007" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0008" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0009" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0010" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0011" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0012" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0013" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0014" x="4124" y="20" width="1381" height="718" frameX="0" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0015" x="4124" y="20" width="1381" height="718" frameX="0" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0016" x="1421" y="20" width="1347" height="718" frameX="-12" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0017" x="1421" y="20" width="1347" height="718" frameX="-12" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0018" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0019" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0020" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0021" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0022" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0023" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0024" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0025" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0026" x="2788" y="20" width="1316" height="718" frameX="-25" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker cheer0027" x="4124" y="20" width="1381" height="718" frameX="0" frameY="-12" frameWidth="1381" frameHeight="730"/>
+	<SubTexture name="Jane speaker dance0000" x="5525" y="20" width="1381" height="710" pivotX="0" pivotY="0" frameX="0" frameY="-12" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0001" x="5525" y="20" width="1381" height="710" frameX="0" frameY="-12" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0002" x="20" y="770" width="1347" height="714" frameX="-12" frameY="-9" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0003" x="20" y="770" width="1347" height="714" frameX="-12" frameY="-9" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0004" x="1387" y="770" width="1316" height="717" frameX="-25" frameY="-6" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0005" x="1387" y="770" width="1316" height="717" frameX="-25" frameY="-6" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0006" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0007" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0008" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0009" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0010" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0011" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0012" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0013" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0014" x="4059" y="770" width="1381" height="721" frameX="0" frameY="-1" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0015" x="4059" y="770" width="1381" height="721" frameX="0" frameY="-1" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0016" x="5460" y="770" width="1347" height="722" frameX="-12" frameY="-1" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0017" x="5460" y="770" width="1347" height="722" frameX="-12" frameY="-1" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0018" x="6827" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0019" x="6827" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0020" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0021" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0022" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0023" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0024" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0025" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker dance0026" x="2723" y="770" width="1316" height="723" frameX="-25" frameY="0" frameWidth="1381" frameHeight="723"/>
+	<SubTexture name="Jane speaker sad0000" x="20" y="1513" width="1381" height="707" pivotX="0" pivotY="0"/>
+	<SubTexture name="Jane speaker sad0001" x="20" y="1513" width="1381" height="707"/>
+	<SubTexture name="Jane speaker sad0002" x="1421" y="1513" width="1347" height="707" frameX="-12" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0003" x="1421" y="1513" width="1347" height="707" frameX="-12" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0004" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0005" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0006" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0007" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0008" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0009" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0010" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0011" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0012" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0013" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0014" x="20" y="1513" width="1381" height="707"/>
+	<SubTexture name="Jane speaker sad0015" x="20" y="1513" width="1381" height="707"/>
+	<SubTexture name="Jane speaker sad0016" x="1421" y="1513" width="1347" height="707" frameX="-12" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0017" x="1421" y="1513" width="1347" height="707" frameX="-12" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0018" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0019" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0020" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0021" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0022" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0023" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0024" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0025" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0026" x="2788" y="1513" width="1316" height="707" frameX="-25" frameY="0" frameWidth="1381" frameHeight="707"/>
+	<SubTexture name="Jane speaker sad0027" x="20" y="1513" width="1381" height="707"/>
+</TextureAtlas>

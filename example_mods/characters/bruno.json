@@ -1,0 +1,159 @@
+{
+	"animations": [
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Bruno down"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Bruno up"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Bruno right"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Bruno miss left"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "Bruno dodge"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Bruno miss down"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "Bruno hurt"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Bruno miss up"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Bruno miss right"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "Bruno idle"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "Bruno idle"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "Bruno scared"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Bruno left"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Bruno hey"
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "firstDeath",
+			"fps": 20,
+			"name": "Bruno firstDeath",
+			"indices": []
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 20,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "Bruno deathConfirm"
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 20,
+			"anim": "deathloop",
+			"indices": [],
+			"name": "Bruno deathloop"
+		},
+		{
+			"offsets": [536, 301],
+			"loop": false,
+			"fps": 20,
+			"anim": "idle",
+			"indices": [],
+			"name": "Bruno idle"
+		}
+	],
+	"vocals_file": "Bruno",
+	"no_antialiasing": false,
+	"image": "characters/Bruno",
+	"position": [35, 390],
+	"healthicon": "Bruno",
+	"flip_x": true,
+	"healthbar_colors": [189, 114, 68],
+	"camera_position": [530, -230],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

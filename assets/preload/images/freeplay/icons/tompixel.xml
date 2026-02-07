@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tompixel.png">
+	<SubTexture name="idle0000" x="54" y="0" width="53" height="54" frameX="2" frameY="2" frameWidth="50" frameHeight="50"/>
+	<SubTexture name="confirm0000" x="54" y="0" width="53" height="54" frameX="2" frameY="2" frameWidth="50" frameHeight="50"/>
+	<SubTexture name="confirm0001" x="0" y="54" width="53" height="46" frameX="2" frameY="-2" frameWidth="50" frameHeight="50"/>
+	<SubTexture name="confirm0002" x="107" y="0" width="51" height="54" frameX="1" frameY="2" frameWidth="50" frameHeight="50"/>
+	<SubTexture name="confirm0003" x="0" y="0" width="54" height="54" frameX="2" frameY="2" frameWidth="50" frameHeight="50"/>
+	<SubTexture name="confirm-hold0000" x="0" y="0" width="54" height="54" frameX="2" frameY="2" frameWidth="50" frameHeight="50"/>
+</TextureAtlas>

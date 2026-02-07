@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mashka puski.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="MashkaIdle00000000" x="0" y="0" width="359" height="285" frameX="-323" frameY="-717" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="MashkaIdle00010000" x="359" y="0" width="359" height="284" frameX="-323" frameY="-718" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="Mashkayes00000000" x="338" y="285" width="338" height="284" frameX="-329" frameY="-718" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="Mashkayes00010000" x="0" y="285" width="338" height="284" frameX="-329" frameY="-718" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="Mashkayes00020000" x="718" y="0" width="338" height="284" frameX="-329" frameY="-718" frameWidth="1000" frameHeight="1000"/>
+</TextureAtlas>

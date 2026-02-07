@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				320,
+				222
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "bouf idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				316,
+				220
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bouf up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				315,
+				223
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bouf down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				318,
+				223
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bouf left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				324,
+				223
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bouf right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bouf",
+	"position": [
+		0,
+		-70
+	],
+	"healthicon": "bouf",
+	"flip_x": true,
+	"healthbar_colors": [
+		60,
+		161,
+		255
+	],
+	"camera_position": [
+		-390,
+		110
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

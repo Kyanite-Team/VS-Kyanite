@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "Jane speaker dance"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				11,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28
+			],
+			"name": "Jane speaker dance"
+		},
+		{
+			"offsets": [
+				0,
+				-15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "sad",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"name": "Jane speaker sad"
+		},
+		{
+			"offsets": [
+				0,
+				7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13
+			],
+			"name": "Jane speaker cheer"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Jane Speakers",
+	"position": [
+		-300,
+		-55
+	],
+	"healthicon": "jane",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		191,
+		0
+	],
+	"camera_position": [
+		-30,
+		110
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

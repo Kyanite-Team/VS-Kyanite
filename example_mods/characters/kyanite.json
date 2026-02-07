@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				126,
+				189
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "kyanite idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				273,
+				184
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "kyanite left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				190
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "kyanite right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				170,
+				130
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "kyanite down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				87,
+				218
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "kyanite up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				88,
+				189
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "boredom",
+			"indices": [],
+			"name": "kyanite stare"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/kyanite new",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "kyanite",
+	"flip_x": false,
+	"healthbar_colors": [
+		29,
+		76,
+		163
+	],
+	"camera_position": [
+		-150,
+		-360
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

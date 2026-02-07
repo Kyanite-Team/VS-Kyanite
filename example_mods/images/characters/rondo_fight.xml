@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rondo_fight.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="rondo_down0000" x="8" y="8" width="642" height="924" frameX="0" frameY="-3" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0001" x="8" y="8" width="642" height="924" frameX="0" frameY="-3" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0002" x="658" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0003" x="658" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0004" x="1306" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0005" x="1306" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0006" x="1954" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0007" x="1954" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0008" x="2602" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0009" x="2602" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0010" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0011" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0012" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0013" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0014" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0015" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0016" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0017" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0018" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_down0019" x="3250" y="8" width="640" height="927" frameX="0" frameY="0" frameWidth="642" frameHeight="927"/>
+	<SubTexture name="rondo_idle0000" x="3898" y="8" width="635" height="935" frameX="0" frameY="-3" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0001" x="3898" y="8" width="635" height="935" frameX="0" frameY="-3" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0002" x="3898" y="8" width="635" height="935" frameX="0" frameY="-3" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0003" x="4541" y="8" width="633" height="937" frameX="0" frameY="-1" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0004" x="4541" y="8" width="633" height="937" frameX="0" frameY="-1" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0005" x="5182" y="8" width="631" height="938" frameX="0" frameY="0" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0006" x="5182" y="8" width="631" height="938" frameX="0" frameY="0" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0007" x="5821" y="8" width="629" height="938" frameX="0" frameY="0" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0008" x="5821" y="8" width="629" height="938" frameX="0" frameY="0" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0009" x="6458" y="8" width="626" height="935" frameX="0" frameY="-3" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0010" x="6458" y="8" width="626" height="935" frameX="0" frameY="-3" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0011" x="7092" y="8" width="627" height="936" frameX="0" frameY="-2" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0012" x="8" y="954" width="629" height="937" frameX="0" frameY="-1" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0013" x="8" y="954" width="629" height="937" frameX="0" frameY="-1" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0014" x="645" y="954" width="631" height="938" frameX="0" frameY="0" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0015" x="645" y="954" width="631" height="938" frameX="0" frameY="0" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0016" x="1284" y="954" width="633" height="937" frameX="0" frameY="-1" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0017" x="1284" y="954" width="633" height="937" frameX="0" frameY="-1" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0018" x="1925" y="954" width="636" height="932" frameX="-2" frameY="-6" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_idle0019" x="1925" y="954" width="636" height="932" frameX="-2" frameY="-6" frameWidth="638" frameHeight="938"/>
+	<SubTexture name="rondo_left0000" x="2569" y="954" width="617" height="931" frameX="0" frameY="0" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0001" x="2569" y="954" width="617" height="931" frameX="0" frameY="0" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0002" x="3194" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0003" x="3194" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0004" x="3824" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0005" x="3824" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0006" x="4454" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0007" x="4454" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0008" x="5084" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0009" x="5084" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0010" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0011" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0012" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0013" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0014" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0015" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0016" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0017" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_left0018" x="5714" y="954" width="622" height="930" frameX="0" frameY="-1" frameWidth="622" frameHeight="931"/>
+	<SubTexture name="rondo_miss0000" x="6344" y="954" width="617" height="929" frameX="0" frameY="-1" frameWidth="622" frameHeight="930"/>
+	<SubTexture name="rondo_miss0001" x="6344" y="954" width="617" height="929" frameX="0" frameY="-1" frameWidth="622" frameHeight="930"/>
+	<SubTexture name="rondo_miss0002" x="6969" y="954" width="622" height="930"/>
+	<SubTexture name="rondo_miss0003" x="6969" y="954" width="622" height="930"/>
+	<SubTexture name="rondo_miss0004" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0005" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0006" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0007" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0008" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0009" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0010" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0011" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0012" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0013" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0014" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0015" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0016" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0017" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0018" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0019" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0020" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0021" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0022" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0023" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_miss0024" x="8" y="1900" width="622" height="930"/>
+	<SubTexture name="rondo_right0000" x="638" y="1900" width="643" height="927"/>
+	<SubTexture name="rondo_right0001" x="638" y="1900" width="643" height="927"/>
+	<SubTexture name="rondo_right0002" x="1289" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0003" x="1289" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0004" x="1935" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0005" x="1935" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0006" x="2581" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0007" x="2581" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0008" x="3227" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0009" x="3227" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0010" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0011" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0012" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0013" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0014" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0015" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0016" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0017" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0018" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_right0019" x="3873" y="1900" width="638" height="927" frameX="0" frameY="0" frameWidth="643" frameHeight="927"/>
+	<SubTexture name="rondo_hey0000" x="4519" y="1900" width="604" height="938" frameX="-1" frameY="0" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0001" x="5131" y="1900" width="618" height="932" frameX="0" frameY="-6" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0002" x="5757" y="1900" width="642" height="924" frameX="0" frameY="-14" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0003" x="5757" y="1900" width="642" height="924" frameX="0" frameY="-14" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0004" x="6407" y="1900" width="641" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0005" x="6407" y="1900" width="641" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0006" x="7056" y="1900" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0007" x="7056" y="1900" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0008" x="8" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0009" x="8" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0010" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0011" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0012" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0013" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0014" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0015" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0016" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_hey0017" x="656" y="2846" width="640" height="927" frameX="0" frameY="-11" frameWidth="642" frameHeight="938"/>
+	<SubTexture name="rondo_throw10000" x="1304" y="2846" width="636" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10001" x="1304" y="2846" width="636" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10002" x="1304" y="2846" width="636" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10003" x="1948" y="2846" width="637" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10004" x="1948" y="2846" width="637" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10005" x="2593" y="2846" width="639" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10006" x="2593" y="2846" width="639" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10007" x="3240" y="2846" width="639" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10008" x="3240" y="2846" width="639" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10009" x="3887" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10010" x="3887" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10011" x="4535" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10012" x="4535" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10013" x="5183" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10014" x="5183" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10015" x="5831" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10016" x="5831" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10017" x="6479" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10018" x="6479" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10019" x="7127" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10020" x="7127" y="2846" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10021" x="8" y="3789" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10022" x="8" y="3789" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10023" x="656" y="3789" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10024" x="656" y="3789" width="640" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10025" x="1304" y="3789" width="648" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10026" x="1304" y="3789" width="648" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10027" x="1960" y="3789" width="629" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10028" x="1960" y="3789" width="629" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10029" x="2597" y="3789" width="591" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10030" x="2597" y="3789" width="591" height="935" frameX="-316" frameY="-177" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10031" x="3196" y="3789" width="541" height="1003" frameX="-316" frameY="-109" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10032" x="3196" y="3789" width="541" height="1003" frameX="-316" frameY="-109" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10033" x="3745" y="3789" width="514" height="1078" frameX="-316" frameY="-73" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10034" x="4267" y="3789" width="514" height="1057" frameX="-316" frameY="-72" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10035" x="4267" y="3789" width="514" height="1057" frameX="-316" frameY="-72" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10036" x="4789" y="3789" width="514" height="1091" frameX="-316" frameY="-38" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10037" x="4789" y="3789" width="514" height="1091" frameX="-316" frameY="-38" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10038" x="5311" y="3789" width="681" height="1104" frameX="-149" frameY="-25" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10039" x="5311" y="3789" width="681" height="1104" frameX="-149" frameY="-25" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10040" x="6000" y="3789" width="817" height="1129" frameX="0" frameY="0" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10041" x="6000" y="3789" width="817" height="1129" frameX="0" frameY="0" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10042" x="6825" y="3789" width="725" height="1074" frameX="-87" frameY="-55" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10043" x="6825" y="3789" width="725" height="1074" frameX="-87" frameY="-55" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10044" x="8" y="4926" width="684" height="1046" frameX="-128" frameY="-83" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10045" x="8" y="4926" width="684" height="1046" frameX="-128" frameY="-83" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10046" x="700" y="4926" width="685" height="1035" frameX="-127" frameY="-94" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10047" x="700" y="4926" width="685" height="1035" frameX="-127" frameY="-94" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10048" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10049" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10050" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10051" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10052" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10053" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+     <SubTexture name="rondo_throw10054" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10055" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10056" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10057" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10058" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10059" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10060" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10061" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10062" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10063" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+     <SubTexture name="rondo_throw10064" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10065" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10066" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10067" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10068" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+	<SubTexture name="rondo_throw10069" x="1393" y="4926" width="680" height="1038" frameX="-132" frameY="-91" frameWidth="964" frameHeight="1151"/>
+
+
+
+
+
+
+
+	<SubTexture name="rondo_throw20000" x="2081" y="4926" width="674" height="1056" frameX="-61" frameY="-51" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20001" x="2081" y="4926" width="674" height="1056" frameX="-61" frameY="-51" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20002" x="2763" y="4926" width="737" height="1091" frameX="0" frameY="-16" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20003" x="3508" y="4926" width="677" height="1107" frameX="-94" frameY="0" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20004" x="4193" y="4926" width="794" height="1071" frameX="-198" frameY="-36" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20005" x="4995" y="4926" width="1036" height="905" frameX="-107" frameY="-202" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20006" x="6039" y="4926" width="925" height="896" frameX="-111" frameY="-211" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20007" x="6039" y="4926" width="925" height="896" frameX="-111" frameY="-211" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20008" x="6972" y="4926" width="922" height="902" frameX="-125" frameY="-205" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20009" x="6972" y="4926" width="922" height="902" frameX="-125" frameY="-205" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20010" x="8" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20011" x="8" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20012" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20013" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20014" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20015" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20016" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20017" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20018" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20019" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20020" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20021" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20022" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20023" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20024" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20025" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20026" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20027" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20028" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20029" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20030" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20031" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20032" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20033" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20034" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20035" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20036" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20037" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20038" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20039" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20040" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20041" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20042" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20043" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20044" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20045" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20046" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20047" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20048" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20049" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20050" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20051" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20052" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20053" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20054" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20055" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20056" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20057" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20058" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20059" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20060" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20061" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20062" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20063" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20064" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20065" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20066" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20067" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20068" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20069" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20070" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20071" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20072" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20073" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20074" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20075" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20076" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20077" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20078" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20079" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20080" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20081" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20082" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20083" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20084" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20085" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20086" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20087" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20088" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20089" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20090" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20091" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20092" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20093" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20094" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20095" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20096" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20097" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20098" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20099" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20100" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20101" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20102" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20103" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20104" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20105" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20106" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20107" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20108" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20109" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20110" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20111" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20112" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20113" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20114" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20115" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20116" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20117" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20118" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20119" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20120" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20121" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20122" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20123" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20124" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20125" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20126" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20127" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20128" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20129" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20130" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20131" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20132" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20133" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20134" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20135" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20136" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20137" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20138" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20139" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20140" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20141" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20142" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20143" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20144" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_throw20145" x="942" y="6041" width="926" height="903" frameX="-124" frameY="-204" frameWidth="1143" frameHeight="1107"/>
+	<SubTexture name="rondo_up0000" x="1876" y="6041" width="614" height="935" frameX="0" frameY="0" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0001" x="2498" y="6041" width="614" height="935" frameX="0" frameY="0" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0002" x="3120" y="6041" width="616" height="935"/>
+	<SubTexture name="rondo_up0003" x="3120" y="6041" width="616" height="935"/>
+	<SubTexture name="rondo_up0004" x="3744" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0005" x="3744" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0006" x="4368" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0007" x="4368" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0008" x="4992" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0009" x="4992" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0010" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0011" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0012" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0013" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0014" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0015" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0016" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0017" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0018" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+	<SubTexture name="rondo_up0019" x="5616" y="6041" width="616" height="934" frameX="0" frameY="-1" frameWidth="616" frameHeight="935"/>
+</TextureAtlas>

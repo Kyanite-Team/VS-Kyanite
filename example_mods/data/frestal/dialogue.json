@@ -1,0 +1,164 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "beep bop",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "Oh. It's you two. Who are you two?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "talk",
+			"text": "i'm BF. and she's my hot babe GF.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "excited",
+			"text": "and i'm here to battle you uhhhh... i guess",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "confused",
+			"text": "How did you get in there?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "talk",
+			"text": "Well, My dad sent me and my babe to your stadium to rap battle him.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "confused",
+			"text": "My dad also invites the audience and he's still there watching you rap-battling him.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "confused",
+			"text": "Little girl, I'm a bad mood. I don't think I'm gonna rap-battle your boyfriend.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "talk",
+			"text": "But, mister... Can't you just do it now? Pretty pleeeeeaseeeee...",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "just do it, sir. it is not that bad.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "You... sure about this?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.095,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "talk",
+			"text": "YES!",
+			"boxState": "angry",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "Okay okay.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.105,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "talk",
+			"text": "If your boyfriend loses this,",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "pissed",
+			"text": "Something bad will happen.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.145,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "talk",
+			"text": "You understand, blue haired boy?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "shocked",
+			"text": "alright alright! i understand that already!",
+			"boxState": "angry",
+			"sound": "none",
+			"speed": 0.035,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Ok, let's do it.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "excited",
+			"text": "",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		}
+	]
+}

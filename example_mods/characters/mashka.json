@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				260
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MashkaIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				260
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Mashkayes",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				260
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Mashkayes",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				260
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Mashkayes",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				260
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Mashkayes",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mashka puski",
+	"position": [
+		0,
+		-230
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		100
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

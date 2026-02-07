@@ -1,0 +1,68 @@
+{
+	"dialogue": [
+		{
+			"expression": "confused",
+			"text": "What the-",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "novel"
+		},
+		{
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "novel",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Why are you doing here in my house?"
+		},
+		{
+			"expression": "talk",
+			"text": "Beep bop bap skbeep iskjdfghdfhkshdfljhslfjd",
+			"boxState": "normal",
+			"sound": "bfdia",
+			"speed": 0.05,
+			"portrait": "bf-og"
+		},
+		{
+			"expression": "confused",
+			"text": "???",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.145,
+			"portrait": "novel"
+		},
+		{
+			"expression": "confused",
+			"text": "Do you want me to rap-battle you?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "novel"
+		},
+		{
+			"expression": "talk",
+			"text": "BEEP BOP BA SKIBIDI BOP BAP BESH",
+			"boxState": "normal",
+			"sound": "bfdia",
+			"speed": 0.05,
+			"portrait": "bf-og"
+		},
+		{
+			"expression": "talk",
+			"text": "Ugh...",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.065,
+			"portrait": "novel"
+		},
+		{
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "novel",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Fine."
+		}
+	]
+}

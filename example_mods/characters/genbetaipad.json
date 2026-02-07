@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				-270
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "baby_ipad_idle",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				151,
+				-270
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "baby_ipad_left",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				42,
+				-269
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "baby_ipad_down",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-56,
+				-80
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "baby_ipad_up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-59,
+				-271
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "baby_ipad_right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/GenBetaIpad",
+	"position": [
+		70,
+		60
+	],
+	"healthicon": "baby",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		60,
+		230
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

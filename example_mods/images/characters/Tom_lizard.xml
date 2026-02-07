@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Tom_lizard.png">
+	<!-- Created with Adobe Animate version 24.0.7.61 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Tom Down0000" x="20" y="20" width="458" height="706" pivotX="0" pivotY="0" frameX="0" frameY="-7" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0001" x="20" y="20" width="458" height="706" frameX="0" frameY="-7" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0002" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0003" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0004" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0005" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0006" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0007" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0008" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0009" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0010" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0011" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0012" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0013" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0014" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0015" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0016" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0017" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0018" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0019" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0020" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0021" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0022" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0023" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0024" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0025" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Down0026" x="498" y="20" width="437" height="713" frameX="-9" frameY="0" frameWidth="458" frameHeight="713"/>
+	<SubTexture name="Tom Hey0000" x="955" y="20" width="410" height="728" pivotX="-0.05" pivotY="0" frameX="-4" frameY="0" frameWidth="414" frameHeight="728"/>
+	<SubTexture name="Tom Hey0001" x="955" y="20" width="410" height="728" frameX="-4" frameY="0" frameWidth="414" frameHeight="728"/>
+	<SubTexture name="Tom Hey0002" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0003" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0004" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0005" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0006" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0007" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0008" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0009" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0010" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0011" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0012" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0013" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0014" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0015" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0016" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Hey0017" x="1385" y="20" width="414" height="728"/>
+	<SubTexture name="Tom Idle0000" x="1819" y="20" width="416" height="704" pivotX="-0.05" pivotY="0" frameX="-6" frameY="-25" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0001" x="1819" y="20" width="416" height="704" frameX="-6" frameY="-25" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0002" x="2255" y="20" width="420" height="708" frameX="-5" frameY="-20" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0003" x="2695" y="20" width="419" height="708" frameX="-6" frameY="-20" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0004" x="3134" y="20" width="422" height="723" frameX="-4" frameY="-5" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0005" x="3134" y="20" width="422" height="723" frameX="-4" frameY="-5" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0006" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0007" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0008" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0009" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0010" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0011" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0012" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Idle0013" x="3576" y="20" width="427" height="728" frameX="0" frameY="0" frameWidth="427" frameHeight="729"/>
+	<SubTexture name="Tom Left0000" x="20" y="768" width="440" height="728" pivotX="0" pivotY="0" frameX="-4" frameY="0" frameWidth="454" frameHeight="728"/>
+	<SubTexture name="Tom Left0001" x="20" y="768" width="440" height="728" frameX="-4" frameY="0" frameWidth="454" frameHeight="728"/>
+	<SubTexture name="Tom Left0002" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0003" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0004" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0005" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0006" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0007" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0008" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0009" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0010" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0011" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0012" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0013" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0014" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0015" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0016" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0017" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0018" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0019" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0020" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0021" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0022" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0023" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0024" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0025" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Left0026" x="480" y="768" width="454" height="728"/>
+	<SubTexture name="Tom Miss0000" x="954" y="768" width="485" height="810" pivotX="0" pivotY="0" frameX="0" frameY="-8" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0001" x="954" y="768" width="485" height="810" frameX="0" frameY="-8" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0002" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0003" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0004" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0005" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0006" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0007" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0008" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0009" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0010" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0011" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0012" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0013" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0014" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0015" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0016" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0017" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0018" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0019" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0020" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0021" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0022" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0023" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0024" x="1934" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0025" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Miss0026" x="1459" y="768" width="455" height="818" frameX="-9" frameY="0" frameWidth="485" frameHeight="818"/>
+	<SubTexture name="Tom Right0000" x="2409" y="768" width="419" height="731" pivotX="-0.1" pivotY="0" frameX="-21" frameY="0" frameWidth="442" frameHeight="731"/>
+	<SubTexture name="Tom Right0001" x="2409" y="768" width="419" height="731" frameX="-21" frameY="0" frameWidth="442" frameHeight="731"/>
+	<SubTexture name="Tom Right0002" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0003" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0004" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0005" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0006" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0007" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0008" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0009" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0010" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0011" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0012" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0013" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0014" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0015" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0016" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0017" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0018" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0019" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0020" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0021" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0022" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0023" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0024" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0025" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Right0026" x="2848" y="768" width="442" height="731"/>
+	<SubTexture name="Tom Up0000" x="3310" y="768" width="425" height="735" pivotX="0" pivotY="-0.05" frameX="0" frameY="0" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0001" x="3310" y="768" width="425" height="735" frameX="0" frameY="0" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0002" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0003" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0004" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0005" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0006" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0007" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0008" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0009" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0010" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0011" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0012" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0013" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0014" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0015" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0016" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0017" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0018" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0019" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0020" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0021" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0022" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0023" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0024" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0025" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+	<SubTexture name="Tom Up0026" x="20" y="1606" width="435" height="728" frameX="-3" frameY="-7" frameWidth="438" frameHeight="735"/>
+</TextureAtlas>

@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				320,
+				222
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "bouf idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				308,
+				219
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bouf left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				316,
+				220
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bouf up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				318,
+				223
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bouf right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				315,
+				223
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bouf down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				312,
+				222
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "bouf miss"
+		},
+		{
+			"offsets": [
+				312,
+				222
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "bouf miss"
+		},
+		{
+			"offsets": [
+				312,
+				222
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "bouf miss"
+		},
+		{
+			"offsets": [
+				312,
+				222
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "bouf miss"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bouf",
+	"position": [
+		0,
+		-70
+	],
+	"healthicon": "bouf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		400,
+		160
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

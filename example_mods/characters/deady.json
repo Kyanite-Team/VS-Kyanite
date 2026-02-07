@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				140,
+				196
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "death",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				140,
+				196
+			],
+			"anim": "deathConfirm",
+			"fps": 25,
+			"name": "death",
+			"indices": [
+				17,
+				16,
+				15,
+				14,
+				13,
+				12,
+				11,
+				10,
+				9,
+				8,
+				7,
+				6,
+				5,
+				4,
+				3,
+				2,
+				1,
+				0
+			]
+		},
+		{
+			"offsets": [
+				140,
+				196
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [
+				17,
+				17
+			],
+			"name": "death"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Dead_ass",
+	"position": [
+		300,
+		360
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-20,
+		-150
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

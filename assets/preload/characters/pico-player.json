@@ -1,0 +1,201 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				3,
+				0
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "idle",
+			"loop": false,
+			"name": "Pico Idle Dance"
+		},
+		{
+			"offsets": [
+				128,
+				27
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "Pico NOTE LEFT miss"
+		},
+		{
+			"offsets": [
+				318,
+				487
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "Pico Down Note MISS"
+		},
+		{
+			"offsets": [
+				-32,
+				48
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "pico Up note0"
+		},
+		{
+			"offsets": [
+				-24,
+				97
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "pico Up note miss"
+		},
+		{
+			"offsets": [
+				37,
+				35
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "Pico Note Right Miss"
+		},
+		{
+			"offsets": [
+				39,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "Pico HEY"
+		},
+		{
+			"offsets": [
+				-16,
+				-8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "CanHit",
+			"loop": false,
+			"name": "Pico hit spray can"
+		},
+		{
+			"offsets": [
+				6,
+				3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "cock",
+			"loop": false,
+			"name": "Pico gun reload"
+		},
+		{
+			"offsets": [
+				443,
+				163
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "shoot",
+			"loop": false,
+			"name": "Pico shoot spray can"
+		},
+		{
+			"offsets": [
+				126,
+				-14
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Pico NOTE LEFT0"
+		},
+		{
+			"offsets": [
+				36,
+				-11
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Pico Note Right0"
+		},
+		{
+			"offsets": [
+				417,
+				83
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "shoot 1",
+			"loop": false,
+			"name": "Pico shoot 1"
+		},
+		{
+			"offsets": [
+				399,
+				183
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "shoot 2",
+			"loop": false,
+			"name": "Pico shoot 2"
+		},
+		{
+			"offsets": [
+				94,
+				95
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Pico Down Note0"
+		},
+		{
+			"offsets": [
+				191,
+				-1
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "dodge",
+			"loop": false,
+			"name": "Pico dodge"
+		}
+	],
+	"vocals_file": "pico",
+	"no_antialiasing": false,
+	"image": "characters/Pico_Playable",
+	"position": [
+		0,
+		300
+	],
+	"healthicon": "pico",
+	"flip_x": true,
+	"healthbar_colors": [
+		183,
+		216,
+		85
+	],
+	"camera_position": [
+		220,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

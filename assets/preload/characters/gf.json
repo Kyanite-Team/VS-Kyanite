@@ -1,0 +1,136 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-76,
+				139
+			],
+			"fps": 24,
+			"anim": "sad",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"name": "gf sad"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				181,
+				133
+			],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "gf cheer",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-38,
+				142
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "gf dance left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-74,
+				129
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "gf dance right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-77,
+				130
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "gf left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-77,
+				121
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "gf down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-76,
+				132
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "gf up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-76,
+				126
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "gf right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-74,
+				128
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "gf scared",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GF_assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-130,
+		-140
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

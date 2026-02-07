@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="logoBumpin.png">
+	<!-- Created with Adobe Animate version 24.0.7.61 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="logo bumpin0000" x="0" y="0" width="979" height="542" pivotX="0" pivotY="0"/>
+	<SubTexture name="logo bumpin0001" x="0" y="0" width="979" height="542"/>
+	<SubTexture name="logo bumpin0002" x="979" y="0" width="966" height="535" frameX="-6" frameY="-3" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0003" x="1945" y="0" width="942" height="522" frameX="-18" frameY="-10" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0004" x="2887" y="0" width="935" height="518" frameX="-22" frameY="-12" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0005" x="0" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0006" x="923" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0007" x="923" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0008" x="0" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0009" x="0" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0010" x="923" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0011" x="923" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0012" x="0" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+	<SubTexture name="logo bumpin0013" x="0" y="542" width="923" height="512" frameX="-28" frameY="-15" frameWidth="979" frameHeight="542"/>
+</TextureAtlas>

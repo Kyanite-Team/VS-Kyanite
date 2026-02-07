@@ -1,0 +1,51 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"shakey arrows complex",
+						"10",
+						"10"
+					]
+				]
+			],
+			[
+				7500,
+				[
+					[
+						"Change Note Skin",
+						"Nchriski, dad",
+						"false"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bouf"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"zerkshot"
+					],
+					[
+						"Change Character",
+						"GF",
+						"gf oops"
+					]
+				]
+			],
+			[
+				8000,
+				[
+					[
+						"sing shake",
+						"",
+						""
+					]
+				]
+			]
+		]
+	}
+}

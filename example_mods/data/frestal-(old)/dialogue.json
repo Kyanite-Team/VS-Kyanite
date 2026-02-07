@@ -1,0 +1,260 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "novel",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Heya, Novel here."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "novel",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I had to tell ya that this dialogue is over 2 years."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "novel",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yep. I'm not joking lol"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "novel",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "So, enjoy!"
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Hey, BF."
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Yes?"
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "We're in the Dragon's castle. "
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "As my dad said to you about that..."
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "What...?"
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.07,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "He wants to kill you."
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.035,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "shocked",
+			"text": "Nah nah nah bullsh*t!!!!!!"
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "I don't want to die. JEEZ!"
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "shocked",
+			"text": "*gulp*"
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "What?"
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.02,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "shocked",
+			"text": "A dragon will burn us!"
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.02,
+			"portrait": "gf",
+			"boxState": "angry",
+			"expression": "shocked",
+			"text": "NOOOOOOOOOOO!!!!!!!!!!"
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.02,
+			"portrait": "gf",
+			"boxState": "angry",
+			"expression": "shocked",
+			"text": "PLEASE DON'T BURN US ALIVE!!!"
+		},
+		{
+			"sound": "Chrdia",
+			"speed": 0.05,
+			"portrait": "chriski",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Well... I don't."
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Who are you tho?"
+		},
+		{
+			"sound": "Chrdia",
+			"speed": 0.05,
+			"portrait": "chriski",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Chriski the Dragon."
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.02,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "YOOOOOOOOOOOOOO!!!"
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "I forgor about this tho. :skill:"
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "How are you, Chriski? What can you do?"
+		},
+		{
+			"sound": "Chrdia",
+			"speed": 0.05,
+			"portrait": "chriski",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I'm 26 years old. I can breath fire, run really fast..."
+		},
+		{
+			"sound": "Chrdia",
+			"speed": 0.05,
+			"portrait": "chriski",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "I don't know about it... and I'm a little\\nconfused."
+		},
+		{
+			"sound": "GFdia",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Why not?"
+		},
+		{
+			"sound": "Chrdia",
+			"speed": 0.05,
+			"portrait": "chriski",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "I don't know. Shame to me."
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Chriski."
+		},
+		{
+			"sound": "Chrdia",
+			"speed": 0.05,
+			"portrait": "chriski",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "What is it, you little boy?"
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Can we just rap?"
+		},
+		{
+			"sound": "Chrdia",
+			"speed": 0.05,
+			"portrait": "chriski",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Sure, why not."
+		},
+		{
+			"sound": "BFdia",
+			"speed": 0.03,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "Yippppeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\\neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\\neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\\neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!"
+		}
+	]
+}

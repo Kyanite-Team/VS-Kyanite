@@ -1,0 +1,220 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Hey, Kyanite.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate"
+		},
+		{
+			"expression": "confused",
+			"text": "Ummmm",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.075,
+			"portrait": "kate"
+		},
+		{
+			"expression": "confused",
+			"text": "Wait, isn't this a microphone?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate"
+		},
+		{
+			"expression": "talk",
+			"text": "Yes it is.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite"
+		},
+		{
+			"expression": "talk",
+			"text": "Oh, a pink dragon.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "confused",
+			"text": "Boyfriend, I-",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "confused",
+			"text": "hm?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "Can I ask her who's she?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "yea sure.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Hey Lady!",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "shocked",
+			"text": "Wha-",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate"
+		},
+		{
+			"expression": "confused",
+			"text": "Who are you?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate"
+		},
+		{
+			"expression": "confused",
+			"text": "and who's that guy?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate"
+		},
+		{
+			"expression": "talk",
+			"text": "I'm GF.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "And this is my husband BF.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "Oh.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.095,
+			"portrait": "kate"
+		},
+		{
+			"expression": "talk",
+			"text": "Maybe hi BF.",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate"
+		},
+		{
+			"expression": "talk",
+			"text": "yo",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "wanna rap?",
+			"boxState": "normal",
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"sound": "none",
+			"speed": 0.105,
+			"portrait": "kate",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Rap?"
+		},
+		{
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "yes"
+		},
+		{
+			"sound": "none",
+			"speed": 0.065,
+			"portrait": "kate",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Kyanite, does he mean... singing?"
+		},
+		{
+			"sound": "none",
+			"speed": 0.065,
+			"portrait": "kyanite",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "I don't know about this, Kate."
+		},
+		{
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kyanite",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Maybe both of them."
+		},
+		{
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Both?"
+		},
+		{
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Well, I can do that."
+		},
+		{
+			"sound": "none",
+			"speed": 0.05,
+			"portrait": "kate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Now, let's play a song then."
+		}
+	]
+}

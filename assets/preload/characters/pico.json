@@ -1,0 +1,168 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "idle",
+			"loop": false,
+			"name": "Pico Idle Dance"
+		},
+		{
+			"offsets": [
+				139,
+				35
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "Pico Note Right Miss"
+		},
+		{
+			"offsets": [
+				-21,
+				-13
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Pico NOTE LEFT0"
+		},
+		{
+			"offsets": [
+				-19,
+				28
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "Pico NOTE LEFT miss"
+		},
+		{
+			"offsets": [
+				27,
+				48
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "pico Up note0"
+		},
+		{
+			"offsets": [
+				23,
+				97
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "pico Up note miss"
+		},
+		{
+			"offsets": [
+				46,
+				487
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "Pico Down Note MISS"
+		},
+		{
+			"offsets": [
+				87,
+				83
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "attack 1",
+			"loop": false,
+			"name": "Pico shoot 1"
+		},
+		{
+			"offsets": [
+				139,
+				-11
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Pico Note Right0"
+		},
+		{
+			"offsets": [
+				18,
+				183
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "attack 2",
+			"loop": false,
+			"name": "Pico shoot 2"
+		},
+		{
+			"offsets": [
+				30,
+				95
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Pico Down Note0"
+		},
+		{
+			"offsets": [
+				168,
+				-8
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "hit",
+			"loop": false,
+			"name": "Pico hit spray can"
+		},
+		{
+			"offsets": [
+				40,
+				0
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "pre-attack",
+			"loop": false,
+			"name": "Pico gun reload"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Pico_FNF_assetss",
+	"position": [
+		0,
+		300
+	],
+	"healthicon": "pico",
+	"flip_x": true,
+	"healthbar_colors": [
+		183,
+		216,
+		85
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

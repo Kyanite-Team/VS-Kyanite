@@ -1,0 +1,32 @@
+{
+	"storyName": "Your average goober",
+	"difficulties": "Normal, Hard, Hell",
+	"hideFreeplay": false,
+	"weekBackground": "walk",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"tommyw2",
+		""
+	],
+	"songs": [
+		[
+			"Goobs",
+			"tom",
+			[
+				100,
+				176,
+				76
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "the lizard",
+	"hiddenUntilUnlocked": false
+}

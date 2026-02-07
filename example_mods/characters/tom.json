@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				-32
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Tom Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				-30
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Tom Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-25,
+				-47
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Tom Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-42,
+				-26
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Tom Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-44,
+				-32
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Tom Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				-32
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Tom Hey",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Tom_lizard",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "tom",
+	"flip_x": true,
+	"healthbar_colors": [
+		100,
+		176,
+		76
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

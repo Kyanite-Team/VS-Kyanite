@@ -1,0 +1,104 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "Normal, Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": false,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"boin",
+			"ball",
+			[
+				255,
+				0,
+				33
+			]
+		],
+		[
+			"maw",
+			"cat",
+			[
+				186,
+				113,
+				253
+			]
+		],
+		[
+			"idk",
+			"dad",
+			[
+				66,
+				53,
+				0
+			]
+		],
+		[
+			"kids",
+			"baby",
+			[
+				255,
+				193,
+				193
+			]
+		],
+		[
+			"yo-ts-song-is-so-lit",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"frosty",
+			"bouf",
+			[
+				172,
+				232,
+				255
+			]
+		],
+		[
+			"frestal (old)",
+			"chris-old",
+			[
+				0,
+				27,
+				131
+			]
+		],
+		[
+			"scary",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"dad battle",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": true,
+	"weekName": "Custom Week"
+}

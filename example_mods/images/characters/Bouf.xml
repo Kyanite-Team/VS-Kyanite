@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Bouf.png">
+	<SubTexture name="bouf miss0000" x="0" y="418" width="437" height="441" frameX="-326" frameY="-561" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf miss0001" x="0" y="418" width="437" height="441" frameX="-326" frameY="-561" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf miss0002" x="0" y="418" width="437" height="441" frameX="-326" frameY="-561" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf miss0003" x="0" y="418" width="437" height="441" frameX="-326" frameY="-561" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf miss0004" x="0" y="418" width="437" height="441" frameX="-326" frameY="-561" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf right0001" x="463" y="0" width="431" height="418" frameX="-390" frameY="-584" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf right0000" x="0" y="0" width="463" height="418" frameX="-437" frameY="-584" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf up0001" x="463" y="418" width="400" height="416" frameX="-344" frameY="-586" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf up0000" x="894" y="0" width="373" height="463" frameX="-383" frameY="-539" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf down0001" x="0" y="859" width="435" height="367" frameX="-323" frameY="-635" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf down0000" x="435" y="859" width="438" height="336" frameX="-319" frameY="-666" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf left0001" x="0" y="1226" width="380" height="419" frameX="-288" frameY="-583" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf left0000" x="1267" y="413" width="385" height="421" frameX="-241" frameY="-581" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf idle0005" x="1267" y="0" width="399" height="413" frameX="-352" frameY="-589" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf idle0004" x="1267" y="0" width="399" height="413" frameX="-352" frameY="-589" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf idle0003" x="380" y="1226" width="381" height="408" frameX="-357" frameY="-594" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf idle0002" x="380" y="1226" width="381" height="408" frameX="-357" frameY="-594" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf idle0001" x="894" y="463" width="351" height="392" frameX="-370" frameY="-610" frameWidth="1000" frameHeight="1000"/>
+	<SubTexture name="bouf idle0000" x="894" y="463" width="351" height="392" frameX="-370" frameY="-610" frameWidth="1000" frameHeight="1000"/>
+</TextureAtlas>

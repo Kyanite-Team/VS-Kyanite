@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				-32
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Tom Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-47
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Tom Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-26
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Tom Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-43,
+				-31
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Tom Hey",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-17,
+				-29
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Tom Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				22
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Tom Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				-32
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Tom Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				22
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Tom Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				22
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Tom Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				22
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Tom Miss",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Tom_lizard",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "tom",
+	"flip_x": true,
+	"healthbar_colors": [
+		100,
+		176,
+		76
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

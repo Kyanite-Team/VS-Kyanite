@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				166,
+				268
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Novel Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				89,
+				254
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Novel Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				510
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Novel Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				247
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Novel Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				134,
+				159
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Novel Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				134,
+				159
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Novel Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				134,
+				159
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Novel Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				134,
+				159
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Novel Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				329
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Novel Idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Novel",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "novel",
+	"flip_x": false,
+	"healthbar_colors": [
+		187,
+		0,
+		65
+	],
+	"camera_position": [
+		10,
+		-320
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

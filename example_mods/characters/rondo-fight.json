@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [117, 383],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "rondo_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [118, 381],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "rondo_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [117, 387],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "rondo_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [118, 380],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "rondo_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [116, 383],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "rondo_miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [115, 383],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "rondo_miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [115, 383],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "rondo_miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [115, 383],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "rondo_miss",
+			"indices": []
+		},
+		{
+			"offsets": [118, 390],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "rondo_hey"
+		},
+		{
+			"offsets": [404, 545],
+			"loop": false,
+			"fps": 24,
+			"anim": "throw1",
+			"indices": [],
+			"name": "rondo_throw1"
+		},
+		{
+			"offsets": [330, 525],
+			"loop": false,
+			"fps": 24,
+			"anim": "throw2",
+			"indices": [],
+			"name": "rondo_throw2"
+		},
+		{
+			"offsets": [121, 390],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "rondo_idle"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/rondo_fight",
+	"position": [-260, 370],
+	"healthicon": "pl",
+	"flip_x": false,
+	"healthbar_colors": [69, 136, 229],
+	"camera_position": [-110, -340],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": true
+}
