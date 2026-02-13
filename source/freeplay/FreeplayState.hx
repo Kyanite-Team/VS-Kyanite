@@ -23,6 +23,7 @@ import sys.FileSystem;
 #end
 import freeplay.SongIcon;
 import freeplay.SongText;
+import flixel.util.FlxTimer;
 
 using StringTools;
 
@@ -125,7 +126,7 @@ class FreeplayState extends MusicBeatState
 		songText.clipWidth = 200;
 
 		icon = new SongIcon();
-		icon.scale.set(0.5, 0.5);
+		// icon.scale.set(0.5, 0.5);
 		// icon.sprTracker = songText;
 		icon.x = (FlxG.width / 2 + 10) - (disc.width / 2) - icon.width;
 		icon.y = disc.height / 2 - 140;
@@ -136,6 +137,7 @@ class FreeplayState extends MusicBeatState
 			grpSongs.push(songs[i].songName);
 			iconArray.push(songs[i].songCharacter);
 		}
+		trace(iconArray);
 		WeekData.setDirectoryFromWeek();
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
@@ -371,14 +373,23 @@ class FreeplayState extends MusicBeatState
 				colorTween.cancel();
 			}
 
-			if (FlxG.keys.pressed.SHIFT)
+			icon.animation.play("confirm");
+			if(icon.animation.curAnim.finished)
+				icon.animation.play("confirm-hold");
+
+			var shiftHeld:Bool = FlxG.keys.pressed.SHIFT;
+
+			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new ChartingState());
-			}
-			else
-			{
-				LoadingState.loadAndSwitchState(new PlayState());
-			}
+				if (shiftHeld)
+				{
+					LoadingState.loadAndSwitchState(new ChartingState());
+				}
+				else
+				{
+					LoadingState.loadAndSwitchState(new PlayState());
+				}
+			});
 
 			FlxG.sound.music.volume = 0;
 
@@ -461,6 +472,7 @@ class FreeplayState extends MusicBeatState
 
 		Paths.currentModDirectory = songs[curSelected].folder;
 		icon.changeIcon(iconArray[curSelected]);
+		icon.animation.play("idle");
 		songText.text = grpSongs[curSelected];
 		if (songText.tooLong)
 		{

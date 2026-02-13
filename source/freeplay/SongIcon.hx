@@ -30,37 +30,14 @@ class SongIcon extends FlxSprite
 	private var iconOffsets:Array<Float> = [0, 0, 0];
 	public function changeIcon(char:String) {
 		if(this.char != char) {
-			var name:String = 'icons/' + char;
-			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + char; //Older versions of psych engine's support
-			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
-			var file:Dynamic = Paths.image(name);
+			var name:String = 'freeplay/icons/' + char + "pixel";
+			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'freeplay/icons/icon' + char+"pixel"; //Older versions of psych engine's support
+			// if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
 
-			loadGraphic(file); //Load stupidly first for getting the file size
-			var width2 = width;
-			if (width == 450) {
-				loadGraphic(file, true, Math.floor(width / 3), Math.floor(height)); //Then load it fr // winning icons go br
-				iconOffsets[0] = (width - 150) / 3;
-				iconOffsets[1] = (width - 150) / 3;
-				iconOffsets[2] = (width - 150) / 3;
-			} else {
-				loadGraphic(file, true, Math.floor(width / 2), Math.floor(height)); //Then load it fr // winning icons go br
-				iconOffsets[0] = (width - 150) / 2;
-				iconOffsets[1] = (width - 150) / 2;
-			}
-			
-			updateHitbox();
-			if (width2 == 450) {
-				animation.add(char, [0, 1, 2], 0, false);
-			} else {
-				animation.add(char, [0, 1], 0, false);
-			}
-			animation.play(char);
-			this.char = char;
-
-			antialiasing = ClientPrefs.globalAntialiasing;
-			if(char.endsWith('-pixel')) {
-				antialiasing = false;
-			}
+			frames = Paths.getSparrowAtlas(name);
+			animation.addByPrefix("idle", "idle", 24);
+			animation.addByPrefix("confirm", "confirm", 24);
+			animation.addByPrefix("confirm-hold", "confirm-hold", 24);
 		}
 	}
 
