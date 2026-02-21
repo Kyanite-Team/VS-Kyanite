@@ -7,7 +7,6 @@ using StringTools;
 
 class SongIcon extends FlxSprite
 {
-	public var sprTracker:FlxSprite;
 	private var isOldIcon:Bool = false;
 	private var char:String = '';
 
@@ -19,26 +18,32 @@ class SongIcon extends FlxSprite
 		scrollFactor.set();
 	}
 
-	override function update(elapsed:Float)
-	{
-		super.update(elapsed);
-
-		if (sprTracker != null)
-			setPosition(sprTracker.x - sprTracker.width+20, sprTracker.y-30);
-	}
-
 	private var iconOffsets:Array<Float> = [0, 0, 0];
-	public function changeIcon(char:String) {
-		if(this.char != char) {
+
+	public function changeIcon(char:String)
+	{
+		if (this.char != char)
+		{
 			var name:String = 'freeplay/icons/' + char + "pixel";
-			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'freeplay/icons/icon' + char+"pixel"; //Older versions of psych engine's support
+			if (!Paths.fileExists('images/' + name + '.png', IMAGE))
+				name = 'freeplay/icons/icon' + char + "pixel"; // Older versions of psych engine's support
 			// if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
 
 			frames = Paths.getSparrowAtlas(name);
-			animation.addByPrefix("idle", "idle", 24);
-			animation.addByPrefix("confirm", "confirm", 24);
-			animation.addByPrefix("confirm-hold", "confirm-hold", 24);
+			animation.addByPrefix("idle", "idle", 12, true);
+			animation.addByPrefix("confirm", "confirm", 12, false);
+			animation.addByPrefix("confirm-hold", "confirm-hold", 12, true);
 		}
+	}
+
+	public function confirm():Void
+	{
+		animation.play("confirm");
+		animation.onFinish.add(function(name:String):Void
+		{
+			if (name == 'confirm')
+				animation.play('confirm-hold');
+		});
 	}
 
 	override function updateHitbox()
@@ -48,7 +53,8 @@ class SongIcon extends FlxSprite
 		offset.y = iconOffsets[1];
 	}
 
-	public function getCharacter():String {
+	public function getCharacter():String
+	{
 		return char;
 	}
 }

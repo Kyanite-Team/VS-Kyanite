@@ -126,10 +126,10 @@ class FreeplayState extends MusicBeatState
 		songText.clipWidth = 200;
 
 		icon = new SongIcon();
-		// icon.scale.set(0.5, 0.5);
-		// icon.sprTracker = songText;
+		icon.scale.set(1.7, 1.7);
+		icon.updateHitbox();
 		icon.x = (FlxG.width / 2 + 10) - (disc.width / 2) - icon.width;
-		icon.y = disc.height / 2 - 140;
+		icon.y = disc.height / 2 - 90;
 		add(icon);
 
 		for (i in 0...songs.length)
@@ -373,9 +373,10 @@ class FreeplayState extends MusicBeatState
 				colorTween.cancel();
 			}
 
-			icon.animation.play("confirm");
-			if(icon.animation.curAnim.finished)
-				icon.animation.play("confirm-hold");
+			icon.confirm();
+			songText.flickerText();
+
+			FlxG.sound.play(Paths.sound("confirmMenu"), 0.7);
 
 			var shiftHeld:Bool = FlxG.keys.pressed.SHIFT;
 

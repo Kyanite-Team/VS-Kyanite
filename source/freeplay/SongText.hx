@@ -8,6 +8,7 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import openfl.filters.BitmapFilterQuality;
 import flixel.util.FlxColor;
+import openfl.display.BlendMode;
 
 class SongText extends FlxSpriteGroup
 {
@@ -16,7 +17,7 @@ class SongText extends FlxSpriteGroup
 
 	public var text(default, set):Null<String> = "";
 
-    var glowColor:FlxColor = 0xFF00ccff;
+	var glowColor:FlxColor = 0xFF00ccff;
 
 	var whiteText:FlxText;
 
@@ -134,9 +135,40 @@ class SongText extends FlxSpriteGroup
 		scale.y = 1;
 		if (moveTimer != null)
 			moveTimer.cancel();
-        if (moveTween != null)
-            moveTween.cancel();
+		if (moveTween != null)
+			moveTween.cancel();
 		whiteText.offset.x = 0;
 		whiteText.clipRect = new FlxRect(whiteText.offset.x, 0, clipWidth, whiteText.height);
+	}
+
+	var flickerState:Bool = false;
+	var flickerTimer:Null<FlxTimer>;
+
+	public function flickerText():Void
+	{
+		resetText();
+		flickerTimer = new FlxTimer().start(1 / 24, flickerProgress, 19);
+	}
+
+	function flickerProgress(timer:FlxTimer):Void
+	{
+		if (flickerState == true)
+		{
+			whiteText.blend = BlendMode.ADD;
+			whiteText.color = 0xFFFFFFFF;
+			whiteText.textField.filters = [
+				new openfl.filters.GlowFilter(0xFFFFFF, 1, 5, 5, 210, BitmapFilterQuality.MEDIUM),
+				// new openfl.filters.BlurFilter(5, 5, BitmapFilterQuality.LOW)
+			];
+		}
+		else
+		{
+			whiteText.color = 0xFFDDDDDD;
+			whiteText.textField.filters = [
+				new openfl.filters.GlowFilter(0xDDDDDD, 1, 5, 5, 210, BitmapFilterQuality.MEDIUM),
+				// new openfl.filters.BlurFilter(5, 5, BitmapFilterQuality.LOW)
+			];
+		}
+		flickerState = !flickerState;
 	}
 }

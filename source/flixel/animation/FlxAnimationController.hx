@@ -3,7 +3,8 @@ package flixel.animation;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxFrame;
-import flixel.util.FlxDestroyUtil.IFlxDestroyable;
+import flixel.util.FlxDestroyUtil;
+import flixel.util.FlxSignal;
 
 class FlxAnimationController implements IFlxDestroyable
 {
@@ -62,6 +63,14 @@ class FlxAnimationController implements IFlxDestroyable
 	 * A function that has 1 parameter: a string name - animation name.
 	 */
 	public var finishCallback:(name:String) -> Void;
+
+	/**
+	 * Dispatches each time the current animation finishes.
+	 * 
+	 * @param   animName  The name of the current animation
+	 * @since 5.9.0
+	 */
+	public final onFinish = new FlxTypedSignal<(animName:String)->Void>();
 
 	/**
 	 * Internal, reference to owner sprite.
@@ -143,6 +152,8 @@ class FlxAnimationController implements IFlxDestroyable
 
 	public function destroy():Void
 	{
+		FlxDestroyUtil.destroy(onFinish);
+
 		destroyAnimations();
 		_animations = null;
 		callback = null;
@@ -682,6 +693,8 @@ class FlxAnimationController implements IFlxDestroyable
 		{
 			finishCallback(name);
 		}
+
+		onFinish.dispatch(name);
 	}
 
 	function byNamesHelper(AddTo:Array<Int>, FrameNames:Array<String>):Void
