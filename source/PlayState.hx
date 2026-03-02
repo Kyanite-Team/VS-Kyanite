@@ -72,6 +72,9 @@ import sys.io.File;
 import vlc.MP4Handler;
 #end
 
+import transition.stickers.StickerSubState;
+import freeplay.FreeplayState;
+
 using StringTools;
 
 class PlayState extends MusicBeatState
@@ -4462,11 +4465,7 @@ class PlayState extends MusicBeatState
 				trace('WENT BACK TO FREEPLAY??');
 				WeekData.loadTheFirstEnabledMod();
 				cancelMusicFadeTween();
-				if (FlxTransitionableState.skipNextTransIn)
-				{
-					CustomFadeTransition.nextCamera = null;
-				}
-				MusicBeatState.switchState(new freeplay.FreeplayState());
+				openSubState(new StickerSubState(null, (sticker) -> FreeplayState.build(sticker)));
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}

@@ -25,9 +25,12 @@ import freeplay.SongIcon;
 import freeplay.SongText;
 import flixel.util.FlxTimer;
 
+import transition.stickers.StickerSubState;
+import flixel.FlxCamera;
+
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class FreeplayState extends MusicBeatSubstate
 {
 	var songs:Array<SongMetadata> = [];
 
@@ -61,6 +64,18 @@ class FreeplayState extends MusicBeatState
 	var songText:SongText;
 	var icon:SongIcon;
 
+	var stickerSubState:Null<StickerSubState> = null;
+
+	public function new(?stickers:StickerSubState){
+		super();
+		if (stickers?.members != null)
+		{
+			stickerSubState = stickers;
+		}
+	}
+
+	var freeCam:FlxCamera;
+
 	override function create()
 	{
 		// Paths.clearStoredMemory();
@@ -74,6 +89,10 @@ class FreeplayState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+
+		freeCam = new FlxCamera();
+		freeCam.bgColor = FlxColor.TRANSPARENT;
+		FlxG.cameras.add(freeCam, true);
 
 		for (i in 0...WeekData.weeksList.length)
 		{
@@ -183,6 +202,15 @@ class FreeplayState extends MusicBeatState
 		text.scrollFactor.set();
 		add(text);
 		super.create();
+
+		if (stickerSubState != null)
+		{
+			this.persistentUpdate = true;
+			this.persistentDraw = true;
+
+			openSubState(stickerSubState);
+			stickerSubState.degenStickers();
+		}
 	}
 
 	override function closeSubState()
@@ -405,6 +433,10 @@ class FreeplayState extends MusicBeatState
 		super.update(elapsed);
 	}
 
+	override function destroy(){
+		FlxG.cameras.remove(freeCam);
+	}
+
 	public static function destroyFreeplayVocals()
 	{
 		if (vocals != null)
@@ -537,6 +569,17 @@ class FreeplayState extends MusicBeatState
 		scoreBG.x = FlxG.width - (scoreBG.scale.x / 2);
 		diffText.x = Std.int(scoreBG.x + (scoreBG.width / 2));
 		diffText.x -= diffText.width / 2;
+	}
+
+	// sticker bullsh*t
+	public static function build(?stickers:StickerSubState):MusicBeatState{
+		var result:MainMenuState;
+		result = new MainMenuState();
+		result.openSubState(new FreeplayState(stickers));
+		result.persistentUpdate = false;
+		result.persistentDraw = true;
+
+		return result;
 	}
 }
 

@@ -1,5 +1,6 @@
 package;
 
+import freeplay.FreeplayState;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -20,6 +21,8 @@ import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
+
+import transition.stickers.StickerSubState;
 
 using StringTools;
 
@@ -125,7 +128,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.updateHitbox();
 		}
 
-		FlxG.camera.follow(camFollowPos, null, 1);
+		FlxG.camera.follow(camFollow, null, 1);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -176,7 +179,7 @@ class MainMenuState extends MusicBeatState
 		}
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
-		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+		// camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
 		if (!selectedSomethin)
 		{
@@ -235,7 +238,25 @@ class MainMenuState extends MusicBeatState
 									case 'story_mode':
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
-										MusicBeatState.switchState(new freeplay.FreeplayState());
+										{
+											persistentDraw = true;
+											persistentUpdate = false;
+											FlxTransitionableState.skipNextTransIn = true;
+											FlxTransitionableState.skipNextTransOut = true;
+
+											openSubState(new FreeplayState());
+											subStateOpened.addOnce(state ->
+												{
+													for (i in 0...menuItems.members.length)
+													{
+														menuItems.members[i].revive();
+														menuItems.members[i].alpha = 1;
+														menuItems.members[i].visible = true;
+														selectedSomethin = false;
+													}
+													changeItem(0);
+												});
+											}
 									#if MODS_ALLOWED
 									case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());
@@ -294,5 +315,12 @@ class MainMenuState extends MusicBeatState
 				spr.centerOffsets();
 			}
 		});
+	}
+
+	override function closeSubState()
+	{
+		super.closeSubState();
+		selectedSomethin = false;
+		persistentUpdate = true;
 	}
 }
