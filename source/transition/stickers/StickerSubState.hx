@@ -160,16 +160,20 @@ class StickerSubState extends MusicBeatSubstate
 		trace("Collecting stickers...");
 		var stickers:StickerPack = null;
 
+		trace(STICKER_SET);
+		trace(STICKER_PACK);
+
 		#if sys
-		var modStickerDir = Paths.getPath('images/stickerpacks/$STICKER_SET', TEXT, null);
-		if (!NativeFileSystem.exists(modStickerDir))
+		var asStickerDir = Paths.getPath('images/stickerpacks/$STICKER_SET', TEXT, null);
+		var modStickerDir = Paths.modFolders('images/stickerpacks/$STICKER_SET');
+		if (!NativeFileSystem.exists(asStickerDir) && !NativeFileSystem.exists(modStickerDir))
 		{
-			trace("Missing sticker_set", 'Couldn\'t find sticker set "$STICKER_SET"\n\nin $modStickerDir');
+			trace("Missing sticker_set", 'Couldn\'t find sticker set "$STICKER_SET"\n\nin $asStickerDir\n\n or in$modStickerDir');
 		}
-		else if (!NativeFileSystem.exists('$modStickerDir/stickers.json'))
+		else if (!NativeFileSystem.exists('$asStickerDir/stickers.json')&&!NativeFileSystem.exists('$modStickerDir/stickers.json'))
 		{
 			trace("Missing manifest",
-				'Sticker set $STICKER_SET doesn\'t contain a "stickers.json" file\n\nin $modStickerDir/stickers.json');
+				'Sticker set $STICKER_SET doesn\'t contain a "stickers.json" file\n\nin $asStickerDir/stickers.json\n\n or in $modStickerDir/stickers.json');
 		}
 		else
 		{
@@ -183,6 +187,7 @@ class StickerSubState extends MusicBeatSubstate
 			}
 			catch (x)
 			{
+				trace('Couldn\'t make $STICKER_PACK', 'In "$asStickerDir":\n\n${x.message}');
 				trace('Couldn\'t make $STICKER_PACK', 'In "$modStickerDir":\n\n${x.message}');
 			}
 		}

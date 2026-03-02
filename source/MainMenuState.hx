@@ -244,7 +244,7 @@ class MainMenuState extends MusicBeatState
 											FlxTransitionableState.skipNextTransIn = true;
 											FlxTransitionableState.skipNextTransOut = true;
 
-											openSubState(new FreeplayState());
+											openSubState(new StickerSubState(null, (sticker) -> FreeplayState.build(sticker)));
 											subStateOpened.addOnce(state ->
 												{
 													for (i in 0...menuItems.members.length)

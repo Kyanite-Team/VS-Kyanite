@@ -1,0 +1,15 @@
+{
+    "name": "stickers-set-2",
+    "artist": "Marzisdumb_",
+    "stickers": {
+        "kyanite": ["kyaniteSticker1","kyaniteSticker2","kyaniteSticker3"],
+        "kate": ["kateSticker1","kateSticker2","kateSticker3"],
+        "bf": ["bfSticker1", "bfSticker2", "bfSticker3"],
+        "gf": ["gfSticker1", "gfSticker2", "gfSticker3"]
+    },
+    "stickerPacks":{
+        "all": ["kyanite", "kate", "bf", "gf"],
+        "tutorial": ["bf", "gf"],
+        "kk": ["kyanite", "kate"]
+    }
+}

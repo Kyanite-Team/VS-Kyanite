@@ -57,6 +57,9 @@ import hscript.Expr;
 import Discord;
 #end
 
+// sticker bullshit
+import transition.stickers.StickerSubState;
+
 using StringTools;
 
 class FunkinLua {
@@ -212,6 +215,10 @@ class FunkinLua {
 		set('scriptName', scriptName);
 		set('currentModDirectory', Paths.currentModDirectory);
 
+		// mod only
+		set('stickerSet', StickerSubState.STICKER_SET);
+		set('stickerPack', StickerSubState.STICKER_PACK);
+
 		#if windows
 		set('buildTarget', 'windows');
 		#elseif linux
@@ -225,6 +232,14 @@ class FunkinLua {
 		#else
 		set('buildTarget', 'unknown');
 		#end
+
+		// mod callbacks
+		Lua_helper.add_callback(lua, "setStickerSet", function(name:String) {
+			StickerSubState.STICKER_SET = name;
+		});
+		Lua_helper.add_callback(lua, "setStickerPack", function(name:String) {
+			StickerSubState.STICKER_PACK = name;
+		});
 
 		// custom substate
 		Lua_helper.add_callback(lua, "openCustomSubstate", function(name:String, pauseGame:Bool = false) {
