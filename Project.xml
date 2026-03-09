@@ -145,6 +145,12 @@
 	<haxelib name="discord_rpc" if="desktop"/>
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
 
+	<!-- modchart library stuff -->
+	<define name="PSYCH" />
+	<define name="PSYCHVERSION" value="0.6.3"/>
+
+	<haxelib name="fnf-modcharting-tools"/>
+
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
 

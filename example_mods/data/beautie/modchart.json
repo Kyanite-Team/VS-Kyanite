@@ -1,0 +1,20 @@
+{
+    "modifiers": [
+        [
+            "opponentSwap",
+            "OpponentSwap",
+            "",
+            0,
+            -1
+        ],
+        [
+            "opponentSwap1",
+            "OpponentSwap",
+            "",
+            1,
+            -1
+        ]
+    ],
+    "events": [],
+    "playfields":1
+}

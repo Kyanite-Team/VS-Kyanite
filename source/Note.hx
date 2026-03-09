@@ -8,6 +8,9 @@ import flixel.util.FlxColor;
 import flash.display.BitmapData;
 import editors.ChartingState;
 
+// modcharting library
+import flixel.addons.effects.FlxSkewedSprite;
+
 using StringTools;
 
 typedef EventNote = {
@@ -17,8 +20,12 @@ typedef EventNote = {
 	value2:String
 }
 
-class Note extends FlxSprite
+class Note extends FlxSkewedSprite
 {
+	// modchart library
+	public var mesh:modcharting.SustainStrip = null;
+  	public var z:Float = 0;
+
 	public var extraData:Map<String,Dynamic> = [];
 
 	public var strumTime:Float = 0;

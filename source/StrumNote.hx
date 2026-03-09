@@ -4,9 +4,12 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 
+// modchart library
+import flixel.addons.effects.FlxSkewedSprite;
+
 using StringTools;
 
-class StrumNote extends FlxSprite
+class StrumNote extends FlxSkewedSprite
 {
 	private var colorSwap:ColorSwap;
 	public var resetAnim:Float = 0;

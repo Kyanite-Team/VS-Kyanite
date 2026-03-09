@@ -76,6 +76,8 @@ class FreeplayState extends MusicBeatSubstate
 
 	var freeCam:FlxCamera;
 
+	public var busy:Bool = false;
+
 	override function create()
 	{
 		// Paths.clearStoredMemory();
@@ -216,8 +218,9 @@ class FreeplayState extends MusicBeatSubstate
 	override function closeSubState()
 	{
 		changeSelection(0, false);
-		persistentUpdate = true;
 		super.closeSubState();
+		MusicBeatSubstate.instance = this;
+		persistentUpdate = true;
 	}
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
@@ -334,15 +337,38 @@ class FreeplayState extends MusicBeatSubstate
 		else if (upP || downP)
 			changeDiff();
 
-		if (controls.BACK)
+		if (controls.BACK && !busy)
 		{
-			persistentUpdate = false;
+			busy = true;
+			FlxTimer.globalManager.clear();
+
 			if (colorTween != null)
 			{
 				colorTween.cancel();
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
+
+			if (Type.getClass(_parentState) == MainMenuState)
+			{
+				_parentState.persistentUpdate = false;
+				_parentState.persistentDraw = true;
+			}
+
+			new FlxTimer().start(4, (_) ->
+			{
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+				if (Type.getClass(_parentState) == MainMenuState)
+				{
+					FlxG.sound.playMusic(Paths.music("freakyMenu"), 0);
+					FlxG.sound.music.fadeIn(4.0, 0.0, 1.0);
+					close();
+				}
+				else
+				{
+					FlxG.switchState(new MainMenuState());
+				}
+			});
 		}
 
 		if (ctrl)

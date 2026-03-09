@@ -13,6 +13,7 @@ MemetheMemer::memethememer::Hard Charter (Charted Frestal on Hard)::idk::B69443
 JayJetlines2005::missingicon::Hard Charter (Charted Peacehole and Offensive on Hard)::idk::B69443
 Friday Night Funker::fnfunker::Hard Charter (Charted Beautie on Hard)::https://www.youtube.com/channel/UC_Jdzzcv7tF1Tv_wQbb4dTA::BE2C51
 Bruno::Bruno::Co-Director, Debugger (Decoded the engine's build + runs an official GitHub build)::https://github.com/bruno3020/VS-Kyanite::B69443
+VideoBot::vb::Modcharter, Main Coder::https://youtube.com/@videobot2009::14FFFF
 Collabs
 idk::missingicon::you guessed it::none::C1C1C1
 Upcoming Devs
