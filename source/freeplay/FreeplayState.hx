@@ -24,7 +24,6 @@ import sys.FileSystem;
 import freeplay.SongIcon;
 import freeplay.SongText;
 import flixel.util.FlxTimer;
-
 import transition.stickers.StickerSubState;
 import flixel.FlxCamera;
 
@@ -66,7 +65,8 @@ class FreeplayState extends MusicBeatSubstate
 
 	var stickerSubState:Null<StickerSubState> = null;
 
-	public function new(?stickers:StickerSubState){
+	public function new(?stickers:StickerSubState)
+	{
 		super();
 		if (stickers?.members != null)
 		{
@@ -353,22 +353,19 @@ class FreeplayState extends MusicBeatSubstate
 				_parentState.persistentUpdate = false;
 				_parentState.persistentDraw = true;
 			}
-
-			new FlxTimer().start(4, (_) ->
+			
+			FlxTransitionableState.skipNextTransIn = false;
+			FlxTransitionableState.skipNextTransOut = false;
+			if (Type.getClass(_parentState) == MainMenuState)
 			{
-				FlxTransitionableState.skipNextTransIn = true;
-				FlxTransitionableState.skipNextTransOut = true;
-				if (Type.getClass(_parentState) == MainMenuState)
-				{
-					FlxG.sound.playMusic(Paths.music("freakyMenu"), 0);
-					FlxG.sound.music.fadeIn(4.0, 0.0, 1.0);
-					close();
-				}
-				else
-				{
-					FlxG.switchState(new MainMenuState());
-				}
-			});
+				FlxG.sound.playMusic(Paths.music("freakyMenu"), 0);
+				FlxG.sound.music.fadeIn(4.0, 0.0, 1.0);
+				close();
+			}
+			else
+			{
+				FlxG.switchState(new MainMenuState());
+			}
 		}
 
 		if (ctrl)
@@ -459,7 +456,8 @@ class FreeplayState extends MusicBeatSubstate
 		super.update(elapsed);
 	}
 
-	override function destroy(){
+	override function destroy()
+	{
 		FlxG.cameras.remove(freeCam);
 	}
 
@@ -598,7 +596,8 @@ class FreeplayState extends MusicBeatSubstate
 	}
 
 	// sticker bullsh*t
-	public static function build(?stickers:StickerSubState):MusicBeatState{
+	public static function build(?stickers:StickerSubState):MusicBeatState
+	{
 		var result:MainMenuState;
 		result = new MainMenuState();
 		result.openSubState(new FreeplayState(stickers));
