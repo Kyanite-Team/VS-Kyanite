@@ -4,7 +4,8 @@ Friday Night Funkin' is a rhythm game originally made for Ludum Dare 47 "Stuck I
 
 ## Mod Credits:
 * NoveltheSolarisBus - Director, Did everything
-* Bruno - Co-Director, Debugger, Owner of this source code
+* Bruno - Co-Director, Debugger, Original Owner of this source code
+* VideoBot - Modcharter, Source Coder, Owner of this source code
 
 ## Psych Engine Credits:
 * Shadow Mario - Programmer
