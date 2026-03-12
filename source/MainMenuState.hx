@@ -1,5 +1,6 @@
 package;
 
+import flixel.util.FlxTimer;
 import freeplay.FreeplayState;
 #if desktop
 import Discord.DiscordClient;
@@ -46,6 +47,7 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
+	public static var inTransition:Bool = false;
 
 	override function create()
 	{
@@ -195,7 +197,7 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
-			if (controls.BACK)
+			if (controls.BACK && !inTransition)
 			{
 				selectedSomethin = true;
 				FlxG.sound.play(Paths.sound('cancelMenu'));
@@ -320,10 +322,15 @@ class MainMenuState extends MusicBeatState
 		});
 	}
 
+	var bsTimer:FlxTimer;
 	override function closeSubState()
 	{
 		super.closeSubState();
+		if (bsTimer != null) bsTimer.cancel();
 		selectedSomethin = false;
 		persistentUpdate = true;
+		bsTimer = new FlxTimer().start(0.2, (_)->{
+			inTransition = false;
+		});
 	}
 }
