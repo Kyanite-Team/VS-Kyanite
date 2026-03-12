@@ -1190,6 +1190,7 @@ class ChartingState extends MusicBeatState
 	#if desktop
 	var waveformUseInstrumental:FlxUICheckBox;
 	var waveformUseVoices:FlxUICheckBox;
+	var waveformUseOppVoices:FlxUICheckBox;
 	#end
 	var instVolume:FlxUINumericStepper;
 	var voicesVolume:FlxUINumericStepper;
@@ -1201,13 +1202,16 @@ class ChartingState extends MusicBeatState
 		#if desktop
 		if (FlxG.save.data.chart_waveformInst == null) FlxG.save.data.chart_waveformInst = false;
 		if (FlxG.save.data.chart_waveformVoices == null) FlxG.save.data.chart_waveformVoices = false;
+		if (FlxG.save.data.chart_waveformOppVoices == null) FlxG.save.data.chart_waveformOppVoices = false;
 
 		waveformUseInstrumental = new FlxUICheckBox(10, 90, null, null, "Waveform for Instrumental", 100);
 		waveformUseInstrumental.checked = FlxG.save.data.chart_waveformInst;
 		waveformUseInstrumental.callback = function()
 		{
 			waveformUseVoices.checked = false;
+			waveformUseOppVoices.checked = false;
 			FlxG.save.data.chart_waveformVoices = false;
+			FlxG.save.data.chart_waveformOppVoices = false;
 			FlxG.save.data.chart_waveformInst = waveformUseInstrumental.checked;
 			updateWaveform();
 		};
@@ -1217,8 +1221,22 @@ class ChartingState extends MusicBeatState
 		waveformUseVoices.callback = function()
 		{
 			waveformUseInstrumental.checked = false;
+			waveformUseOppVoices.checked = false;
 			FlxG.save.data.chart_waveformInst = false;
+			FlxG.save.data.chart_waveformOppVoices = false;
 			FlxG.save.data.chart_waveformVoices = waveformUseVoices.checked;
+			updateWaveform();
+		};
+
+		waveformUseOppVoices = new FlxUICheckBox(waveformUseVoices.x, waveformUseVoices.y+waveformUseVoices.height, null, null, "Waveform for Opp. Voices", 100);
+		waveformUseOppVoices.checked = FlxG.save.data.chart_waveformOppVoices;
+		waveformUseOppVoices.callback = function()
+		{
+			waveformUseInstrumental.checked = false;
+			waveformUseVoices.checked = false;
+			FlxG.save.data.chart_waveformInst = false;
+			FlxG.save.data.chart_waveformVoices = false;
+			FlxG.save.data.chart_waveformOppVoices = waveformUseOppVoices.checked;
 			updateWaveform();
 		};
 		#end
@@ -1335,12 +1353,12 @@ class ChartingState extends MusicBeatState
 		blockPressWhileTypingOnStepper.push(voicesVolume);
 
 		voicesOppVolume = new FlxUINumericStepper(instVolume.x + 200, instVolume.y, 0.1, 1, 0, 1, 1);
-		voicesOppVolume.value = vocals.volume;
+		voicesOppVolume.value = opponentVocals.volume;
 		voicesOppVolume.name = 'voices_opp_volume';
 		blockPressWhileTypingOnStepper.push(voicesOppVolume);
 		
 		#if !html5
-		sliderRate = new FlxUISlider(this, 'playbackSpeed', 120, 120, 0.5, 3, 150, null, 5, FlxColor.WHITE, FlxColor.BLACK);
+		sliderRate = new FlxUISlider(this, 'playbackSpeed', 120, 150, 0.5, 3, 150, null, 5, FlxColor.WHITE, FlxColor.BLACK);
 		sliderRate.nameLabel.text = 'Playback Rate';
 		tab_group_chart.add(sliderRate);
 		#end
@@ -1357,13 +1375,14 @@ class ChartingState extends MusicBeatState
 		#if desktop
 		tab_group_chart.add(waveformUseInstrumental);
 		tab_group_chart.add(waveformUseVoices);
+		tab_group_chart.add(waveformUseOppVoices);
 		#end
 		tab_group_chart.add(instVolume);
 		tab_group_chart.add(voicesVolume);
 		tab_group_chart.add(voicesOppVolume);
 		tab_group_chart.add(check_mute_inst);
 		tab_group_chart.add(check_mute_vocals);
-		tab_group_chart.add(check_mute_vocals_opponent);
+		tab_group_chart.add(check_mute_vocals_opponent); 
 		tab_group_chart.add(check_vortex);
 		tab_group_chart.add(mouseScrollingQuant);
 		tab_group_chart.add(check_warnings);
@@ -1843,6 +1862,10 @@ class ChartingState extends MusicBeatState
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
 				}
+				if(opponentVocals != null){
+					opponentVocals.pause();
+					opponentVocals.time = FlxG.sound.music.time;
+				}
 			}
 
 			//ARROW VORTEX SHIT NO DEADASS
@@ -1869,6 +1892,10 @@ class ChartingState extends MusicBeatState
 				if(vocals != null) {
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
+				}
+				if(opponentVocals != null){
+					opponentVocals.pause();
+					opponentVocals.time = FlxG.sound.music.time;
 				}
 			}
 
@@ -1959,6 +1986,10 @@ class ChartingState extends MusicBeatState
 					if(vocals != null) {
 						vocals.pause();
 						vocals.time = FlxG.sound.music.time;
+					}
+					if(opponentVocals != null) {
+						opponentVocals.pause();
+						opponentVocals.time = FlxG.sound.music.time;
 					}
 
 					var dastrum = 0;
@@ -2189,7 +2220,7 @@ class ChartingState extends MusicBeatState
 		gridBG = FlxGridOverlay.create(GRID_SIZE, GRID_SIZE, GRID_SIZE * 9, Std.int(GRID_SIZE * getSectionBeats() * 4 * zoomList[curZoom]));
 
 		#if desktop
-		if(FlxG.save.data.chart_waveformInst || FlxG.save.data.chart_waveformVoices) {
+		if(FlxG.save.data.chart_waveformInst || FlxG.save.data.chart_waveformVoices || FlxG.save.data.chart_waveformOppVoices) {
 			updateWaveform();
 		}
 		#end
@@ -2250,7 +2281,7 @@ class ChartingState extends MusicBeatState
 		}
 		waveformPrinted = false;
 
-		if(!FlxG.save.data.chart_waveformInst && !FlxG.save.data.chart_waveformVoices) {
+		if(!FlxG.save.data.chart_waveformInst && !FlxG.save.data.chart_waveformVoices && !FlxG.save.data.chart_waveformOppVoices) {
 			//trace('Epic fail on the waveform lol');
 			return;
 		}
@@ -2265,55 +2296,24 @@ class ChartingState extends MusicBeatState
 		var et:Float = st + (Conductor.stepCrochet * steps);
 
 		@:privateAccess {
-			if (FlxG.save.data.chart_waveformInst) {
-				var sound:FlxSound = FlxG.sound.music;
-				if (sound._sound != null && sound._sound.__buffer != null) {
-					var bytes:Bytes = sound._sound.__buffer.data.toBytes();
-				
-					wavData = waveformData(
-						sound._sound.__buffer,
-						bytes,
-						st,
-						et,
-						1,
-						wavData,
-						Std.int(gridBG.height)
-					);
-				}
-			}
-		
-			if (FlxG.save.data.chart_waveformVoices) {
-				var sound:FlxSound = vocals;
-				if (sound._sound != null && sound._sound.__buffer != null) {
-					var bytes:Bytes = sound._sound.__buffer.data.toBytes();
-				
-					wavData = waveformData(
-						sound._sound.__buffer,
-						bytes,
-						st,
-						et,
-						1,
-						wavData,
-						Std.int(gridBG.height)
-					);
-				}
-			}
+			var sound:FlxSound = FlxG.sound.music;
+			if(FlxG.save.data.chart_waveformVoices)
+				sound = vocals;
+			else if(FlxG.save.data.chart_waveformOppVoices)
+				sound = opponentVocals;
 
-			if (FlxG.save.data.chart_waveformOppVoices){
-				var sound:FlxSound = opponentVocals;
-				if (sound._sound != null && sound._sound.__buffer != null) {
-					var bytes:Bytes = sound._sound.__buffer.data.toBytes();
-				
-					wavData = waveformData(
-						sound._sound.__buffer,
-						bytes,
-						st,
-						et,
-						1,
-						wavData,
-						Std.int(gridBG.height)
-					);
-				}
+			if (sound != null && sound._sound != null && sound._sound.__buffer != null) {
+				var bytes:Bytes = sound._sound.__buffer.data.toBytes();
+
+				wavData = waveformData(
+					sound._sound.__buffer,
+					bytes,
+					st,
+					et,
+					1,
+					wavData,
+					Std.int(gridBG.height)
+				);
 			}
 		}
 		// Draws
@@ -2520,6 +2520,10 @@ class ChartingState extends MusicBeatState
 			vocals.pause();
 			vocals.time = FlxG.sound.music.time;
 		}
+		if(opponentVocals != null) {
+			opponentVocals.pause();
+			opponentVocals.time = FlxG.sound.music.time;
+		}
 		updateCurStep();
 
 		updateGrid();
@@ -2540,6 +2544,10 @@ class ChartingState extends MusicBeatState
 				if(vocals != null) {
 					vocals.pause();
 					vocals.time = FlxG.sound.music.time;
+				}
+				if(opponentVocals != null) {
+					opponentVocals.pause();
+					opponentVocals.time = FlxG.sound.music.time;
 				}
 				updateCurStep();
 			}

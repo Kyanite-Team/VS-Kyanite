@@ -67,6 +67,7 @@ class FreeplayState extends MusicBeatSubstate
 
 	public function new(?stickers:StickerSubState)
 	{
+		controls.isInSubstate = true;
 		super();
 		if (stickers?.members != null)
 		{
@@ -93,7 +94,7 @@ class FreeplayState extends MusicBeatSubstate
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		freeCam = new FlxCamera();
+		freeCam = new FlxCamera(0, 0);
 		freeCam.bgColor = FlxColor.TRANSPARENT;
 		FlxG.cameras.add(freeCam, true);
 
@@ -220,6 +221,7 @@ class FreeplayState extends MusicBeatSubstate
 	{
 		changeSelection(0, false);
 		super.closeSubState();
+		controls.isInSubstate = true;
 		MusicBeatSubstate.instance = this;
 		persistentUpdate = true;
 	}
@@ -459,6 +461,8 @@ class FreeplayState extends MusicBeatSubstate
 
 	override function destroy()
 	{
+		controls.isInSubstate = false;
+		super.destroy();
 		FlxG.cameras.remove(freeCam);
 	}
 

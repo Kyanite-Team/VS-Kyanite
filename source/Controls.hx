@@ -297,6 +297,8 @@ class Controls extends FlxActionSet
 	inline function get_RESET()
 		return _reset.check();
 
+	public var isInSubstate:Bool = false; // don't worry about this it becomes true and false on it's own in MusicBeatSubstate
+
 	#if (haxe >= "4.0.0")
 	public function new(name, scheme = None)
 	{
