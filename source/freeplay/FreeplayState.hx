@@ -80,6 +80,7 @@ class FreeplayState extends MusicBeatSubstate
 
 	override function create()
 	{
+		MainMenuState.inTransition = true;
 		// Paths.clearStoredMemory();
 		// Paths.clearUnusedMemory();
 
