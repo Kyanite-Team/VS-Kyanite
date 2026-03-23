@@ -105,7 +105,7 @@ class StickerSubState extends MusicBeatSubstate
 
 		// makes the stickers on the most recent camera, which is more often than not... a UI camera!!
 		// grpStickers.cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
-		grpStickers.cameras = FlxG.cameras.list;
+		grpStickers.camera = FlxG.cameras.list[FlxG.cameras.list.length -1];
 
 		if (oldStickers != null)
 		{
@@ -122,7 +122,7 @@ class StickerSubState extends MusicBeatSubstate
 
 	public function degenStickers():Void
 	{
-		grpStickers.cameras = FlxG.cameras.list;
+		grpStickers.camera = FlxG.cameras.list[FlxG.cameras.list.length -1];
 
 		if (grpStickers.members == null || grpStickers.members.length == 0)
 		{
