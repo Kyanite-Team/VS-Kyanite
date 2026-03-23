@@ -55,6 +55,7 @@ import sys.io.File;
 #end
 
 import Character;
+import flixel.util.FlxStringUtil;
 
 
 @:access(flixel.system.FlxSound._sound)
@@ -2086,11 +2087,11 @@ class ChartingState extends MusicBeatState
 		opponentVocals.pitch = playbackSpeed;
 
 		bpmTxt.text =
-		Std.string(FlxMath.roundDecimal(Conductor.songPosition / 1000, 2)) + " / " + Std.string(FlxMath.roundDecimal(FlxG.sound.music.length / 1000, 2)) +
-		"\nSection: " + curSec +
-		"\n\nBeat: " + Std.string(curDecBeat).substring(0,4) +
-		"\n\nStep: " + curStep +
-		"\n\nBeat Snap: " + quantization + "th";
+		Std.string(FlxStringUtil.formatTime(Conductor.songPosition/1000, true)) + " / " + Std.string(FlxStringUtil.formatTime(FlxG.sound.music.length / 1000, true)) +
+			"\nSection: " + curSec +
+			"\n\nBeat: " + Std.string(curDecBeat) +
+			"\n\nStep: " + curDecStep +
+			"\n\nBeat Snap: " + quantization + "th";
 
 		var playedSound:Array<Bool> = [false, false, false, false]; //Prevents ouchy GF sex sounds
 		curRenderedNotes.forEachAlive(function(note:Note) {
