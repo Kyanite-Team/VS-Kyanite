@@ -17,10 +17,11 @@ import flixel.util.FlxStringUtil;
 
 import freeplay.FreeplayState;
 import transition.stickers.StickerSubState;
+import AlphaText;
 
 class PauseSubState extends MusicBeatSubstate
 {
-	var grpMenuShit:FlxTypedGroup<FlxText>;
+	var grpMenuShit:FlxTypedGroup<AlphaText>;
 
 	var menuItems:Array<String> = [];
 	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Change Difficulty', 'Options', 'Exit to menu'];
@@ -30,7 +31,7 @@ class PauseSubState extends MusicBeatSubstate
 	var pauseMusic:FlxSound;
 	var practiceText:FlxText;
 	var skipTimeText:FlxText;
-	var skipTimeTracker:FlxText;
+	var skipTimeTracker:AlphaText;
 	var curTime:Float = Math.max(0, Conductor.songPosition);
 	//var botplayText:FlxText;
 
@@ -133,7 +134,7 @@ class PauseSubState extends MusicBeatSubstate
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
 
-		grpMenuShit = new FlxTypedGroup<FlxText>();
+		grpMenuShit = new FlxTypedGroup<AlphaText>();
 		add(grpMenuShit);
 
 		regenMenu();
@@ -332,8 +333,11 @@ class PauseSubState extends MusicBeatSubstate
 
 		var bullShit:Int = 0;
 
-		grpMenuShit.forEach(function(spr:FlxText){
+		grpMenuShit.forEach(function(spr:AlphaText){
 			spr.alpha = (spr.ID == curSelected)?1:0.6;
+
+			spr.targetY = bullShit - curSelected;
+			bullShit++;
 		});
 
 		/* for (item in grpMenuShit.members)
@@ -367,14 +371,21 @@ class PauseSubState extends MusicBeatSubstate
 		}
 
 		for (i in 0...menuItems.length) {
-			var item = new FlxText(90, 320+(i*60), 0, menuItems[i], 32);
+			var item = new AlphaText(90, 160, menuItems[i], 32);
+			item.isMenuItem = true;
 			item.ID = i;
+			item.targetY = i;
+			item.changeX = false;
+			item.screenCenter(X);
+			item.textDisplay.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			item.textDisplay.borderSize = 4;
+			item.textDisplay.screenCenter(X);
 			grpMenuShit.add(item);
 
 			if(menuItems[i] == 'Skip Time')
 			{
-				skipTimeText = new FlxText(0, 0, 0, '', 64);
-				skipTimeText.setFormat(Paths.font("vcr.ttf"), 64, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				skipTimeText = new FlxText(0, 320, 0, '', 32);
+				skipTimeText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 				skipTimeText.scrollFactor.set();
 				skipTimeText.borderSize = 2;
 				skipTimeTracker = item;
@@ -392,8 +403,9 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		if(skipTimeText == null || skipTimeTracker == null) return;
 
-		skipTimeText.x = skipTimeTracker.x + skipTimeTracker.width + 60;
-		skipTimeText.y = skipTimeTracker.y;
+		// skipTimeText.x = skipTimeTracker.x + skipTimeTracker.width + 120;
+		skipTimeText.screenCenter(X);
+		skipTimeText.y = skipTimeTracker.textDisplay.y + 30;
 		skipTimeText.visible = (skipTimeTracker.alpha >= 1);
 	}
 

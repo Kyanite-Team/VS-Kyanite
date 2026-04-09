@@ -180,6 +180,7 @@ class PlayState extends MusicBeatState
 	public var opponentStrums:FlxTypedGroup<StrumNote>;
 	public var playerStrums:FlxTypedGroup<StrumNote>;
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
+	public var grpNoteHoldSplashes:FlxTypedGroup<NoteHoldSplash>;
 
 	public var camZooming:Bool = false;
 	public var camZoomingMult:Float = 1;
@@ -192,6 +193,7 @@ class PlayState extends MusicBeatState
 	public var combo:Int = 0;
 
 	private var healthBarBG:AttachedSprite;
+	private var healthSprite:AttachedSprite;
 
 	public var healthBar:FlxBar;
 
@@ -417,6 +419,7 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camOther, false);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
+		grpNoteHoldSplashes = new FlxTypedGroup<NoteHoldSplash>();
 
 		FlxG.cameras.setDefaultDrawTarget(camGame, true);
 		CustomFadeTransition.nextCamera = camOther;
@@ -1112,7 +1115,6 @@ class PlayState extends MusicBeatState
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
-		add(grpNoteSplashes);
 
 		if (ClientPrefs.timeBarType == 'Song Name')
 		{
@@ -1123,6 +1125,16 @@ class PlayState extends MusicBeatState
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
 		grpNoteSplashes.add(splash);
 		splash.alpha = 0.0;
+
+		var holdsplash:NoteHoldSplash = new NoteHoldSplash(-100, 100, 0);
+		grpNoteHoldSplashes.add(holdsplash);
+		NoteHoldSplash.scrollX = 1;
+		NoteHoldSplash.scrollY = 1;
+		holdsplash.alpha = 0.0;
+		new FlxTimer().start(1, function(tmr:FlxTimer)
+		{
+			holdsplash.endHold(true);
+		});
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
@@ -1137,6 +1149,7 @@ class PlayState extends MusicBeatState
 		playfieldRenderer = new PlayfieldRenderer(strumLineNotes, notes, this);
 		playfieldRenderer.cameras = [camHUD];
 		add(playfieldRenderer);
+		add(grpNoteHoldSplashes);
 		add(grpNoteSplashes);
 
 		camFollow = new FlxPoint();
@@ -1185,6 +1198,15 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
 
+		healthSprite = new AttachedSprite("Healthbar_Kyanite");
+		healthSprite.x = healthBar.x-40;
+		healthSprite.y = healthBar.y - 167;
+		healthSprite.yAdd = -167;
+        healthSprite.xAdd = -40;
+		healthSprite.visible = !ClientPrefs.hideHud;
+		add(healthSprite);
+		healthSprite.sprTracker = healthBar;
+
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
 		iconP1.visible = !ClientPrefs.hideHud;
@@ -1198,7 +1220,8 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
+		scoreTxt = new FlxText(0, healthBarBG.y + 36, 0, "", 20);
+		scoreTxt.x = healthBar.x + healthBarBG.width - 190;
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
@@ -1217,10 +1240,12 @@ class PlayState extends MusicBeatState
 		}
 
 		strumLineNotes.cameras = [camHUD];
+		grpNoteHoldSplashes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
+		healthSprite.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
@@ -2436,13 +2461,7 @@ class PlayState extends MusicBeatState
 
 	public function updateScore(miss:Bool = false)
 	{
-		scoreTxt.text = 'Score: '
-			+ songScore
-			+ ' | Misses: '
-			+ songMisses
-			+ ' | Rating: '
-			+ ratingName
-			+ (ratingName != '?' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : '');
+		scoreTxt.text = 'Score: ' + songScore;
 
 		if (ClientPrefs.scoreZoom && !miss && !cpuControlled)
 		{
@@ -3550,6 +3569,20 @@ class PlayState extends MusicBeatState
 					if (!daNote.mustPress && daNote.wasGoodHit && !daNote.hitByOpponent && !daNote.ignoreNote)
 					{
 						opponentNoteHit(daNote);
+						if (daNote.isSustainNote)
+						{
+							if (opponentonHoldSplash[daNote.noteData] != null)
+							{
+								opponentonHoldSplash[daNote.noteData].setPos(opponentStrums.members[daNote.noteData].x, opponentStrums.members[daNote.noteData].y);
+								if (daNote.animation.curAnim.name.endsWith('holdend'))
+								{
+									var holdSplash:NoteHoldSplash = opponentonHoldSplash[daNote.noteData];
+									opponentonHoldSplash[daNote.noteData].alpha = 1;
+									holdSplash.endHold(true);
+									opponentonHoldSplash[daNote.noteData] = null;
+								}
+							}
+						}
 					}
 
 					if (!daNote.blockHit && daNote.mustPress && cpuControlled && daNote.canBeHit)
@@ -3559,6 +3592,17 @@ class PlayState extends MusicBeatState
 							if (daNote.canBeHit)
 							{
 								goodNoteHit(daNote);
+								if (onHoldSplash[daNote.noteData] != null)
+								{
+									onHoldSplash[daNote.noteData].setPos(playerStrums.members[daNote.noteData].x, playerStrums.members[daNote.noteData].y);
+									if (daNote.animation.curAnim.name.endsWith('holdend'))
+									{
+										var holdSplash:NoteHoldSplash = onHoldSplash[daNote.noteData];
+										onHoldSplash[daNote.noteData].alpha = 1;
+										holdSplash.endHold(true);
+										onHoldSplash[daNote.noteData] = null;
+									}
+								}
 							}
 						}
 						else if (daNote.strumTime <= Conductor.songPosition || daNote.isSustainNote)
@@ -4939,8 +4983,28 @@ class PlayState extends MusicBeatState
 					&& !daNote.blockHit)
 				{
 					goodNoteHit(daNote);
+					if (onHoldSplash[daNote.noteData] != null)
+					{
+						if (daNote.animation.curAnim.name.endsWith('holdend'))
+						{
+							var holdSplash:NoteHoldSplash = onHoldSplash[daNote.noteData];
+							onHoldSplash[daNote.noteData].alpha = 1;
+							holdSplash.endHold(true);
+							onHoldSplash[daNote.noteData] = null;
+						}
+					}
 				}
 			});
+
+			for (i in 0...4)
+				// holdSplash.setPos(playerStrums.members[daNote.noteData].x, playerStrums.members[daNote.noteData].y);
+				if (onHoldSplash[i] != null && onHoldSplash[i].animation.curAnim.name == 'in')
+				{
+					if (!parsedHoldArray[i])
+						onHoldSplash[i].alpha = 0;
+					else
+						onHoldSplash[i].setPos(playerStrums.members[i].x, playerStrums.members[i].y);
+				}
 
 			if (parsedHoldArray.contains(true) && !endingSong)
 			{
@@ -5035,6 +5099,15 @@ class PlayState extends MusicBeatState
 			char.playAnim(animToPlay, true);
 		}
 
+		if (daNote.isSustainNote && !daNote.blockHit && !daNote.ignoreNote){
+			if (onHoldSplash[daNote.noteData] != null)
+			{
+				var holdSplash:NoteHoldSplash = onHoldSplash[daNote.noteData];
+				holdSplash.endHold(false);
+				onHoldSplash[daNote.noteData] = null;
+			}
+		}
+
 		callOnLuas('noteMiss', [
 			notes.members.indexOf(daNote),
 			daNote.noteData,
@@ -5093,6 +5166,8 @@ class PlayState extends MusicBeatState
 		callOnLuas('noteMissPress', [direction]);
 	}
 
+	public var opponentonHoldSplash:Array<NoteHoldSplash> = [null, null, null, null];
+
 	function opponentNoteHit(note:Note):Void
 	{
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
@@ -5130,6 +5205,9 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		if (!note.noteSplashDisabled)
+			spawnNoteSplashOnNote(note);
+		
 		if (SONG.needsVoices)
 			vocals.volume = 1;
 
@@ -5158,6 +5236,8 @@ class PlayState extends MusicBeatState
 			note.destroy();
 		}
 	}
+
+	public var onHoldSplash:Array<NoteHoldSplash> = [null, null, null, null];
 
 	function goodNoteHit(note:Note):Void
 	{
@@ -5208,6 +5288,10 @@ class PlayState extends MusicBeatState
 				if (combo > 9999)
 					combo = 9999;
 				popUpScore(note);
+			}
+			else{
+				if (!note.prevNote.isSustainNote)
+					spawnNoteSplashOnNote(note);
 			}
 			health += note.hitHealth * healthGain;
 
@@ -5285,7 +5369,7 @@ class PlayState extends MusicBeatState
 	{
 		if (ClientPrefs.noteSplashes && note != null)
 		{
-			var strum:StrumNote = playerStrums.members[note.noteData];
+			var strum:StrumNote = (note.mustPress)?playerStrums.members[note.noteData]:opponentStrums.members[note.noteData];
 			if (strum != null)
 			{
 				spawnNoteSplash(strum.x, strum.y, note.noteData, note);
@@ -5316,9 +5400,35 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
-		splash.setupNoteSplash(x, y, data, skin, hue, sat, brt);
-		grpNoteSplashes.add(splash);
+		if (note.isSustainNote)
+		{
+			if (note.mustPress){
+				if (onHoldSplash[note.noteData] == null)
+				{
+					var holdsplash:NoteHoldSplash = grpNoteHoldSplashes.recycle(NoteHoldSplash);
+					holdsplash.setup(x, y, data, skin, hue, sat, brt);
+					grpNoteHoldSplashes.add(holdsplash);
+
+					onHoldSplash[note.noteData] = holdsplash;
+				}
+			}
+			else{
+				if (opponentonHoldSplash[note.noteData] == null)
+				{
+					var holdsplash:NoteHoldSplash = grpNoteHoldSplashes.recycle(NoteHoldSplash);
+					holdsplash.setup(x, y, data, skin, hue, sat, brt);
+					grpNoteHoldSplashes.add(holdsplash);
+
+					opponentonHoldSplash[note.noteData] = holdsplash;
+				}
+			}
+		}
+		else
+		{
+			var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
+			splash.setupNoteSplash(x, y, data, skin, hue, sat, brt);
+			grpNoteSplashes.add(splash);
+		}
 	}
 
 	var fastCarCanDrive:Bool = true;

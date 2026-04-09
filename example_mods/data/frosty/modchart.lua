@@ -132,6 +132,7 @@ function modactions()
             game.notes.cameras = [noteCam, fakeNoteCam];
             game.strumLineNotes.cameras = [noteCam, fakeNoteCam];
             game.playfieldRenderer.cameras = [noteCam, fakeNoteCam];
+            game.grpNoteHoldSplashes.cameras = [noteCam, fakeNoteCam];
             game.grpNoteSplashes.cameras = [noteCam, fakeNoteCam];
 
             FlxG.cameras.remove(game.camOther, false);
@@ -170,6 +171,7 @@ function modactions()
             game.strumLineNotes.camera = game.camHUD;
             game.playfieldRenderer.camera = game.camHUD;
             game.grpNoteSplashes.camera = game.camHUD;
+            game.grpNoteHoldSplashes.camera = game.camHUD;
 
             FlxG.cameras.remove(noteCam, true);
             FlxG.cameras.remove(fakeNoteCam, true);
@@ -252,6 +254,14 @@ function onCreatePost()
 end
 function onUpdate(elapsed)
     modupdate(elapsed)
+end
+
+function onDestroy()
+    -- clearing everything up
+    runHaxeCode([[
+        FlxG.cameras.remove(camNotes, true);
+        FlxG.cameras.remove(camNotesFake, true);
+    ]])
 end
 
 -- template
