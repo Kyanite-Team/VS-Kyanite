@@ -79,6 +79,7 @@ import freeplay.FreeplayState;
 import modcharting.ModchartFuncs;
 import modcharting.NoteMovement;
 import modcharting.PlayfieldRenderer;
+import modcharting.ModchartEditorState;
 
 using StringTools;
 
@@ -335,6 +336,7 @@ class PlayState extends MusicBeatState
 	// Debug buttons
 	private var debugKeysChart:Array<FlxKey>;
 	private var debugKeysCharacter:Array<FlxKey>;
+	private var debugKeysModchart:Array<FlxKey>;
 
 	// Less laggy controls
 	private var keysArray:Array<Dynamic>;
@@ -359,6 +361,7 @@ class PlayState extends MusicBeatState
 
 		debugKeysChart = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_1'));
 		debugKeysCharacter = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_2'));
+		debugKeysModchart = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_3'));
 		PauseSubState.songName = null; // Reset to default
 		playbackRate = ClientPrefs.getGameplaySetting('songspeed', 1);
 
@@ -3323,6 +3326,10 @@ class PlayState extends MusicBeatState
 		{
 			openChartEditor();
 		}
+		if (FlxG.keys.anyJustPressed(debugKeysModchart) && !endingSong && !inCutscene)
+		{
+			openModChartEditor();
+		}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
@@ -3729,6 +3736,18 @@ class PlayState extends MusicBeatState
 
 		#if desktop
 		DiscordClient.changePresence("Chart Editor", null, null, true);
+		#end
+	}
+	function openModChartEditor()
+	{
+		persistentUpdate = false;
+		paused = true;
+		cancelMusicFadeTween();
+		MusicBeatState.switchState(new ModchartEditorState());
+		chartingMode = true;
+
+		#if desktop
+		DiscordClient.changePresence("Modchart Editor", null, null, true);
 		#end
 	}
 

@@ -3,7 +3,7 @@ local op, plr = "opponent", "player"
 
 local l, e = "len", "end"
 
-local debug = true
+local debug = false
 
 function callmods()
     for i in pairs(dirs) do
