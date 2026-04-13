@@ -1,7 +1,7 @@
 {
 	"song": {
 		"speed": 3,
-		"stage": "stage",
+		"stage": "kyanstage",
 		"player1": "bf",
 		"player2": "kate",
 		"events": [],
@@ -3084,7 +3084,7 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
+		"gfVersion": "gf-kyanite",
 		"bpm": 130,
 		"needsVoices": true,
 		"song": "Beautie"

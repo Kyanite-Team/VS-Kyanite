@@ -3017,11 +3017,11 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
+		"gfVersion": "gf-kyanite",
 		"song": "Beautie",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "stage",
+		"stage": "kyanstage",
 		"bpm": 130,
 		"speed": 2.5
 	}
