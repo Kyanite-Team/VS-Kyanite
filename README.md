@@ -9,7 +9,7 @@ Friday Night Funkin' is a rhythm game originally made for Ludum Dare 47 "Stuck I
 * SayanSama - Composer
 * BulbMan - Composer
 * RHZzoom - Artist
-* alu - Hell Charter (that's a hell)
+* alu - Hell Charter
 
 ## Psych Engine Credits:
 * Shadow Mario - Programmer
