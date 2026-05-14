@@ -26,6 +26,7 @@ import freeplay.SongText;
 import flixel.util.FlxTimer;
 import transition.stickers.StickerSubState;
 import flixel.FlxCamera;
+import freeplay.filters.SongMeta;
 
 using StringTools;
 
@@ -73,6 +74,8 @@ class FreeplayState extends MusicBeatSubstate
 
 	var stickerSubState:Null<StickerSubState> = null;
 
+	var filter:String = "bf";
+
 	public function new(?stickers:StickerSubState)
 	{
 		controls.isInSubstate = true;
@@ -108,31 +111,68 @@ class FreeplayState extends MusicBeatSubstate
 
 		for (i in 0...WeekData.weeksList.length)
 		{
-			weeks.push(WeekData.weeksLoaded.get(WeekData.weeksList[i]));
-			/* if (weekIsLocked(WeekData.weeksList[i]))
-				continue;
-
+			// weeks.push(WeekData.weeksLoaded.get(WeekData.weeksList[i]));
 			var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
+
 			var leSongs:Array<String> = [];
 			var leChars:Array<String> = [];
 
-			for (j in 0...leWeek.songs.length)
-			{
-				leSongs.push(leWeek.songs[j][0]);
-				leChars.push(leWeek.songs[j][1]);
-			}
-
-			WeekData.setDirectoryFromWeek(leWeek);
 			for (song in leWeek.songs)
 			{
-				var colors:Array<Int> = song[2];
-				if (colors == null || colors.length < 3)
+				var path = Paths.formatToSongPath(song[0]);
+				// trace(song[0]);
+
+				trace(FileSystem.exists(Paths.json(path+"/meta")));
+
+				if (FileSystem.exists(Paths.json(path + "/meta")))
 				{
-					colors = [146, 113, 253];
+					var songMeta:MetaJSON = SongMeta.loadJson(path);
+
+					if (songMeta.freeplayCharacter == filter)
+					{
+						var colors:Array<Int> = song[2];
+						if (colors == null || colors.length < 3)
+						{
+							colors = [146, 113, 253];
+						}
+						addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+
+						leChars.push(song[1]);
+						WeekData.setDirectoryFromWeek(leWeek);
+					}
 				}
-				addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
-			} */
+			}
+
+			/* if (weekIsLocked(WeekData.weeksList[i]))
+					continue;
+
+				var leSongs:Array<String> = [];
+				var leChars:Array<String> = [];
+
+				for (j in 0...leWeek.songs.length)
+				{
+					leSongs.push(leWeek.songs[j][0]);
+					leChars.push(leWeek.songs[j][1]);
+				}
+
+				WeekData.setDirectoryFromWeek(leWeek);
+				for (song in leWeek.songs)
+				{
+					var colors:Array<Int> = song[2];
+					if (colors == null || colors.length < 3)
+					{
+						colors = [146, 113, 253];
+					}
+					addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+			}*/
 		}
+
+		for (i in 0...songs.length)
+		{
+			grpSongs.push(songs[i].songName);
+			iconArray.push(songs[i].songCharacter);
+		}
+
 		WeekData.loadTheFirstEnabledMod();
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
@@ -195,7 +235,8 @@ class FreeplayState extends MusicBeatSubstate
 		weekSprite = new FlxSprite(0, 0);
 		add(weekSprite);
 
-		changeWeek();
+		// changeWeek();
+		changeSelection();
 		changeDiff();
 
 		var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
@@ -341,17 +382,17 @@ class FreeplayState extends MusicBeatSubstate
 			}
 		}
 
-		if (controls.UI_LEFT_P)
-			changeWeek(-1);
-		else if (controls.UI_RIGHT_P)
-			changeWeek(1);
-
 		/* if (controls.UI_LEFT_P)
-				changeDiff(-1);
+				changeWeek(-1);
 			else if (controls.UI_RIGHT_P)
-				changeDiff(1);
-			else if (upP || downP)
-				changeDiff(); */
+				changeWeek(1); */
+
+		if (controls.UI_LEFT_P)
+			changeDiff(-1);
+		else if (controls.UI_RIGHT_P)
+			changeDiff(1);
+		else if (upP || downP)
+			changeDiff();
 
 		if (controls.BACK && !busy)
 		{
@@ -638,28 +679,28 @@ class FreeplayState extends MusicBeatSubstate
 		var leSongs:Array<String> = [];
 		var leChars:Array<String> = [];
 
-		weekSprite.loadGraphic(Paths.image("storymenu/"+WeekData.weeksList[curWeek]));
+		weekSprite.loadGraphic(Paths.image("storymenu/" + WeekData.weeksList[curWeek]));
 		weekSprite.updateHitbox();
 		weekSprite.antialiasing = ClientPrefs.globalAntialiasing;
-		
+
 		weekBG.scale.x = weekSprite.width + 40;
 		weekBG.scale.y = weekSprite.height + 10;
 		weekBG.updateHitbox();
-		
+
 		trace("Week Sprite: " + weekSprite.width);
 		trace("Week BG: " + weekBG.width);
-			
+
 		weekBG.x = FlxG.width - (weekBG.scale.x);
 		weekBG.y = scoreBG.y + scoreBG.height;
-			
-		weekSprite.x = weekBG.x + 20; //account for the extra 40 pixels
+
+		weekSprite.x = weekBG.x + 20; // account for the extra 40 pixels
 		weekSprite.y = weekBG.y + 5;
-		
+
 		/* weekBG.scale.x = weekSprite.width + 40;
-		weekBG.x = (scoreBG.x - (weekBG.scale.x));
-		
-		weekSprite.x = (weekBG.x);
-		weekSprite.y = (weekBG.y); */
+			weekBG.x = (scoreBG.x - (weekBG.scale.x));
+
+			weekSprite.x = (weekBG.x);
+			weekSprite.y = (weekBG.y); */
 
 		for (j in 0...leWeek.songs.length)
 		{

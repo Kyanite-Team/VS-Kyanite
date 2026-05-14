@@ -81,6 +81,8 @@ import modcharting.NoteMovement;
 import modcharting.PlayfieldRenderer;
 import modcharting.ModchartEditorState;
 
+import engine.AdditionalLua;
+
 using StringTools;
 
 class PlayState extends MusicBeatState
@@ -1461,6 +1463,7 @@ class PlayState extends MusicBeatState
 		}
 
 		ModchartFuncs.loadLuaFunctions();
+		AdditionalLua.loadAdditionalLua();
 		callOnLuas('onCreatePost', []);
 
 		super.create();
@@ -3585,7 +3588,7 @@ class PlayState extends MusicBeatState
 								{
 									var holdSplash:NoteHoldSplash = opponentonHoldSplash[daNote.noteData];
 									opponentonHoldSplash[daNote.noteData].alpha = 1;
-									holdSplash.endHold(true);
+									holdSplash.endHold(false);
 									opponentonHoldSplash[daNote.noteData] = null;
 								}
 							}
@@ -5444,9 +5447,11 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
-			splash.setupNoteSplash(x, y, data, skin, hue, sat, brt);
-			grpNoteSplashes.add(splash);
+			if (note.mustPress){
+				var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
+				splash.setupNoteSplash(x, y, data, skin, hue, sat, brt);
+				grpNoteSplashes.add(splash);
+			}
 		}
 	}
 
