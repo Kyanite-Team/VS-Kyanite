@@ -1,4 +1,0 @@
-An event where the HUD bumps and rotates
-Value 1: 'On' to start the event and 'Off' to stop
-Start typing with capital letter or the event will
-not happen
