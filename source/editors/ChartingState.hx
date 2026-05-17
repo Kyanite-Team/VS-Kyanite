@@ -953,7 +953,7 @@ class ChartingState extends MusicBeatState
 		}
 
 		#if LUA_ALLOWED
-		var directories:Array<String> = [];
+		var directories:Array<String> = [Paths.getPreloadPath('custom_notetypes/')];
 
 		#if MODS_ALLOWED
 		directories.push(Paths.mods('custom_notetypes/'));
@@ -1015,7 +1015,7 @@ class ChartingState extends MusicBeatState
 
 		#if LUA_ALLOWED
 		var eventPushedMap:Map<String, Bool> = new Map<String, Bool>();
-		var directories:Array<String> = [];
+		var directories:Array<String> = [Paths.getPreloadPath('custom_events/')];
 
 		#if MODS_ALLOWED
 		directories.push(Paths.mods('custom_events/'));

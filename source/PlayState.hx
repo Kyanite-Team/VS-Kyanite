@@ -917,12 +917,12 @@ class PlayState extends MusicBeatState
 		var foldersToCheck:Array<String> = [Paths.getPreloadPath('scripts/')];
 
 		#if MODS_ALLOWED
-		foldersToCheck.insert(0, Paths.mods('scripts/'));
+		foldersToCheck.push(Paths.mods('scripts/'));
 		if (Paths.currentModDirectory != null && Paths.currentModDirectory.length > 0)
-			foldersToCheck.insert(0, Paths.mods(Paths.currentModDirectory + '/scripts/'));
+			foldersToCheck.push(Paths.mods(Paths.currentModDirectory + '/scripts/'));
 
 		for (mod in Paths.getGlobalMods())
-			foldersToCheck.insert(0, Paths.mods(mod + '/scripts/'));
+			foldersToCheck.push(Paths.mods(mod + '/scripts/'));
 		#end
 
 		for (folder in foldersToCheck)
