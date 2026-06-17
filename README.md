@@ -11,8 +11,6 @@ Friday Night Funkin' is a rhythm game originally made for Ludum Dare 47 "Stuck I
 * RHZzoom - Artist
 * alu - Hell Charter
 
-test
-
 ## Psych Engine Credits:
 * Shadow Mario - Programmer
 * RiverOaken - Artist
