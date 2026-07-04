@@ -27,8 +27,14 @@ import flixel.util.FlxTimer;
 import transition.stickers.StickerSubState;
 import flixel.FlxCamera;
 import freeplay.filters.SongMeta;
+import freeplay.characterselect.CharacterSelectSubState;
 
 using StringTools;
+
+typedef FreeplayStateParams = {
+	?character:String,
+	?fromChar:Bool
+};
 
 class FreeplayState extends MusicBeatSubstate
 {
@@ -75,8 +81,9 @@ class FreeplayState extends MusicBeatSubstate
 	var stickerSubState:Null<StickerSubState> = null;
 
 	var filter:String = "bf";
+	public var needsFilters:Bool;
 
-	public function new(?stickers:StickerSubState)
+	public function new(?params:FreeplayStateParams, ?stickers:StickerSubState, ?filterony:Bool = true)
 	{
 		controls.isInSubstate = true;
 		super();
@@ -84,6 +91,8 @@ class FreeplayState extends MusicBeatSubstate
 		{
 			stickerSubState = stickers;
 		}
+		this.needsFilters = filterony;
+		filter = params?.character ?? "bf";
 	}
 
 	var freeCam:FlxCamera;
@@ -109,6 +118,8 @@ class FreeplayState extends MusicBeatSubstate
 		freeCam.bgColor = FlxColor.TRANSPARENT;
 		FlxG.cameras.add(freeCam, true);
 
+		trace(filter);
+
 		for (i in 0...WeekData.weeksList.length)
 		{
 			// weeks.push(WeekData.weeksLoaded.get(WeekData.weeksList[i]));
@@ -119,27 +130,42 @@ class FreeplayState extends MusicBeatSubstate
 
 			for (song in leWeek.songs)
 			{
-				var path = Paths.formatToSongPath(song[0]);
-				// trace(song[0]);
+				if (needsFilters){
+					var path = Paths.formatToSongPath(song[0]);
+					// trace(song[0]);
 
-				trace(FileSystem.exists(Paths.json(path+"/meta")));
+					trace(FileSystem.exists(Paths.json(path+"/meta")));
 
-				if (FileSystem.exists(Paths.json(path + "/meta")))
-				{
-					var songMeta:MetaJSON = SongMeta.loadJson(path);
-
-					if (songMeta.freeplayCharacter == filter)
+					if (FileSystem.exists(Paths.json(path + "/meta")))
 					{
-						var colors:Array<Int> = song[2];
-						if (colors == null || colors.length < 3)
-						{
-							colors = [146, 113, 253];
-						}
-						addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+						var songMeta:MetaJSON = SongMeta.loadJson(path);
 
-						leChars.push(song[1]);
-						WeekData.setDirectoryFromWeek(leWeek);
+						trace(songMeta.freeplayCharacter == filter);
+
+						if (songMeta.freeplayCharacter == filter)
+						{
+							var colors:Array<Int> = song[2];
+							if (colors == null || colors.length < 3)
+							{
+								colors = [146, 113, 253];
+							}
+							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+
+							leChars.push(song[1]);
+							WeekData.setDirectoryFromWeek(leWeek);
+						}
 					}
+				}
+				else{
+					var colors:Array<Int> = song[2];
+					if (colors == null || colors.length < 3)
+					{
+						colors = [146, 113, 253];
+					}
+					addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+
+					leChars.push(song[1]);
+					WeekData.setDirectoryFromWeek(leWeek);
 				}
 			}
 
@@ -393,6 +419,9 @@ class FreeplayState extends MusicBeatSubstate
 			changeDiff(1);
 		else if (upP || downP)
 			changeDiff();
+
+		if (FlxG.keys.justPressed.TAB)
+			openSubState(new CharacterSelectSubState());
 
 		if (controls.BACK && !busy)
 		{
@@ -655,11 +684,11 @@ class FreeplayState extends MusicBeatSubstate
 	}
 
 	// sticker bullsh*t
-	public static function build(?stickers:StickerSubState):MusicBeatState
+	public static function build(?params:FreeplayStateParams, ?stickers:StickerSubState):MusicBeatState
 	{
 		var result:MainMenuState;
 		result = new MainMenuState();
-		result.openSubState(new FreeplayState(stickers));
+		result.openSubState(new FreeplayState(params, stickers));
 		result.persistentUpdate = false;
 		result.persistentDraw = true;
 

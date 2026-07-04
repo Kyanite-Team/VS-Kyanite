@@ -249,19 +249,24 @@ class MainMenuState extends MusicBeatState
 											FlxTransitionableState.skipNextTransIn = true;
 											FlxTransitionableState.skipNextTransOut = true;
 
-											openSubState(new StickerSubState(null, (sticker) -> FreeplayState.build(sticker)));
-											subStateOpened.addOnce(state ->
-												{
-													for (i in 0...menuItems.members.length)
+											if(!FlxG.keys.pressed.SHIFT){
+												openSubState(new StickerSubState(null, (sticker) -> FreeplayState.build(null, sticker)));
+												subStateOpened.addOnce(state ->
 													{
-														menuItems.members[i].revive();
-														menuItems.members[i].alpha = 1;
-														menuItems.members[i].visible = true;
-														selectedSomethin = false;
-													}
-													changeItem(0);
-												});
+														for (i in 0...menuItems.members.length)
+														{
+															menuItems.members[i].revive();
+															menuItems.members[i].alpha = 1;
+															menuItems.members[i].visible = true;
+															selectedSomethin = false;
+														}
+														changeItem(0);
+													});
 											}
+											else{
+												openSubState(new FreeplayState(null, null, false));
+											}
+										}
 									#if MODS_ALLOWED
 									case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());

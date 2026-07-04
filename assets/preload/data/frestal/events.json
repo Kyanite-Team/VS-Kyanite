@@ -7,22 +7,22 @@
 					[
 						"RalZoom-addZoom",
 						"game",
-						"0.25/0.8/quartIn"
+						"0.25/0.000001/quartOut"
 					],
 					[
 						"Change Note Skin",
-						"Ok notes, dad",
+						"notes/Kyanite notes, dad",
 						"false"
 					]
 				]
 			],
 			[
-				9473.68421052631,
+				78.9473684210526,
 				[
 					[
 						"RalZoom-addZoom",
 						"game",
-						"-0.25/0.8/quartOut"
+						"-0.25/10/quartOut"
 					]
 				]
 			],
@@ -30,24 +30,14 @@
 				10105.2631578947,
 				[
 					[
-						"Add Camera Zoom",
-						"1",
-						"0.9"
-					],
-					[
 						"FlashWhite",
 						"1",
 						""
-					]
-				]
-			],
-			[
-				29052.6315789474,
-				[
+					],
 					[
-						"RalZoom-addZoom",
-						"game",
-						"0.25/0.8/quartIn"
+						"Add Camera Zoom",
+						"1",
+						"0.9"
 					]
 				]
 			],
@@ -68,11 +58,6 @@
 						"HUD stuff",
 						"On",
 						""
-					],
-					[
-						"RalZoom-addZoom",
-						"game",
-						"-0.25/0.8/quartOut"
 					]
 				]
 			],
@@ -82,7 +67,7 @@
 					[
 						"HUD stuff",
 						"Off",
-						"0"
+						""
 					],
 					[
 						"Add Camera Zoom",
@@ -97,12 +82,12 @@
 				]
 			],
 			[
-				55578.947368421,
+				60631.5789473684,
 				[
 					[
 						"RalZoom-addZoom",
 						"game",
-						"0.25/0.8/quartIn"
+						"0.25/0.2/quartOut"
 					]
 				]
 			],
@@ -117,12 +102,162 @@
 				]
 			],
 			[
-				70736.8421052631,
+				70105.2631578947,
 				[
 					[
 						"RalZoom-addZoom",
 						"game",
-						"-0.25/0.8/quartOut"
+						"-0.125/0.2/quartOut"
+					]
+				]
+			],
+			[
+				70421.0526315789,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"-0.125/0.2/quartOut"
+					]
+				]
+			],
+			[
+				70736.8421052631,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				71368.4210526315,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				71999.9999999999,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				72631.5789473684,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				73263.1578947368,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				73894.7368421052,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				74526.3157894736,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				75157.894736842,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				75789.4736842105,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				76421.0526315789,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				77052.6315789473,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				77684.2105263157,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				78315.7894736841,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				78947.3684210526,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -130,9 +265,19 @@
 				79578.947368421,
 				[
 					[
-						"RalZoom-addZoom",
-						"game",
-						"0.25/0.8/quartIn"
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				80210.5263157894,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -153,11 +298,6 @@
 						"HUD stuff",
 						"On",
 						""
-					],
-					[
-						"RalZoom-addZoom",
-						"game",
-						"-0.25/0.8/quartOut"
 					]
 				]
 			],
@@ -182,12 +322,142 @@
 				]
 			],
 			[
-				120000,
+				102315.789473684,
 				[
 					[
 						"RalZoom-addZoom",
 						"game",
-						"0.25/0.8/quartIn"
+						"0.25/0.2/quartOut"
+					]
+				]
+			],
+			[
+				103578.947368421,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"-0.25/0.2/quartOut"
+					]
+				]
+			],
+			[
+				104842.105263158,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				105157.894736842,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				105473.684210526,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				105789.47368421,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				106105.263157895,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"-0.25/0.2/quartOut"
+					]
+				]
+			],
+			[
+				107368.421052631,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.25/0.2/quartOut"
+					]
+				]
+			],
+			[
+				108631.578947368,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"-0.25/0.2/quartOut"
+					]
+				]
+			],
+			[
+				109894.736842105,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				110210.526315789,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				110526.315789474,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				110842.105263158,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"0.0625/0.2/quartOut"
+					]
+				]
+			],
+			[
+				111157.894736842,
+				[
+					[
+						"RalZoom-addZoom",
+						"game",
+						"-0.25/0.2/quartOut"
 					]
 				]
 			],
@@ -203,11 +473,6 @@
 						"Add Camera Zoom",
 						"1",
 						"0.9"
-					],				
-					[
-						"RalZoom-addZoom",
-						"game",
-						"-0.25/0.8/quartOut"
 					]
 				]
 			],
@@ -245,14 +510,14 @@
 				122526.315789474,
 				[
 					[
-						"Add Camera Zoom",
-						"1",
-						"0.9"
-					],
-					[
 						"FlashWhite",
 						"1",
 						""
+					],
+					[
+						"Add Camera Zoom",
+						"1",
+						"0.9"
 					]
 				]
 			]

@@ -4544,7 +4544,7 @@ class PlayState extends MusicBeatState
 				trace('WENT BACK TO FREEPLAY??');
 				WeekData.loadTheFirstEnabledMod();
 				cancelMusicFadeTween();
-				openSubState(new StickerSubState(null, (sticker) -> FreeplayState.build(sticker)));
+				openSubState(new StickerSubState(null, (sticker) -> FreeplayState.build(null, sticker)));
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}

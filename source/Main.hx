@@ -14,6 +14,7 @@ import lime.app.Application;
 
 #if desktop
 import Discord.DiscordClient;
+import flixel.FlxSprite;
 #end
 
 //crash handler stuff
@@ -116,6 +117,8 @@ class Main extends Sprite
 				DiscordClient.shutdown();
 			});
 		}
+
+		FlxG.mouse.load(openfl.Assets.getBitmapData("assets/images/cursor-default.png"));
 		#end
 	}
 
