@@ -118,8 +118,25 @@ class Main extends Sprite
 			});
 		}
 
-		FlxG.mouse.load(openfl.Assets.getBitmapData("assets/images/cursor-default.png"));
+		initHaxeUI();
 		#end
+	}
+
+	function initHaxeUI()
+	{
+		// This has to come before Toolkit.init since locales get initialized there
+		haxe.ui.locale.LocaleManager.instance.autoSetLocale = false;
+		// Calling this before any HaxeUI components get used is important:
+		// - It initializes the theme styles.
+		// - It scans the class path and registers any HaxeUI components.
+		haxe.ui.Toolkit.init();
+		haxe.ui.Toolkit.theme = 'dark'; // don't be cringe
+		// haxe.ui.Toolkit.theme = 'light'; // embrace cringe
+		haxe.ui.Toolkit.autoScale = false;
+		// Don't focus on UI elements when they first appear.
+		haxe.ui.focus.FocusManager.instance.autoFocus = false;
+		editors.cursor.Cursor.registerHaxeUICursors();
+		haxe.ui.tooltips.ToolTipManager.defaultDelay = 200;
 	}
 
 	// Code was entirely made by sqirra-rng for their fnf engine named "Izzy Engine", big props to them!!!

@@ -145,6 +145,10 @@
 	<haxelib name="discord_rpc" if="desktop"/>
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
 
+	<!-- haxeui -->
+	<haxelib name="haxeui-core"/>
+	<haxelib name="haxeui-flixel"/>
+
 	<!-- modchart library stuff -->
 	<define name="PSYCH" />
 	<define name="PSYCHVERSION" value="0.6.3"/>
