@@ -4674,7 +4674,7 @@ class PlayState extends MusicBeatState
 		}
 		else{
 			//trace(Paths.image('combo/numbers/${daRating.image}'));
-			trace(Paths.image('combo/combo'));
+			//trace(Paths.image('combo/combo'));
 			rating.loadGraphic(Paths.image('ratings/${daRating.image}'));
 			comboSpr.loadGraphic(Paths.image('combo/combo'));
 		}
