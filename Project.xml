@@ -128,11 +128,11 @@
 	<assets path="assets/fonts" embed='true'/>
 	<!-- _______________________________ Libraries ______________________________ -->
 
-	<haxelib name="flixel" />
+	<haxelib name="flixel" version="5.5.0"/>
 	<haxedev set='webgl' />
 
 	<!--In case you want to use the addons package-->
-	<haxelib name="flixel-addons" />
+	<haxelib name="flixel-addons" version="3.2.0"/>
 	<haxelib name="hscript" />
 	<define name="hscriptPos" />
 

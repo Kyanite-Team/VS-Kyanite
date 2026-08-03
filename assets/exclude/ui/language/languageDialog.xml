@@ -8,11 +8,13 @@
             font-size: 12px;
         }
     </style>
-    <listView id="translations" width="100%" height="100%">
-        
-    </listView>
-        <!-- <tree-view id="translations">
+    <scrollview width="100%" height="90%">
+        <vbox id="translations">
+
+        </vbox>
+    </scrollview>
+    <!-- <tree-view id="translations">
 
         </tree-view> -->
-    <button text="+" width="100%" id="addMenuKey"/>
+    <button text="+" width="100%" id="addMenuKey" />
 </dialog>

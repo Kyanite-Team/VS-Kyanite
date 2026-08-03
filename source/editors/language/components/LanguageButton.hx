@@ -6,7 +6,7 @@ import editors.language.LanguageFile;
 
 class LanguageButton extends Button{
     public var translations:LanguageFile.TranslationKeys;
-    public function new(key:LanguageFile.TranslationKeys){
+    public function new(key:TranslationKeys){
         super();
 		translations = key;
         text = key.key;

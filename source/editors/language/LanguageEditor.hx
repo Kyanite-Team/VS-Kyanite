@@ -9,6 +9,7 @@ import haxe.ui.containers.ScrollView;
 import haxe.ui.containers.dialogs.Dialog.DialogButton;
 import editors.language.*;
 import editors.language.components.*;
+import editors.language.LanguageFile;
 import editors.cursor.Cursor;
 
 class LanguageEditor extends UIState
@@ -16,7 +17,7 @@ class LanguageEditor extends UIState
 	var menuBar:EditorMenuBar;
 	var translationDialog:TranslationDialog;
 
-	var languageFile:LanguageFile.Language;
+	var languageFile:Language;
 
 	public var instance:LanguageEditor;
 
@@ -31,8 +32,8 @@ class LanguageEditor extends UIState
 		menuBar = new EditorMenuBar();
 		add(menuBar);
 		translationDialog = new TranslationDialog();
-		translationDialog.left = 10;
-		translationDialog.top = 20;
+		translationDialog.left = 5;
+		translationDialog.top = 40;
 		add(translationDialog);
 
 		handleMenuInputs();
