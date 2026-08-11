@@ -1,0 +1,6 @@
+<dialog title="Add Menu Key" style="font-size: 12px;">
+    <grid>
+        <label text="Key: "/>
+        <textfield id="menuKeyInput" style="font-size: 14px;"/>
+    </grid>
+</dialog>
