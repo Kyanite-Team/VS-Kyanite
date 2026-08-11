@@ -149,6 +149,9 @@
 	<haxelib name="haxeui-core"/>
 	<haxelib name="haxeui-flixel"/>
 
+	<!-- FlxAnimate -->
+	<haxelib name="flxanimate" />
+
 	<!-- modchart library stuff -->
 	<define name="PSYCH" />
 	<define name="PSYCHVERSION" value="0.6.3"/>

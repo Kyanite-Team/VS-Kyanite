@@ -39,6 +39,8 @@ class ResultScreen extends MusicBeatState{
 	public var modchartSounds:Map<String, FlxSound> = new Map<String, FlxSound>();
 	public var modchartTexts:Map<String, ModchartText> = new Map<String, ModchartText>(); */
 
+	var atlas:FlxAnimate;
+
     override function create(){
 		Paths.clearStoredMemory();
 
@@ -85,6 +87,11 @@ class ResultScreen extends MusicBeatState{
 		}
 		#end
 
+		atlas = new FlxAnimate();
+		Paths.loadAnimateAtlas(atlas, "test");
+		atlas.anim.addBySymbol("lost", "pico loss final", 24, true);
+		add(atlas);
+
 		// callOnScripts('CreateResult', []);
 
 		// callOnLuas('CreateResult', []);
@@ -95,6 +102,9 @@ class ResultScreen extends MusicBeatState{
         if (controls.BACK){
             MusicBeatState.switchState(new MainMenuState());
         }
+
+		if (FlxG.keys.justPressed.SPACE)
+			atlas.anim.play("lost");
         super.update(elapsed);
     }
 
