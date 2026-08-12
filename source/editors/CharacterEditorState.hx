@@ -1200,6 +1200,7 @@ class CharacterEditorState extends MusicBeatState
 		healthBar.leftBar.color = healthBar.rightBar.color = FlxColor.fromRGB(character.healthColorArray[0], character.healthColorArray[1],
 			character.healthColorArray[2]);
 		healthIcon.changeIcon(character.healthIcon);
+		trace(character.healthColorArray);
 		updatePresence();
 	}
 
