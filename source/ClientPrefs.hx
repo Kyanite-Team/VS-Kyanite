@@ -308,4 +308,11 @@ class ClientPrefs {
 		}
 		return copiedArray;
 	}
+
+	public static function toggleVolumeKeys(?turnOn:Bool = true)
+	{
+		FlxG.sound.muteKeys = turnOn ? TitleState.muteKeys : [];
+		FlxG.sound.volumeDownKeys = turnOn ? TitleState.volumeDownKeys : [];
+		FlxG.sound.volumeUpKeys = turnOn ? TitleState.volumeUpKeys : [];
+	}
 }

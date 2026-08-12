@@ -15,6 +15,8 @@ import flixel.FlxState;
 import flixel.FlxCamera;
 import flixel.FlxBasic;
 
+import engine.PsychCamera;
+
 class MusicBeatState extends modcharting.ModchartMusicBeatState
 {
 	private var curSection:Int = 0;
@@ -172,5 +174,14 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 		var val:Null<Float> = 4;
 		if(PlayState.SONG != null && PlayState.SONG.notes[curSection] != null) val = PlayState.SONG.notes[curSection].sectionBeats;
 		return val == null ? 4 : val;
+	}
+
+	public function initPsychCamera():PsychCamera
+	{
+		var camera = new PsychCamera();
+		FlxG.cameras.reset(camera);
+		FlxG.cameras.setDefaultDrawTarget(camera, true);
+		// trace('initialized psych camera ' + Sys.cpuTime());
+		return camera;
 	}
 }

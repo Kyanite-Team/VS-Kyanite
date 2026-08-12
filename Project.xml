@@ -150,7 +150,7 @@
 	<haxelib name="haxeui-flixel"/>
 
 	<!-- FlxAnimate -->
-	<haxelib name="flxanimate" />
+	<haxelib name="kanimate" />
 
 	<!-- modchart library stuff -->
 	<define name="PSYCH" />

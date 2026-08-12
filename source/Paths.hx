@@ -565,7 +565,7 @@ class Paths
 	}
 	#end
 
-	#if flxanimate
+	#if kanimate
 	public static function loadAnimateAtlas(spr:FlxAnimate, folderOrImg:Dynamic, spriteJson:Dynamic = null, animationJson:Dynamic = null)
 	{
 		var changedAnimJson = false;

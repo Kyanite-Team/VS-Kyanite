@@ -65,6 +65,11 @@ class FlxAnimationController implements IFlxDestroyable
 	public var finishCallback:(name:String) -> Void;
 
 	/**
+	 * How fast or slow time should pass for this animation controller
+	 */
+	public var timeScale:Float = 1.0;
+
+	/**
 	 * Dispatches each time the current animation finishes.
 	 * 
 	 * @param   animName  The name of the current animation

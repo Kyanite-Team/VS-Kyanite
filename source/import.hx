@@ -1,4 +1,4 @@
 #if !macro
 import Paths;
-import flxanimate.FlxAnimate;
+import kanimate.FlxAnimate;
 #end
