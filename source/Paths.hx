@@ -250,7 +250,12 @@ class Paths
 	inline static public function image(key:String, ?library:String):FlxGraphic
 	{
 		// streamlined the assets process more
-		var returnAsset:FlxGraphic = returnGraphic(key, library);
+		var returnAsset:FlxGraphic;
+		if (LanguageFile.getLanguageFile('images/$key.png') != null)
+			returnAsset = returnGraphic(LanguageFile.getLanguageFile(key), library);
+		else
+			returnAsset = returnGraphic(key, library);
+		//var returnAsset:FlxGraphic = returnGraphic(key, library);
 		return returnAsset;
 	}
 
@@ -359,8 +364,10 @@ class Paths
 
 	public static function returnGraphic(key:String, ?library:String)
 	{
+		trace("key: "+key);
 		#if MODS_ALLOWED
 		var modKey:String = modsImages(key);
+		trace("modPath: "+modKey);
 		if (FileSystem.exists(modKey))
 		{
 			if (!currentTrackedAssets.exists(modKey))
@@ -376,6 +383,7 @@ class Paths
 		#end
 
 		var path = getPath('images/$key.png', IMAGE, library);
+		trace("path: "+path);
 		// trace(path);
 		if (OpenFlAssets.exists(path, IMAGE))
 		{

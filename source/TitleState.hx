@@ -130,6 +130,7 @@ class TitleState extends MusicBeatState
 		FlxG.save.bind('funkin' #if (flixel < "5.0.0"), 'ninjamuffin99' #end);
 
 		ClientPrefs.loadPrefs();
+		LanguageFile.loadJson(ClientPrefs.language);
 
 		#if CHECK_FOR_UPDATES
 		if(ClientPrefs.checkForUpdates && !closedState) {

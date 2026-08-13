@@ -89,6 +89,8 @@ class ClientPrefs {
 	];
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 
+	public static var language:String = "english";
+
 	public static function loadDefaultKeys() {
 		defaultKeys = keyBinds.copy();
 		//trace(defaultKeys);
@@ -131,6 +133,8 @@ class ClientPrefs {
 		FlxG.save.data.pauseMusic = pauseMusic;
 		FlxG.save.data.checkForUpdates = checkForUpdates;
 		FlxG.save.data.comboStacking = comboStacking;
+
+		FlxG.save.data.language = language;
 	
 		FlxG.save.flush();
 
@@ -267,6 +271,8 @@ class ClientPrefs {
 		}
 		if (FlxG.save.data.comboStacking != null)
 			comboStacking = FlxG.save.data.comboStacking;
+
+		FlxG.save.data.language ??= language;
 
 		var save:FlxSave = new FlxSave();
 		save.bind('controls_v2' #if (flixel < "5.0.0"), 'Kyanite' #end);
