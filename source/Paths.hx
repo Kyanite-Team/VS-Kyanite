@@ -251,10 +251,11 @@ class Paths
 	{
 		// streamlined the assets process more
 		var returnAsset:FlxGraphic;
-		if (LanguageFile.getLanguageFile('images/$key.png') != null)
-			returnAsset = returnGraphic(LanguageFile.getLanguageFile(key), library);
+		if (FileSystem.exists(getPath(LanguageFile.getLanguageFile('images/$key.png'), IMAGE, library))
+			|| FileSystem.exists(modFolders(LanguageFile.getLanguageFile('images/$key.png'))))
+			returnAsset = returnGraphic(LanguageFile.getLanguageFile('images/$key'), library);
 		else
-			returnAsset = returnGraphic(key, library);
+			returnAsset = returnGraphic('images/$key', library);
 		//var returnAsset:FlxGraphic = returnGraphic(key, library);
 		return returnAsset;
 	}
@@ -319,24 +320,30 @@ class Paths
 	inline static public function getSparrowAtlas(key:String, ?library:String):FlxAtlasFrames
 	{
 		#if MODS_ALLOWED
-		var imageLoaded:FlxGraphic = returnGraphic(key);
-		var xmlExists:Bool = false;
-		if (FileSystem.exists(modsXml(key)))
-		{
-			xmlExists = true;
+		var imageLoaded:FlxGraphic = image(key);
+		var xml:String = modsXml(key);
+		var xmlExists:Bool = FileSystem.exists(xml);
+
+		var path:String = null;
+		var directories:Array<String> = [modFolders(LanguageFile.getLanguageFile('images/$key.xml')), modFolders('images/$key.xml'), getPath(LanguageFile.getLanguageFile('images/$key.xml'), TEXT, library), getPath('images/$key.xml', TEXT, library)];
+		
+		for(i=>directory in directories){
+			if (FileSystem.exists(directory)){
+				path = directory;
+				break;
+			}
 		}
 
-		return FlxAtlasFrames.fromSparrow((imageLoaded != null ? imageLoaded : image(key, library)),
-			(xmlExists ? File.getContent(modsXml(key)) : file('images/$key.xml', library)));
+		return FlxAtlasFrames.fromSparrow(imageLoaded, (xmlExists ? File.getContent(xml) : File.getContent(path)));
 		#else
-		return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
+		return FlxAtlasFrames.fromSparrow(imageLoaded, path);
 		#end
 	}
 
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
 		#if MODS_ALLOWED
-		var imageLoaded:FlxGraphic = returnGraphic(key);
+		var imageLoaded:FlxGraphic = returnGraphic('images/$key');
 		var txtExists:Bool = false;
 		if (FileSystem.exists(modsTxt(key)))
 		{
@@ -364,10 +371,8 @@ class Paths
 
 	public static function returnGraphic(key:String, ?library:String)
 	{
-		trace("key: "+key);
 		#if MODS_ALLOWED
-		var modKey:String = modsImages(key);
-		trace("modPath: "+modKey);
+		var modKey:String = modFolders('$key.png');
 		if (FileSystem.exists(modKey))
 		{
 			if (!currentTrackedAssets.exists(modKey))
@@ -382,9 +387,7 @@ class Paths
 		}
 		#end
 
-		var path = getPath('images/$key.png', IMAGE, library);
-		trace("path: "+path);
-		// trace(path);
+		var path = getPath('$key.png', IMAGE, library);
 		if (OpenFlAssets.exists(path, IMAGE))
 		{
 			if (!currentTrackedAssets.exists(path))

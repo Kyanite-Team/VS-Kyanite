@@ -31,54 +31,54 @@ class VisualsUISubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Visuals and UI';
-		rpcTitle = 'Visuals & UI Settings Menu'; //for Discord Rich Presence
+		title = LanguageFile.getPhrase("visuals_and_ui.title");
+		rpcTitle = LanguageFile.getPhrase("visuals_and_ui.discord"); //for Discord Rich Presence
 
-		var option:Option = new Option('Note Splashes',
-			"If unchecked, hitting \"Sick!\" notes won't show particles.",
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.note_splashes"),
+			LanguageFile.getPhrase("visuals_and_ui.note_splashes_tip"),
 			'noteSplashes',
 			'bool',
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Hide HUD',
-			'If checked, hides most HUD elements.',
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.hide_hud"),
+			LanguageFile.getPhrase("visuals_and_ui.hide_hud_tip"),
 			'hideHud',
 			'bool',
 			false);
 		addOption(option);
 		
-		var option:Option = new Option('Time Bar:',
-			"What should the Time Bar display?",
+		var option:Option = new Option('${LanguageFile.getPhrase("visuals_and_ui.time_bar")}:',
+			LanguageFile.getPhrase("visuals_and_ui.time_bar_tip"),
 			'timeBarType',
 			'string',
 			'Time Left',
 			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
 		addOption(option);
 
-		var option:Option = new Option('Flashing Lights',
-			"Uncheck this if you're sensitive to flashing lights!",
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.flashing_lights"),
+			LanguageFile.getPhrase("visuals_and_ui.flashing_lights_tip"),
 			'flashing',
 			'bool',
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Camera Zooms',
-			"If unchecked, the camera won't zoom in on a beat hit.",
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.cam_zooms"),
+			LanguageFile.getPhrase("visuals_and_ui.cam_zooms_tip"),
 			'camZooms',
 			'bool',
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Score Text Zoom on Hit',
-			"If unchecked, disables the Score text zooming\neverytime you hit a note.",
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.score_zoom_hit"),
+			LanguageFile.getPhrase("visuals_and_ui.score_zoom_hit_tip"),
 			'scoreZoom',
 			'bool',
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Health Bar Transparency',
-			'How much transparent should the health bar and icons be.',
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.health_opacity"),
+			LanguageFile.getPhrase("visuals_and_ui.health_opacity_tip"),
 			'healthBarAlpha',
 			'percent',
 			1);
@@ -90,8 +90,8 @@ class VisualsUISubState extends BaseOptionsMenu
 		addOption(option);
 		
 		#if !mobile
-		var option:Option = new Option('FPS Counter',
-			'If unchecked, hides FPS Counter.',
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.fps_counter"),
+			LanguageFile.getPhrase("visuals_and_ui.fps_counter_tip"),
 			'showFPS',
 			'bool',
 			true);
@@ -99,8 +99,8 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.onChange = onChangeFPSCounter;
 		#end
 		
-		var option:Option = new Option('Pause Screen Song:',
-			"What song do you prefer for the Pause Screen?",
+		var option:Option = new Option('${LanguageFile.getPhrase("visuals_and_ui.pause_song")}:',
+			LanguageFile.getPhrase("visuals_and_ui.pause_song_tip"),
 			'pauseMusic',
 			'string',
 			'Tea Time',
@@ -117,8 +117,8 @@ class VisualsUISubState extends BaseOptionsMenu
 		addOption(option);
 		#end
 
-		var option:Option = new Option('Combo Stacking',
-			"If unchecked, Ratings and Combo won't stack, saving on System Memory and making them easier to read",
+		var option:Option = new Option(LanguageFile.getPhrase("visuals_and_ui.combo_stacking"),
+			LanguageFile.getPhrase("visuals_and_ui.combo_stacking_tip"),
 			'comboStacking',
 			'bool',
 			true);

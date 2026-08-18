@@ -7,17 +7,28 @@ import flixel.FlxSprite;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import sys.FileSystem;
 import sys.io.File;
-import editors.language.LanguageFile;
 import flixel.FlxG;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.math.FlxMath;
+import flixel.util.FlxColor;
+import freeplay.FreeplayState;
+
+import flixel.system.FlxAssets.FlxGraphicAsset;
 
 using StringTools;
 
-class LanguageOptionsMenu extends MusicBeatSubstate{
+class LanguageOptionsMenu extends MusicBeatSubstate
+{
 	var grpLanguages:FlxTypedGroup<Alphabet> = new FlxTypedGroup<Alphabet>();
 	var languages:Array<String> = [];
 	var curSelected:Int = 0;
+	var curSelectedItem:Int;
+
+	var oldSelection:Int;
+
+	var selectorLeft:Alphabet;
+	var selectorRight:Alphabet;
+	var flagArray:Array<Flag> = [];
 
 	public function new()
 	{
@@ -30,23 +41,28 @@ class LanguageOptionsMenu extends MusicBeatSubstate{
 		add(bg);
 		add(grpLanguages);
 
-		//languages.push(ClientPrefs.defaultData.language); // English (US)
-		//displayLanguages.set(ClientPrefs.defaultData.language, Language.defaultLangName);
-		var directories:Array<String> = [Paths.mods("language"), Paths.mods(Paths.currentModDirectory+"language"), Paths.getPreloadPath("language")];
+		// languages.push(ClientPrefs.defaultData.language); // English (US)
+		// displayLanguages.set(ClientPrefs.defaultData.language, Language.defaultLangName);
+		var directories:Array<String> = [
+			Paths.mods("language"),
+			Paths.mods(Paths.currentModDirectory + "language"),
+			Paths.getPreloadPath("language")
+		];
 		for (directory in directories)
 		{
-            trace(directory);
-            if (FileSystem.exists(directory)){
-		    	for (file in FileSystem.readDirectory(directory))
-		    	{
-		    		if (file.toLowerCase().endsWith('.json'))
-		    		{
-		    			var langFile:String = file.substring(0, file.length - '.json'.length).trim();
-		    			if (!languages.contains(langFile))
-		    				languages.push(langFile);
-		    		}
-		    	}
-            }
+			// trace(directory);
+			if (FileSystem.exists(directory))
+			{
+				for (file in FileSystem.readDirectory(directory))
+				{
+					if (file.toLowerCase().endsWith('.json'))
+					{
+						var langFile:String = file.substring(0, file.length - '.json'.length).trim();
+						if (!languages.contains(langFile))
+							languages.push(langFile);
+					}
+				}
+			}
 		}
 
 		languages.sort(function(a:String, b:String)
@@ -60,16 +76,30 @@ class LanguageOptionsMenu extends MusicBeatSubstate{
 			return 0;
 		});
 
-        for (i => lang in languages){
-            var name = lang;
+		oldSelection = curSelectedItem = curSelected = languages.indexOf(ClientPrefs.language);
 
-            var display:Alphabet = new Alphabet(0, 300, name, true);
-            display.isMenuItem = true;
-            display.targetY = i;
-            display.changeX = false;
-            display.screenCenter(X);
-            grpLanguages.add(display);
-        }
+		for (i => lang in languages)
+		{
+			var file = LanguageFile.loadJson(lang);
+
+			var display:Alphabet = new Alphabet(0, 300, file.display_name, true);
+			display.isMenuItem = true;
+			display.screenCenter();
+			display.y += (100 * (i - (languages.length / 2))) + 50;
+			// display.targetY = i;
+			display.changeX = false;
+			var flag = new Flag(LanguageFile.flag(file.id));
+			flag.sprTracker = display;
+			flag.xAdd = display.width + 10;
+			flagArray.push(flag);
+			grpLanguages.add(display);
+			add(flag);
+		}
+
+		selectorLeft = new Alphabet(0, 0, '>', true);
+		add(selectorLeft);
+		selectorRight = new Alphabet(0, 0, '<', true);
+		add(selectorRight);
 
 		changeSelected();
 	}
@@ -79,6 +109,12 @@ class LanguageOptionsMenu extends MusicBeatSubstate{
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+		var curLang = grpLanguages.members[curSelectedItem];
+		var lerpVal:Float = CoolUtil.boundTo(elapsed * 9.6, 0, 1);
+		selectorLeft.y = selectorRight.y = FlxMath.lerp(selectorLeft.y, curLang.y, lerpVal);
+		selectorLeft.x = FlxMath.lerp(selectorLeft.x, curLang.x - 63, lerpVal);
+		selectorRight.x = FlxMath.lerp(selectorRight.x, (curLang.x + curLang.width + flagArray[curSelectedItem].width) + 15, lerpVal);
 
 		var mult:Int = (FlxG.keys.pressed.SHIFT) ? 4 : 1;
 		if (controls.UI_UP_P)
@@ -92,9 +128,14 @@ class LanguageOptionsMenu extends MusicBeatSubstate{
 		{
 			if (changedLanguage)
 			{
-				FlxTransitionableState.skipNextTransIn = true;
-				FlxTransitionableState.skipNextTransOut = true;
-				MusicBeatState.resetState();
+				TitleState.initialized = false;
+				TitleState.closedState = false;
+				if (FreeplayState.vocals != null)
+				{
+					FreeplayState.vocals.fadeOut(0.3);
+					FreeplayState.vocals = null;
+				}
+				FlxG.camera.fade(FlxColor.BLACK, 0.5, false, FlxG.resetGame, false);
 			}
 			else
 				close();
@@ -105,9 +146,14 @@ class LanguageOptionsMenu extends MusicBeatSubstate{
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.6);
 			ClientPrefs.language = languages[curSelected];
-			trace(ClientPrefs.language);
+			trace('curSelected language: ${ClientPrefs.language}');
 			ClientPrefs.saveSettings();
-			changedLanguage = true;
+
+			changedLanguage = (oldSelection != languages.indexOf(ClientPrefs.language));
+
+			LanguageFile.loadLanguage(ClientPrefs.language);
+
+			curSelectedItem = languages.indexOf(ClientPrefs.language);
 		}
 	}
 
@@ -122,5 +168,46 @@ class LanguageOptionsMenu extends MusicBeatSubstate{
 				lang.alpha = 1;
 		}
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.6);
+		// trace(changedLanguage);
+	}
+}
+
+class Flag extends FlxSprite{
+	public var sprTracker:FlxSprite;
+	public var xAdd:Float = 0;
+	public var yAdd:Float = 0;
+	public var angleAdd:Float = 0;
+	public var alphaMult:Float = 1;
+
+	public var copyAngle:Bool = true;
+	public var copyAlpha:Bool = true;
+	public var copyVisible:Bool = false;
+
+	public function new(graphic:FlxGraphicAsset)
+	{
+		super();
+		loadGraphic(graphic);
+		updateHitbox();
+		antialiasing = ClientPrefs.globalAntialiasing;
+	}
+
+	override function update(elapsed:Float)
+	{
+		super.update(elapsed);
+
+		if (sprTracker != null)
+		{
+			setPosition(sprTracker.x + xAdd, sprTracker.y + yAdd);
+			scrollFactor.set(sprTracker.scrollFactor.x, sprTracker.scrollFactor.y);
+
+			if (copyAngle)
+				angle = sprTracker.angle + angleAdd;
+
+			if (copyAlpha)
+				alpha = sprTracker.alpha * alphaMult;
+
+			if (copyVisible)
+				visible = sprTracker.visible;
+		}
 	}
 }

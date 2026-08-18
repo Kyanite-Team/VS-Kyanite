@@ -1,0 +1,410 @@
+{
+    "id": "english",
+    "display_name": "English",
+    "phrases": [
+        {
+            "key": "options.note_colors",
+            "translation": "Note Colors"
+        },
+        {
+            "key": "options.controls",
+            "translation": "Controls"
+        },
+        {
+            "key": "options.adjust_delay_and_combo",
+            "translation": "Adjust Delay and Combo"
+        },
+        {
+            "key": "options.graphics",
+            "translation": "Graphics"
+        },
+        {
+            "key": "options.visuals_and_ui",
+            "translation": "Visuals and UI"
+        },
+        {
+            "key": "options.gameplay",
+            "translation": "Gameplay"
+        },
+        {
+            "key": "options.language",
+            "translation": "Language"
+        },
+        {
+            "key": "gameplay.title",
+            "translation": "Gameplay Settings"
+        },
+        {
+            "key": "gameplay.discord",
+            "translation": "Gameplay Settings Menu"
+        },
+        {
+            "key": "gameplay.controller_mode",
+            "translation": "Controller Mode"
+        },
+        {
+            "key": "gameplay.controller_tip",
+            "translation": "Check this if you want to play with\na controller instead of using your Keyboard."
+        },
+        {
+            "key": "gameplay.downscroll",
+            "translation": "Downscroll"
+        },
+        {
+            "key": "gameplay.downscroll_tip",
+            "translation": "If checked, notes go Down instead of Up, simple enough."
+        },
+        {
+            "key": "gameplay.middlescroll",
+            "translation": "Middlescroll"
+        },
+        {
+            "key": "gameplay.middlescroll_tip",
+            "translation": "If checked, your notes get centered."
+        },
+        {
+            "key": "gameplay.opponent_notes",
+            "translation": "Opponent Notes"
+        },
+        {
+            "key": "gameplay.opponent_notes_tip",
+            "translation": "If unchecked, opponent notes get hidden."
+        },
+        {
+            "key": "gameplay.ghost_tapping",
+            "translation": "Ghost Tapping"
+        },
+        {
+            "key": "gameplay.ghost_tapping_tip",
+            "translation": "If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit."
+        },
+        {
+            "key": "gameplay.no_reset",
+            "translation": "Disable Reset Button"
+        },
+        {
+            "key": "gameplay.no_reset_tip",
+            "translation": "If checked, pressing Reset won't do anything."
+        },
+        {
+            "key": "gameplay.hitsound_volume",
+            "translation": "Hitsound Volume"
+        },
+        {
+            "key": "gameplay.hitsound_volume_tip",
+            "translation": "Funny notes does \"Tick!\" when you hit them."
+        },
+        {
+            "key": "gameplay.rating_offset",
+            "translation": "Rating Offset"
+        },
+        {
+            "key": "gameplay.rating_offset_tip",
+            "translation": "Changes how late/early you have to hit for a 'Sick!'\nHigher values mean you have to hit later."
+        },
+        {
+            "key": "gameplay.sick_window",
+            "translation": "Sick! Hit Window"
+        },
+        {
+            "key": "gameplay.sick_window_tip",
+            "translation": "Changes the amount of time you have\nfor hitting a 'Sick!' in milliseconds."
+        },
+        {
+            "key": "gameplay.good_window",
+            "translation": "Good Hit Window"
+        },
+        {
+            "key": "gameplay.good_window_tip",
+            "translation": "Changes the amount of time you have\nfor hitting a 'Good' in milliseconds."
+        },
+        {
+            "key": "gameplay.bad_window",
+            "translation": "Bad Hit Window"
+        },
+        {
+            "key": "gameplay.bad_window_tip",
+            "translation": "Changes the amount of time you have\nfor hitting a 'Bad' in milliseconds."
+        },
+        {
+            "key": "gameplay.safe_frames",
+            "translation": "Safe Frames"
+        },
+        {
+            "key": "gameplay.safe_frames_tip",
+            "translation": "Changes how many frames you have for\nhitting a note earlier or late."
+        },
+        {
+            "key": "controls.notes",
+            "translation": "NOTES"
+        },
+        {
+            "key": "controls.left",
+            "translation": "Left"
+        },
+        {
+            "key": "controls.right",
+            "translation": "Right"
+        },
+        {
+            "key": "controls.up",
+            "translation": "Up"
+        },
+        {
+            "key": "controls.down",
+            "translation": "Down"
+        },
+        {
+            "key": "controls.ui",
+            "translation": "UI"
+        },
+        {
+            "key": "controls.reset",
+            "translation": "Reset"
+        },
+        {
+            "key": "controls.accept",
+            "translation": "Accept"
+        },
+        {
+            "key": "controls.back",
+            "translation": "Back"
+        },
+        {
+            "key": "controls.pause",
+            "translation": "Pause"
+        },
+        {
+            "key": "controls.volume",
+            "translation": "VOLUME"
+        },
+        {
+            "key": "controls.mute",
+            "translation": "Mute"
+        },
+        {
+            "key": "controls.debug",
+            "translation": "DEBUG"
+        },
+        {
+            "key": "controls.key_1",
+            "translation": "Key 1"
+        },
+        {
+            "key": "controls.key_2",
+            "translation": "Key 2"
+        },
+        {
+            "key": "controls.key_3",
+            "translation": "Key 3"
+        },
+        {
+            "key": "controls.reset_to_default",
+            "translation": "Reset to Default Keys"
+        },
+        {
+            "key": "graphics.title",
+            "translation": "Graphics Settings"
+        },
+        {
+            "key": "graphics.discord",
+            "translation": "Graphics Settings Menu"
+        },
+        {
+            "key": "graphics.low_quality",
+            "translation": "Low Quality"
+        },
+        {
+            "key": "graphics.low_quality_tip",
+            "translation": "If checked, disables some background details,\ndecreases loading times and improves performance."
+        },
+        {
+            "key": "graphics.anti_aliasing",
+            "translation": "Anti-Aliasing"
+        },
+        {
+            "key": "graphics.anti_aliasing_tip",
+            "translation": "If unchecked, disables anti-aliasing, increases performance\nat the cost of sharper visuals."
+        },
+        {
+            "key": "graphics.shaders",
+            "translation": "Shaders"
+        },
+        {
+            "key": "graphics.shaders_tip",
+            "translation": "If unchecked, disables shaders.\nIt's used for some visual effects, and also CPU intensive for weaker PCs."
+        },
+        {
+            "key": "graphics.fps",
+            "translation": "Framerate"
+        },
+        {
+            "key": "graphics.fps_tip",
+            "translation": "Pretty self explanatory, isn't it?"
+        },
+        {
+            "key": "note_colors.hsb",
+            "translation": "Hue    Saturation  Brightness"
+        },
+        {
+            "key": "note_offset.beat_hit",
+            "translation": "Beat Hit!"
+        },
+        {
+            "key": "note_offset.rating_offset",
+            "translation": "Rating Offset"
+        },
+        {
+            "key": "note_offset.numbers_offset",
+            "translation": "Numbers Offset"
+        },
+        {
+            "key": "note_offset.current_offset",
+            "translation": "Current offset"
+        },
+        {
+            "key": "note_offset.combo_offset",
+            "translation": "Combo Offset (Press Accept to Switch)"
+        },
+        {
+            "key": "note_offset.note_and_beat_offset",
+            "translation": "Note/Beat Delay (Press Accept to Switch)"
+        },
+        {
+            "key": "visuals_and_ui.title",
+            "translation": "Visuals and UI"
+        },
+        {
+            "key": "visuals_and_ui.discord",
+            "translation": "Visuals & UI Settings Menu"
+        },
+        {
+            "key": "visuals_and_ui.note_splashes",
+            "translation": "Note Splashes"
+        },
+        {
+            "key": "visuals_and_ui.note_splashes_tip",
+            "translation": "If unchecked, hitting \"Sick!\" notes won't show particles."
+        },
+        {
+            "key": "visuals_and_ui.hide_hud",
+            "translation": "Hide HUD"
+        },
+        {
+            "key": "visuals_and_ui.hide_hud_tip",
+            "translation": "If checked, hides most HUD elements."
+        },
+        {
+            "key": "visuals_and_ui.time_bar",
+            "translation": "Time Bar"
+        },
+        {
+            "key": "visuals_and_ui.time_bar_tip",
+            "translation": "What should the Time Bar display?"
+        },
+        {
+            "key": "visuals_and_ui.flashing_lights",
+            "translation": "Flashing Lights"
+        },
+        {
+            "key": "visuals_and_ui.flashing_lights_tip",
+            "translation": "Uncheck this if you're sensitive to flashing lights!"
+        },
+        {
+            "key": "visuals_and_ui.cam_zooms",
+            "translation": "Camera Zooms"
+        },
+        {
+            "key": "visuals_and_ui.cam_zooms_tip",
+            "translation": "If unchecked, the camera won't zoom in on a beat hit."
+        },
+        {
+            "key": "visuals_and_ui.score_zoom_hit",
+            "translation": "Score Text Zoom on Hit"
+        },
+        {
+            "key": "visuals_and_ui.score_zoom_hit_tip",
+            "translation": "If unchecked, disables the Score text zooming\neverytime you hit a note."
+        },
+        {
+            "key": "visuals_and_ui.health_opacity",
+            "translation": "Health Bar Transparency"
+        },
+        {
+            "key": "visuals_and_ui.health_opacity_tip",
+            "translation": "How much transparent should the health bar and icons be."
+        },
+        {
+            "key": "visuals_and_ui.fps_counter",
+            "translation": "FPS Counter"
+        },
+        {
+            "key": "visuals_and_ui.fps_counter_tip",
+            "translation": "If unchecked, hides FPS Counter."
+        },
+        {
+            "key": "visuals_and_ui.pause_song",
+            "translation": "Pause Screen Song"
+        },
+        {
+            "key": "visuals_and_ui.pause_song_tip",
+            "translation": "What song do you prefer for the Pause Screen?"
+        },
+        {
+            "key": "visuals_and_ui.combo_stacking",
+            "translation": "Combo Stacking"
+        },
+        {
+            "key": "visuals_and_ui.combo_stacking_tip",
+            "translation": "If unchecked, Ratings and Combo won't stack, saving on System Memory and making them easier to read"
+        },
+        {
+            "key": "gamemod.scroll_type",
+            "translation": "Scroll Type"
+        },
+        {
+            "key": "gamemod.scroll_speed",
+            "translation": "Scroll Speed"
+        },
+        {
+            "key": "gamemod.playback_rate",
+            "translation": "Playback Rate"
+        },
+        {
+            "key": "gamemod.healthgain_multiplier",
+            "translation": "Health Gain Multiplier"
+        },
+        {
+            "key": "gamemod.healthloss_multiplier",
+            "translation": "Health Loss Multiplier"
+        },
+        {
+            "key": "gamemod.instakill",
+            "translation": "Instakill on Miss"
+        },
+        {
+            "key": "gamemod.practice",
+            "translation": "Practice Mode"
+        },
+        {
+            "key": "gamemod.botplay",
+            "translation": "Botplay"
+        },
+        {
+            "key": "freeplay.personal_best",
+            "translation": "PERSONAL BEST"
+        },
+        {
+            "key": "freeplay.tip",
+            "translation": "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy."
+        },
+        {
+            "key": "playstate.score_text",
+            "translation": "Score"
+        },
+        {
+            "key": "playstate.botplay",
+            "translation": "BOTPLAY"
+        }
+    ]
+}

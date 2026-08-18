@@ -83,7 +83,7 @@ class FreeplayState extends MusicBeatSubstate
 	var filter:String = "bf";
 	public var needsFilters:Bool;
 
-	public function new(?params:FreeplayStateParams, ?stickers:StickerSubState, ?filterony:Bool = true)
+	public function new(?params:FreeplayStateParams, ?stickers:StickerSubState, ?filterony:Bool = false)
 	{
 		controls.isInSubstate = true;
 		super();
@@ -270,7 +270,7 @@ class FreeplayState extends MusicBeatSubstate
 		add(textBG);
 
 		#if PRELOAD_ALL
-		var leText:String = "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
+		var leText:String = LanguageFile.getPhrase("freeplay.tip");
 		var size:Int = 16;
 		#else
 		var leText:String = "Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
@@ -361,7 +361,7 @@ class FreeplayState extends MusicBeatSubstate
 			ratingSplit[1] += '0';
 		}
 
-		scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
+		scoreText.text = '${LanguageFile.getPhrase("freeplay.personal_best")}: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
 		positionHighscore();
 
 		var upP = controls.UI_UP_P;

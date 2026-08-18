@@ -14,7 +14,6 @@ import flixel.util.FlxGradient;
 import flixel.FlxState;
 import flixel.FlxCamera;
 import flixel.FlxBasic;
-
 import engine.PsychCamera;
 
 class MusicBeatState extends modcharting.ModchartMusicBeatState
@@ -34,12 +33,14 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
 
-	override function create() {
+	override function create()
+	{
 		camBeat = FlxG.camera;
 		var skip:Bool = FlxTransitionableState.skipNextTransOut;
 		super.create();
 
-		if(!skip) {
+		if (!skip)
+		{
 			openSubState(new CustomFadeTransition(0.7, true));
 		}
 		FlxTransitionableState.skipNextTransOut = false;
@@ -47,7 +48,7 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		//everyStep();
+		// everyStep();
 		var oldStep:Int = curStep;
 
 		updateCurStep();
@@ -55,10 +56,10 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 
 		if (oldStep != curStep)
 		{
-			if(curStep > 0)
+			if (curStep > 0)
 				stepHit();
 
-			if(PlayState.SONG != null)
+			if (PlayState.SONG != null)
 			{
 				if (oldStep < curStep)
 					updateSection();
@@ -67,15 +68,23 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 			}
 		}
 
-		if(FlxG.save.data != null) FlxG.save.data.fullscreen = FlxG.fullscreen;
+		if (FlxG.save.data != null)
+			FlxG.save.data.fullscreen = FlxG.fullscreen;
+
+		if (FlxG.keys.justPressed.F5)
+		{
+			LanguageFile.loadLanguage(ClientPrefs.language);
+			resetState();
+		}
 
 		super.update(elapsed);
 	}
 
 	private function updateSection():Void
 	{
-		if(stepsToDo < 1) stepsToDo = Math.round(getBeatsOnSection() * 4);
-		while(curStep >= stepsToDo)
+		if (stepsToDo < 1)
+			stepsToDo = Math.round(getBeatsOnSection() * 4);
+		while (curStep >= stepsToDo)
 		{
 			curSection++;
 			var beats:Float = getBeatsOnSection();
@@ -86,7 +95,8 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 
 	private function rollbackSection():Void
 	{
-		if(curStep < 0) return;
+		if (curStep < 0)
+			return;
 
 		var lastSection:Int = curSection;
 		curSection = 0;
@@ -96,19 +106,21 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 			if (PlayState.SONG.notes[i] != null)
 			{
 				stepsToDo += Math.round(getBeatsOnSection() * 4);
-				if(stepsToDo > curStep) break;
-				
+				if (stepsToDo > curStep)
+					break;
+
 				curSection++;
 			}
 		}
 
-		if(curSection > lastSection) sectionHit();
+		if (curSection > lastSection)
+			sectionHit();
 	}
 
 	private function updateBeat():Void
 	{
 		curBeat = Math.floor(curStep / 4);
-		curDecBeat = curDecStep/4;
+		curDecBeat = curDecStep / 4;
 	}
 
 	private function updateCurStep():Void
@@ -120,22 +132,29 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 		curStep = lastChange.stepTime + Math.floor(shit);
 	}
 
-	public static function switchState(nextState:FlxState) {
+	public static function switchState(nextState:FlxState)
+	{
 		// Custom made Trans in
 		var curState:Dynamic = FlxG.state;
 		var leState:MusicBeatState = curState;
-		if(!FlxTransitionableState.skipNextTransIn) {
+		if (!FlxTransitionableState.skipNextTransIn)
+		{
 			leState.openSubState(new CustomFadeTransition(0.6, false));
-			if(nextState == FlxG.state) {
-				CustomFadeTransition.finishCallback = function() {
+			if (nextState == FlxG.state)
+			{
+				CustomFadeTransition.finishCallback = function()
+				{
 					FlxG.resetState();
 				};
-				//trace('resetted');
-			} else {
-				CustomFadeTransition.finishCallback = function() {
+				// trace('resetted');
+			}
+			else
+			{
+				CustomFadeTransition.finishCallback = function()
+				{
 					FlxG.switchState(nextState);
 				};
-				//trace('changed state');
+				// trace('changed state');
 			}
 			return;
 		}
@@ -143,11 +162,13 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 		FlxG.switchState(nextState);
 	}
 
-	public static function resetState() {
+	public static function resetState()
+	{
 		MusicBeatState.switchState(FlxG.state);
 	}
 
-	public static function getState():MusicBeatState {
+	public static function getState():MusicBeatState
+	{
 		var curState:Dynamic = FlxG.state;
 		var leState:MusicBeatState = curState;
 		return leState;
@@ -161,18 +182,19 @@ class MusicBeatState extends modcharting.ModchartMusicBeatState
 
 	public function beatHit():Void
 	{
-		//trace('Beat: ' + curBeat);
+		// trace('Beat: ' + curBeat);
 	}
 
 	public function sectionHit():Void
 	{
-		//trace('Section: ' + curSection + ', Beat: ' + curBeat + ', Step: ' + curStep);
+		// trace('Section: ' + curSection + ', Beat: ' + curBeat + ', Step: ' + curStep);
 	}
 
 	function getBeatsOnSection()
 	{
 		var val:Null<Float> = 4;
-		if(PlayState.SONG != null && PlayState.SONG.notes[curSection] != null) val = PlayState.SONG.notes[curSection].sectionBeats;
+		if (PlayState.SONG != null && PlayState.SONG.notes[curSection] != null)
+			val = PlayState.SONG.notes[curSection].sectionBeats;
 		return val == null ? 4 : val;
 	}
 

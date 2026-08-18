@@ -31,7 +31,7 @@ class ControlsSubState extends MusicBeatSubstate {
 	private static var curSelected:Int = 1;
 	private static var curAlt:Bool = false;
 
-	private static var defaultKey:String = 'Reset to Default Keys';
+	private static var defaultKey:String = 'Reset to Default';
 	private var bindLength:Int = 0;
 
 	var optionShit:Array<Dynamic> = [
@@ -91,7 +91,11 @@ class ControlsSubState extends MusicBeatSubstate {
 				isCentered = true;
 			}
 
-			var optionText:Alphabet = new Alphabet(200, 300, optionShit[i][0], (!isCentered || isDefaultKey));
+			var regex = ~/\s/g;
+
+			var text = (optionShit[i][0].length > 0) ?LanguageFile.getPhrase("controls." + regex.replace(optionShit[i][0], "_").toLowerCase()) : "";
+
+			var optionText:Alphabet = new Alphabet(200, 300, text, (!isCentered || isDefaultKey));
 			optionText.isMenuItem = true;
 			if(isCentered) {
 				optionText.screenCenter(X);
