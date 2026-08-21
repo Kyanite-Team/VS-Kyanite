@@ -138,4 +138,34 @@ class CoolUtil
 		FlxG.openURL(site);
 		#end
 	}
+
+	/**
+	 * Merges two dynamic objects.
+	 * This operation will directly modify `obj` in place if can be merged, or return `with` otherwise.
+	 * If `obj` and `with` are Json objects, `with` will add and/or overwrite fields.
+	 * 
+	 * @param obj The initial object
+	 * @param with The object to merge `obj` with
+	 */
+	// code from https://github.com/inky03/impostorLegacyPublic/blob/main/source/funkin/utils/CoolUtil.hx
+	public static function merge(obj:Dynamic, with:Dynamic):Dynamic
+	{
+		// um ,.. yeag
+
+		if (obj == null || !Reflect.isObject(obj))
+		{
+			return with;
+		}
+		else if (with == null || !Reflect.isObject(with))
+		{
+			return obj;
+		}
+
+		for (field in Reflect.fields(with))
+		{
+			Reflect.setField(obj, field, merge(Reflect.field(obj, field), Reflect.field(with, field)));
+		}
+
+		return obj;
+	}
 }

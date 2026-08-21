@@ -33,20 +33,25 @@ class LanguageFile
 
 	public static function loadJson(file:String)
 	{
-		var path:String = null;
-		if (FileSystem.exists(Paths.modFolders('language/${file}.json')))
+		var rawJson:String = null;
+		var dirs:Array<String> = [Paths.getPreloadPath('language/$file.json'), Paths.modFolders('language/$file.json')];
+
+		for (dir in dirs){
+			if (FileSystem.exists(dir))
+				rawJson = CoolUtil.merge(rawJson, File.getContent(dir).trim());
+		}
+
+		/*if (FileSystem.exists(Paths.modFolders('language/${file}.json')))
 			path = Paths.modFolders('language/${file}.json');
 		else if (FileSystem.exists(Paths.getPreloadPath('language/${file}.json')))
-			path = Paths.getPreloadPath('language/${file}.json');
+			path = Paths.getPreloadPath('language/${file}.json');*/
 
-		var rawJson:String = null;
-
-		#if sys
+		/* #if sys
 		if (FileSystem.exists(path))
 			rawJson = File.getContent(path).trim();
 		else
 		#end
-		rawJson = Assets.getText(path).trim();
+		rawJson = Assets.getText(path).trim(); */
 
 		return parseJSON(rawJson);
 	}
@@ -57,8 +62,7 @@ class LanguageFile
 		phrases = [];
 		for (phrase in languageJson.phrases)
 		{
-			if (!phrases.exists(phrase.key))
-			{
+			if (!phrases.exists(phrase.key)){
 				phrases.set(phrase.key, phrase.translation);
 			}
 		}

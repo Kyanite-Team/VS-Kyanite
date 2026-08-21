@@ -33,6 +33,10 @@ class AdditionalLua{
                 var result = getSubMod(name, subMod, base);
                 return result;
             });
+
+			Lua_helper.add_callback(funkin.lua, "getPhrase", function(key:String){
+				return LanguageFile.getPhrase(key);
+			});
         }
     }
     #end

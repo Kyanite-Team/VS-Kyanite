@@ -118,7 +118,7 @@ class FreeplayState extends MusicBeatSubstate
 		freeCam.bgColor = FlxColor.TRANSPARENT;
 		FlxG.cameras.add(freeCam, true);
 
-		trace(filter);
+		// trace(filter);
 
 		for (i in 0...WeekData.weeksList.length)
 		{
@@ -257,9 +257,6 @@ class FreeplayState extends MusicBeatSubstate
 		weekBG = new FlxSprite(scoreBG.x, scoreBG.y + scoreBG.height).makeGraphic(1, 1, FlxColor.BLACK);
 		weekBG.alpha = 0.6;
 		add(weekBG);
-
-		weekSprite = new FlxSprite(0, 0);
-		add(weekSprite);
 
 		// changeWeek();
 		changeSelection();
