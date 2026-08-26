@@ -26,8 +26,7 @@ class SongIcon extends FlxSprite
 		{
 			var name:String = 'freeplay/icons/' + char + "pixel";
 			if (!Paths.fileExists('images/' + name + '.png', IMAGE))
-				name = 'freeplay/icons/icon' + char + "pixel"; // Older versions of psych engine's support
-			// if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
+				name = 'freeplay/icons/facepixel'; // Prevents crash from missing icon
 
 			frames = Paths.getSparrowAtlas(name);
 			animation.addByPrefix("idle", "idle", 12, true);

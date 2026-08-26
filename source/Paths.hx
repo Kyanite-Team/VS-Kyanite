@@ -256,7 +256,7 @@ class Paths
 			returnAsset = returnGraphic(LanguageFile.getLanguageFile('images/$key'), library);
 		else
 			returnAsset = returnGraphic('images/$key', library);
-		//var returnAsset:FlxGraphic = returnGraphic(key, library);
+		// var returnAsset:FlxGraphic = returnGraphic(key, library);
 		return returnAsset;
 	}
 
@@ -325,16 +325,12 @@ class Paths
 		var xmlExists:Bool = FileSystem.exists(xml);
 
 		var path:String = null;
-		var directories:Array<String> = [modFolders(LanguageFile.getLanguageFile('images/$key.xml')), modFolders('images/$key.xml'), getPath(LanguageFile.getLanguageFile('images/$key.xml'), TEXT, library), getPath('images/$key.xml', TEXT, library)];
+		var directories:Array<String> = [getPath('images/$key.xml', TEXT, library)];
+		var languageExists:Bool = FileSystem.exists(file(LanguageFile.getLanguageFile('images/$key.xml'), library));
 		
-		for(i=>directory in directories){
-			if (FileSystem.exists(directory)){
-				path = directory;
-				break;
-			}
-		}
-
-		return FlxAtlasFrames.fromSparrow(imageLoaded, (xmlExists ? File.getContent(xml) : File.getContent(path)));
+		return FlxAtlasFrames.fromSparrow(imageLoaded,
+			(xmlExists ? File.getContent(xml) : (languageExists ? file(LanguageFile.getLanguageFile('images/$key.xml'),
+				library) : file('images/$key.xml', library))));
 		#else
 		return FlxAtlasFrames.fromSparrow(imageLoaded, path);
 		#end
@@ -473,7 +469,12 @@ class Paths
 
 	inline static public function modsXml(key:String)
 	{
-		return modFolders('images/' + key + '.xml');
+		var path:String = null;
+		if (FileSystem.exists(modFolders(LanguageFile.getLanguageFile('images/$key.xml'))))
+			path = modFolders(LanguageFile.getLanguageFile('images/$key.xml'));
+		else
+			path = modFolders('images/$key.xml');
+		return path;
 	}
 
 	inline static public function modsTxt(key:String)

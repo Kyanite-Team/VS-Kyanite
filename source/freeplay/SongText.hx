@@ -10,6 +10,7 @@ import openfl.filters.BitmapFilterQuality;
 import flixel.util.FlxColor;
 import openfl.display.BlendMode;
 
+@:nullSafety
 class SongText extends FlxSpriteGroup
 {
 	public var clipWidth(default, set):Int = 255;
