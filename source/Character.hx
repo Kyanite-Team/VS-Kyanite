@@ -110,7 +110,7 @@ class Character extends FlxSprite
 			default:
 				var characterPath:String = 'characters/$curCharacter.json';
 
-				var path:String = Paths.getPath(characterPath, TEXT, null);
+				var path:String = Paths.getPath(characterPath, TEXT, null, true);
 				#if MODS_ALLOWED
 				if (!FileSystem.exists(path))
 				#else

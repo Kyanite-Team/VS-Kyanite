@@ -490,7 +490,7 @@ class CharacterEditorState extends MusicBeatState
 				return;
 
 			var characterPath:String = 'characters/$intended.json';
-			var path:String = Paths.getPath(characterPath, TEXT, null);
+			var path:String = Paths.getPath(characterPath, TEXT, null, true);
 			#if MODS_ALLOWED
 			if (FileSystem.exists(path))
 			#else
@@ -504,11 +504,11 @@ class CharacterEditorState extends MusicBeatState
 				reloadCharacterDropDown();
 				updatePointerPos();
 			}
-		else
-		{
-			reloadCharacterDropDown();
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-		}
+			else
+			{
+				reloadCharacterDropDown();
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+			}
 		});
 		reloadCharacterDropDown();
 		charDropDown.selectedLabel = _char;

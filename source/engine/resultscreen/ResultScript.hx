@@ -1,165 +1,330 @@
 package engine.resultscreen;
 
-import flixel.sound.FlxSound;
-
-import haxe.PosInfos;
-import haxe.Log;
-
-import hscript.Parser;
-import hscript.Interp;
-import sys.io.File;
-
 import flixel.FlxG;
+import kanimate.FlxAnimate;
+import flixel.util.FlxColor;
+
+import sys.io.File;
+import sys.FileSystem;
+
+import crowplexus.iris.Iris;
+import crowplexus.iris.IrisConfig;
+import crowplexus.hscript.Expr.Error as IrisError;
+import crowplexus.hscript.Printer;
+
+import haxe.ValueException;
 
 using StringTools;
 
-class ResultScript extends Interp{
+typedef HScriptInfos =
+{
+	> haxe.PosInfos,
+	var ?funcName:String;
+	var ?showLine:Null<Bool>;
+}
+
+class ResultScript extends Iris{
 	public static var Function_Stop:Dynamic = 1;
 	public static var Function_Continue:Dynamic = 0;
 	public static var Function_StopScript:Dynamic = 2;
 
-	public static var interpScript:String; // For initializing scripts on strings instead.
-	public static var originClass:String = "";
+	public var filePath:String;
+	public var modFolder:String;
+	public var returnValue:Dynamic;
 
-	var name:String;
-    
-    var parser:Parser;
-	var program:Dynamic;
-	var interp:Interp;
+	public var origin:String;
 
-    var result:Dynamic;
-
-	public static var sounds:Map<String, FlxSound> = new Map<String, FlxSound>();
-	public static var script_variables:Map<String, Dynamic> = new Map<String, Dynamic>();
-	public function new(?scriptName:String, ?ext:String = "hx", ?additionalVars:Map<String, Dynamic>){
-        super();
-
-		parser = new Parser();
-		parser.allowTypes = true;
-		parser.allowJSON = true;
-		parser.allowMetadata = true;
-		name = originClass;
-		if (scriptName == null)
-		{
-			if (interpScript != null)
-			{
-				var o:String = "hscript";
-				if (originClass != null)
-					o = originClass;
-				try
-				{
-					program = parser.parseString(interpScript, o);
-				}
-				catch (e)
-				{
-					trace('There was an error while parsing a script! $e');
-				}
-			}
-			else
-			{
-				trace("Cannot initialize empty script!");
-				return;
-			}
-		}
-		else
-		{
-			var script:String = File.getContent(scriptName + ext);
-			program = parser.parseString(script, scriptName + ext);
-			name = scriptName + ext;
-		}
-		interp = new Interp();
-		variables = interp.variables; // Match the interp's vars for later use.
-
-		// Reset these for later use.
-		interpScript = null;
-		originClass = "";
-
-		// trace(name);
-
-		// Default imports.
-		setVar("FlxG", flixel.FlxG);
-		setVar("FlxGroup", flixel.group.FlxGroup);
-		setVar("FlxTypedGroup", flixel.group.FlxGroup.FlxTypedGroup);
-		setVar("FlxSpriteGroup", flixel.group.FlxSpriteGroup);
-		setVar("FlxTypedSpriteGroup", flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup);
-		setVar("StringTools", StringTools);
-		setVar("ClientPrefs", ClientPrefs);
-		setVar("Paths", Paths);
-		setVar("CoolUtil", CoolUtil);
-		setVar("Conductor", Conductor);
-
-		/* setVar("changePresence", DiscordClient.changePresence);
-		setVar("swapToken", DiscordClient.swapToken);
-		setVar("setToken", DiscordClient.swapToken); */
-
-		setVar("Std", Std);
-		setVar("FlxSound", FlxSound);
-
-		setVar("add", FlxG.state.add);
-		setVar("insert", FlxG.state.insert);
-		setVar("remove", FlxG.state.remove);
-		if (additionalVars != null)
-		{
-			trace(additionalVars);
-			for (k => v in additionalVars)
-			{
-				setVar(k, v);
-			}
-		}
-		var sFolder:String = '';
-		var pathS:Array<String> = scriptName.split("/");
-		pathS.pop();
-		sFolder = pathS.join("/");
-        for (key => value in variables)
-        {
-            if (!script_variables.exists(key)) // avoid setting the same variavles over and over
-                script_variables.set(key, value); // match instance variables.
-        }
-
-        result = interp.execute(program);
-    }
-
-	public function exists(name:String):Bool
-		return interp.variables.exists(name);
-
-	function isFunc(name:String):Bool
-		return Reflect.isFunction(interp.variables.get(name));
-
-	public function callFunc(name:String, args:Array<Dynamic>):Dynamic
+	override public function new(?parent:Dynamic, ?file:String, ?varsToBring:Any = null, ?manualRun:Bool = false)
 	{
+		if (file == null)
+			file = '';
+
+		filePath = file;
+		if (filePath != null && filePath.length > 0)
+		{
+			this.origin = filePath;
+			#if MODS_ALLOWED
+			var myFolder:Array<String> = filePath.split('/');
+			if (myFolder[0] + '/' == Paths.mods()
+				&& (Paths.currentModDirectory == myFolder[1] || Paths.getGlobalMods().contains(myFolder[1]))) // is inside mods folder
+				this.modFolder = myFolder[1];
+			#end
+		}
+		var scriptThing:String = file;
+		var scriptName:String = null;
+		if (parent == null && file != null)
+		{
+			var f:String = file.replace('\\', '/');
+			if (f.contains('/') && !f.contains('\n'))
+			{
+				scriptThing = File.getContent(f);
+				scriptName = f;
+			}
+		}
+		super(scriptThing, new IrisConfig(scriptName, false, false));
+		var customInterp:CustomInterp = new CustomInterp();
+		customInterp.parentInstance = FlxG.state;
+		customInterp.showPosOnLog = false;
+		this.interp = customInterp;
+
+		preset();
+
+		this.varsToBring = varsToBring;
+
+		if (!manualRun)
+		{
+			try
+			{
+				var ret:Dynamic = execute();
+				returnValue = ret;
+			}
+			catch (e:IrisError)
+			{
+				returnValue = null;
+				this.destroy();
+				throw e;
+			}
+		}
+	}
+
+	var varsToBring(default, set):Any = null;
+
+	override function preset()
+	{
+		super.preset();
+
+		// Some very commonly used classes
+		set('Type', Type);
+		#if sys
+		set('File', File);
+		set('FileSystem', FileSystem);
+		#end
+		set('FlxG', flixel.FlxG);
+		set('FlxMath', flixel.math.FlxMath);
+		set('FlxSprite', flixel.FlxSprite);
+		set('FlxText', flixel.text.FlxText);
+		set('FlxCamera', flixel.FlxCamera);
+		set('FlxTimer', flixel.util.FlxTimer);
+		set('FlxTween', flixel.tweens.FlxTween);
+		set('FlxEase', flixel.tweens.FlxEase);
+		set('FlxColor', CustomFlxColor);
+		set('Paths', Paths);
+		set('Conductor', Conductor);
+		set('ClientPrefs', ClientPrefs);
+		#if ACHIEVEMENTS_ALLOWED
+		set('Achievements', Achievements);
+		#end
+		set('Character', Character);
+		set('Alphabet', Alphabet);
+		set('Note', Note);
+		#if (!flash && sys)
+		set('FlxRuntimeShader', flixel.addons.display.FlxRuntimeShader);
+		#end
+		set('ShaderFilter', openfl.filters.ShaderFilter);
+		set('StringTools', StringTools);
+		#if flxanimate
+		set('FlxAnimate', FlxAnimate);
+		#end
+
+		set('debugPrint', function(text:String, ?color:FlxColor = null)
+		{
+			if (color == null)
+				color = FlxColor.WHITE;
+			ResultScreen.instance.addTextToDebug(text, color);
+		});
+
+		set('this', this);
+		set('game', FlxG.state);
+
+		#if windows
+		set('buildTarget', 'windows');
+		#elseif linux
+		set('buildTarget', 'linux');
+		#elseif mac
+		set('buildTarget', 'mac');
+		#elseif html5
+		set('buildTarget', 'browser');
+		#elseif android
+		set('buildTarget', 'android');
+		#else
+		set('buildTarget', 'unknown');
+		#end
+
+		set('Function_StopScript', Function_StopScript);
+		set('Function_Stop', Function_Stop);
+		set('Function_Continue', Function_Continue);
+	}
+
+	override function call(funcToRun:String, ?args:Array<Dynamic>):IrisCall
+	{
+		if (funcToRun == null || interp == null)
+			return null;
+
+		if (!exists(funcToRun))
+		{
+			Iris.error('No function named: $funcToRun', this.interp.posInfos());
+			return null;
+		}
+
 		try
 		{
-			if (exists(name)) // if it is debug, run the func regardless of if it exists, then spit out the error afterward.
-			{
-				// trace("Test Trace: Func called: " + name + " with arguments: " + args);
-				try
-				{
-					return call(this, interp.variables.get(name), args);
-				}
-				catch (e:Dynamic)
-				{
-					trace(e);
-				}
-			}
+			var func:Dynamic = interp.variables.get(funcToRun); // function signature
+			final ret = Reflect.callMethod(null, func, args ?? []);
+			return {funName: funcToRun, signature: func, returnValue: ret};
 		}
-		catch (e:Dynamic)
+		catch (e:IrisError)
 		{
-			if (Std.string(e).trim() == "Null Function Pointer")
-			{
-				trace('[ ${interp.posInfos()} ]Function $name does not exist in `${this.name}`');
-			}
-			else
-			{
-				Log.trace(e, interp.posInfos());
-			}
+			var pos:HScriptInfos = cast this.interp.posInfos();
+			pos.funcName = funcToRun;
+			Iris.error(Printer.errorToString(e, false), pos);
+		}
+		catch (e:ValueException)
+		{
+			var pos:HScriptInfos = cast this.interp.posInfos();
+			pos.funcName = funcToRun;
+			Iris.error('$e', pos);
 		}
 		return null;
 	}
 
-	public override function setVar(k:String, v:Dynamic)
+	override public function destroy()
 	{
-		script_variables.set(k, v);
-		interp.variables.set(k, v);
-		super.setVar(k, v);
+		origin = null;
+		super.destroy();
+	}
+
+	function set_varsToBring(values:Any)
+	{
+		if (varsToBring != null)
+			for (key in Reflect.fields(varsToBring))
+				if (exists(key.trim()))
+					interp.variables.remove(key.trim());
+
+		if (values != null)
+		{
+			for (key in Reflect.fields(values))
+			{
+				key = key.trim();
+				set(key, Reflect.field(values, key));
+			}
+		}
+
+		return varsToBring = values;
+	}
+}
+
+class CustomFlxColor
+{
+	public static var TRANSPARENT(default, null):Int = FlxColor.TRANSPARENT;
+	public static var BLACK(default, null):Int = FlxColor.BLACK;
+	public static var WHITE(default, null):Int = FlxColor.WHITE;
+	public static var GRAY(default, null):Int = FlxColor.GRAY;
+
+	public static var GREEN(default, null):Int = FlxColor.GREEN;
+	public static var LIME(default, null):Int = FlxColor.LIME;
+	public static var YELLOW(default, null):Int = FlxColor.YELLOW;
+	public static var ORANGE(default, null):Int = FlxColor.ORANGE;
+	public static var RED(default, null):Int = FlxColor.RED;
+	public static var PURPLE(default, null):Int = FlxColor.PURPLE;
+	public static var BLUE(default, null):Int = FlxColor.BLUE;
+	public static var BROWN(default, null):Int = FlxColor.BROWN;
+	public static var PINK(default, null):Int = FlxColor.PINK;
+	public static var MAGENTA(default, null):Int = FlxColor.MAGENTA;
+	public static var CYAN(default, null):Int = FlxColor.CYAN;
+
+	public static function fromInt(Value:Int):Int
+		return cast FlxColor.fromInt(Value);
+
+	public static function fromRGB(Red:Int, Green:Int, Blue:Int, Alpha:Int = 255):Int
+		return cast FlxColor.fromRGB(Red, Green, Blue, Alpha);
+
+	public static function fromRGBFloat(Red:Float, Green:Float, Blue:Float, Alpha:Float = 1):Int
+		return cast FlxColor.fromRGBFloat(Red, Green, Blue, Alpha);
+
+	public static inline function fromCMYK(Cyan:Float, Magenta:Float, Yellow:Float, Black:Float, Alpha:Float = 1):Int
+		return cast FlxColor.fromCMYK(Cyan, Magenta, Yellow, Black, Alpha);
+
+	public static function fromHSB(Hue:Float, Sat:Float, Brt:Float, Alpha:Float = 1):Int
+		return cast FlxColor.fromHSB(Hue, Sat, Brt, Alpha);
+
+	public static function fromHSL(Hue:Float, Sat:Float, Light:Float, Alpha:Float = 1):Int
+		return cast FlxColor.fromHSL(Hue, Sat, Light, Alpha);
+
+	public static function fromString(str:String):Int
+		return cast FlxColor.fromString(str);
+}
+
+class CustomInterp extends crowplexus.hscript.Interp
+{
+	public var parentInstance(default, set):Dynamic = [];
+
+	private var _instanceFields:Array<String>;
+
+	function set_parentInstance(inst:Dynamic):Dynamic
+	{
+		parentInstance = inst;
+		if (parentInstance == null)
+		{
+			_instanceFields = [];
+			return inst;
+		}
+		_instanceFields = Type.getInstanceFields(Type.getClass(inst));
+		return inst;
+	}
+
+	public function new()
+	{
+		super();
+	}
+
+	override function fcall(o:Dynamic, funcToRun:String, args:Array<Dynamic>):Dynamic
+	{
+		for (_using in usings)
+		{
+			var v = _using.call(o, funcToRun, args);
+			if (v != null)
+				return v;
+		}
+
+		var f = get(o, funcToRun);
+
+		if (f == null)
+		{
+			Iris.error('Tried to call null function $funcToRun', posInfos());
+			return null;
+		}
+
+		return Reflect.callMethod(o, f, args);
+	}
+
+	override function resolve(id:String):Dynamic
+	{
+		if (locals.exists(id))
+		{
+			var l = locals.get(id);
+			return l.r;
+		}
+
+		if (variables.exists(id))
+		{
+			var v = variables.get(id);
+			return v;
+		}
+
+		if (imports.exists(id))
+		{
+			var v = imports.get(id);
+			return v;
+		}
+
+		if (parentInstance != null && _instanceFields.contains(id))
+		{
+			var v = Reflect.getProperty(parentInstance, id);
+			return v;
+		}
+
+		error(EUnknownVariable(id));
+
+		return null;
 	}
 }

@@ -12,6 +12,12 @@ import flixel.FlxG;
 import flixel.util.FlxColor;
 
 import engine.resultscreen.ResultScript;
+import engine.resultscreen.ResultScript.HScriptInfos;
+
+import crowplexus.iris.Iris;
+import crowplexus.iris.IrisConfig;
+import crowplexus.hscript.Expr.Error as IrisError;
+import crowplexus.hscript.Printer;
 
 #if sys
 import sys.FileSystem;
@@ -22,79 +28,45 @@ using StringTools;
 
 class ResultScreen extends MusicBeatState{
 	public var camGame:FlxCamera;
-    
+    public var camDebug:FlxCamera;
+
+
 	//hscript
+	public static var instance:ResultScreen;
 	public var scriptArray:Array<ResultScript> = [];
-
-    // Lua shit
-	/* public static var instance:ResultScreen;
-
-	public var luaArray:Array<ResultLua> = [];
-
-	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
-	public var variables:Map<String, Dynamic> = new Map();
-	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
-	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
-	public var modchartTimers:Map<String, FlxTimer> = new Map<String, FlxTimer>();
-	public var modchartSounds:Map<String, FlxSound> = new Map<String, FlxSound>();
-	public var modchartTexts:Map<String, ModchartText> = new Map<String, ModchartText>(); */
-
-	var atlas:FlxAnimate;
+	private var debugGroup:FlxTypedGroup<FunkinLua.DebugLuaText>;
 
     override function create(){
 		Paths.clearStoredMemory();
 
+		instance = this;
+
 		camGame = new FlxCamera();
+
+		camDebug = new FlxCamera();
+		camDebug.bgColor = 0x00;
+
 		FlxG.cameras.reset(camGame);
+		FlxG.cameras.add(camDebug, false);
 
-		// for lua
-		// instance = this;
+		debugGroup = new FlxTypedGroup<FunkinLua.DebugLuaText>();
+		debugGroup.camera = camDebug;
+		add(debugGroup);
 
-		#if LUA_ALLOWED
-		/* luaDebugGroup = new FlxTypedGroup<DebugLuaText>();
-		//luaDebugGroup.camera = camGame;
-		add(luaDebugGroup); */
+		var directories:Array<String> = [Paths.modFolders('resultScreen/'), Paths.getPreloadPath('resultScreen/')];
 
-		var filesPushed:Array<String> = [];
-		var foldersToCheck:Array<String> = [Paths.getPreloadPath('resultScreen/')];
-
-		#if MODS_ALLOWED
-		foldersToCheck.push(Paths.mods('resultScreen/'));
-		if (Paths.currentModDirectory != null && Paths.currentModDirectory.length > 0)
-			foldersToCheck.push(Paths.mods(Paths.currentModDirectory + '/resultScreen/'));
-
-		for (mod in Paths.getGlobalMods())
-			foldersToCheck.push(Paths.mods(mod + '/resultScreen/'));
-		#end
-
-		for (folder in foldersToCheck)
-		{
-			if (FileSystem.exists(folder))
-			{
-				for (file in FileSystem.readDirectory(folder))
-				{
-					if (file.endsWith('.hx') && !filesPushed.contains(file)){
-						scriptArray.push(new ResultScript(folder+file));
-						filesPushed.push(file);
+		for (folder in directories){
+			if (FileSystem.exists(folder)){
+				for (file in FileSystem.readDirectory(folder)){
+					if (file.toLowerCase().endsWith('.hx')){
+						initHscript(folder+file);
 					}
-					/* if (file.endsWith('.lua') && !filesPushed.contains(file))
-					{
-						luaArray.push(new ResultLua(folder + file));
-						filesPushed.push(file);
-					} */
 				}
 			}
 		}
-		#end
 
-		atlas = new FlxAnimate();
-		Paths.loadAnimateAtlas(atlas, "test");
-		atlas.anim.addBySymbol("lost", "pico loss final", 24, true);
-		add(atlas);
+		callOnScript("CreateResult");
 
-		// callOnScripts('CreateResult', []);
-
-		// callOnLuas('CreateResult', []);
         super.create();
     }
 
@@ -103,25 +75,32 @@ class ResultScreen extends MusicBeatState{
             MusicBeatState.switchState(new MainMenuState());
         }
 
-		if (FlxG.keys.justPressed.SPACE)
-			atlas.anim.play("lost");
         super.update(elapsed);
     }
 
     override function destroy(){
-		/* for (lua in luaArray)
-		{
-			lua.call('DestroyResult', []);
-			lua.stop();
-		}
-		luaArray = []; */
-
-		// callOnScripts('DestroyResult', []);
-		scriptArray = [];
         super.destroy();
     }
 
-	/*public function callOnScripts(event:String, ars:Array<Dynamic>, ?ignoreStops:Bool = false, exclusions:Array<String> = null, excludeValues:Array<Dynamic> = null){
+	public function initHscript(file:String){
+		var newScript:ResultScript = null;
+		try{
+			newScript = new ResultScript(null, file);
+			trace('Initialized HScript for: $file');
+			scriptArray.push(newScript);
+		}
+		catch(e:IrisError){
+			var pos:HScriptInfos = cast {fileName: file, showLine: true};
+			Iris.error(Printer.errorToString(e, false), pos);
+			var newScript:ResultScript = cast (Iris.instances.get(file), ResultScript);
+			if (newScript != null)
+				newScript.destroy();
+		}
+	}
+
+	public function callOnScript(funcToCall:String, args:Array<Dynamic> = null, ?ignoreStops:Bool = false, exclusions:Array<String> = null,
+			excludeValues:Array<Dynamic> = null):Dynamic
+	{
 		var returnVal:Dynamic = ResultScript.Function_Continue;
 
 		if (exclusions == null)
@@ -133,19 +112,21 @@ class ResultScreen extends MusicBeatState{
 		var len:Int = scriptArray.length;
 		if (len < 1)
 			return returnVal;
-		
+
 		for (script in scriptArray)
 		{
 			@:privateAccess
-			if (script == null || !script.exists(event))
+			if (script == null || !script.exists(funcToCall) || exclusions.contains(script.origin))
 				continue;
 
-			var callValue = script.call(event, args);
+			var callValue = script.call(funcToCall, args);
 			if (callValue != null)
 			{
 				var myValue:Dynamic = callValue.returnValue;
 
-				if (myValue == ResultScript.Function_StopScript && !excludeValues.contains(myValue)	&& !ignoreStops)
+				if ((myValue == ResultScript.Function_StopScript || myValue == ResultScript.Function_Stop)
+					&& !excludeValues.contains(myValue)
+					&& !ignoreStops)
 				{
 					returnVal = myValue;
 					break;
@@ -157,61 +138,22 @@ class ResultScreen extends MusicBeatState{
 		}
 
 		return returnVal;
-	}*/
-
-	/*public function callOnLuas(event:String, args:Array<Dynamic>, ignoreStops = true, exclusions:Array<String> = null):Dynamic
-	{
-		var returnVal:Dynamic = ResultLua.Function_Continue;
-		#if LUA_ALLOWED
-		if (exclusions == null)
-			exclusions = [];
-		for (script in luaArray)
-		{
-			if (exclusions.contains(script.scriptName))
-				continue;
-
-			var ret:Dynamic = script.call(event, args);
-			if (ret == ResultLua.Function_StopLua && !ignoreStops)
-				break;
-
-			// had to do this because there is a bug in haxe where Stop != Continue doesnt work
-			var bool:Bool = ret == ResultLua.Function_Continue;
-			if (!bool && ret != 0)
-			{
-				returnVal = cast ret;
-			}
-		}
-		#end
-		// trace(event, returnVal);
-		return returnVal;
-	}
-
-	public function getLuaObject(tag:String, text:Bool = true):FlxSprite
-	{
-		if (modchartSprites.exists(tag))
-			return modchartSprites.get(tag);
-		if (text && modchartTexts.exists(tag))
-			return modchartTexts.get(tag);
-		if (variables.exists(tag))
-			return variables.get(tag);
-		return null;
 	}
 
 	public function addTextToDebug(text:String, color:FlxColor)
 	{
-		#if LUA_ALLOWED
-		luaDebugGroup.forEachAlive(function(spr:DebugLuaText)
-		{
-			spr.y += 20;
-		});
+		var newText:FunkinLua.DebugLuaText = debugGroup.recycle(FunkinLua.DebugLuaText);
+		newText.text = text;
+		newText.color = color;
+		newText.alpha = 1;
+		newText.setPosition(10, 8 - newText.height);
 
-		if (luaDebugGroup.members.length > 34)
+		debugGroup.forEachAlive(function(spr:FunkinLua.DebugLuaText)
 		{
-			var blah = luaDebugGroup.members[34];
-			blah.destroy();
-			luaDebugGroup.remove(blah);
-		}
-		luaDebugGroup.insert(0, new DebugLuaText(text, luaDebugGroup, color));
-		#end
-	}*/
+			spr.y += newText.height + 2;
+		});
+		debugGroup.add(newText);
+
+		Sys.println(text);
+	}
 }
