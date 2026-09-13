@@ -1,0 +1,5 @@
+<h1>Bye bye code</h1>
+<p>You heard me right, I (VideoBot) deleted the entire source code.</p>
+<p>Why? You may ask, well, the director (Novel) is just a piece of crap, he pissed me off ever since I joined the project. If you think this can't get any worse, you're wrong. Recently I got a message from 1 of my friends with a screenshot of Novel texting him where I noticed Novel lying to my friend. This was a huge mistake of Novel and I decided to quit VS Kyanite, leaving it with no source coder.</p>
+<p>So, Novel, if you're reading this. Good luck making the update.</p>
+<p>For the other devs of this mod, please leave the mod. He forces you to do something even when you tell him you can't. This happened to me and Bulb Man. The day I left the dev team of this mod was just a relieve because it's much more quiet in my head. I don't have to worry when I come online on discord with getting a message from Novel and I can work in piece for my other projects, not getting a message from Novel again.</p>
